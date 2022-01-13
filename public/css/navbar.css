@@ -1,0 +1,108 @@
+li {
+  list-style-type: none;
+  margin-top: 15px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 22px;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  background-color: grey;
+  position: sticky;
+  top: 0px;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-right: 95px;
+}
+
+nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+
+.sous {
+  display: none;
+  box-shadow: 0px 1px 2px #ccc;
+  background-color: grey;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+nav > ul li:hover .sous {
+  display: block;
+}
+.sous li {
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+.sous a {
+  padding: 10px;
+  border-bottom: none;
+}
+.sous a:hover {
+  border-bottom: none;
+  background-color: RGBa(200, 200, 200, 0.1);
+}
+
+.container {
+  max-width: 2500px;
+  margin-top: 0px;
+  height: 60px;
+  text-decoration: none;
+}
+
+.deroulant > a::after {
+  content: "▼";
+  font-size: 25px;
+}
+
+ul ul li:hover ul {
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  left: 150px;
+  top: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.deroulant ul {
+  visibility: hidden;
+}
+
+.deroulant:hover > ul {
+  visibility: visible;
+}
+
+h1 {
+  color: white;
+}

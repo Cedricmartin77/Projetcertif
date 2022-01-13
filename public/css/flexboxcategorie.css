@@ -1,0 +1,43 @@
+.flex {
+  display: flex;
+  background-color: gray;
+  margin: 35px;
+  border: solid 10px;
+  border-radius: 20px;
+  border-color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 121px;
+  text-decoration: none;
+}
+
+.text {
+  display: flex;
+  width: 37%;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.flex:hover {
+  opacity: 1;
+  background-color: #52b788;
+}
+
+body {
+  background-color: black;
+}

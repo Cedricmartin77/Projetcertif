@@ -1,0 +1,60 @@
+body {
+    background: black;
+    font-family: Georgia, "Times New Roman", Times, serif, Courier, monospace;
+    font-weight: 250;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  p {
+    color: white;
+    margin-top: 350px;
+    margin-left: 540px;
+    margin-bottom: 160px;
+  }
+  
+  .flex2 {
+    display: flex;
+    background-color: gray;
+    margin: 30px;
+    border: solid 10px;
+    border-radius: 20px;
+    border-color: white;
+    color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 600px;
+    margin-bottom: 25px;
+  }
+  
+  .image {
+    display: flex;
+    width: 30%;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  body {
+    background-color: black;
+  }
+  
+  .container2 {
+    margin: 270px;
+    display: flex;
+    height: 650px;
+    width: 450px;
+    border-radius: 20%;
+    margin-top: 50px;
+  }
+  

@@ -1,0 +1,30 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}Encyclopedie Du Personnage{% endblock %}
+
+{% block body %}
+    <h1>Encyclopedie Du Personnage</h1>
+
+    <table class="table text-light">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ encyclopedie_du_personnage.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ encyclopedie_du_personnage.title }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td><img src="{{ asset('img/logoencyclopediedupersonnage/' ~ encyclopedie_du_personnage.img) }}" alt=""></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_encyclopedie_du_personnage_index') }}" class="text-light">Retour a la liste</a>
+
+    <a href="{{ path('admin_encyclopedie_du_personnage_edit', {'id': encyclopedie_du_personnage.id}) }}" class="text-light">Modifier</a>
+
+    {{ include('admin_encyclopedie_du_personnage/_delete_form.html.twig') }}
+{% endblock %}

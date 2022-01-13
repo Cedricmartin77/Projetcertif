@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Encyclopedie des Personnages{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/flexboxencyclopediedespersonnage.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<h1 class="text-light">Encyclopédie des Personnages </h1>
+
+<div class="box" style="flex-flow: row wrap;">
+  {% for encyclopediedespersos in encyclopedie_des_personnages %}
+    <a href="{{ path('encyclopedie_du_personnage', {'id': encyclopediedespersos.id }) }}" class="flex">
+      <div class="image">
+        <img src=" {{ asset('img/logoencyclopediedespersonnages/' ~ encyclopediedespersos.img) }} " alt=""/>
+      </div>
+      <div class="text">
+        <p>{{ encyclopediedespersos.title }}</p>
+      </div>
+    </a>
+    {% endfor %}
+
+{% endblock %}

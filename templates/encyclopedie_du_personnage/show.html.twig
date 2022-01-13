@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Encyclopedie de {{ encyclopedie_du_personnage.title }}{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/flexencyclopediedupersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}">
+
+{% endblock %}
+
+{% block body %}
+  
+ <h1 class="text-light">Encyclopedie de {{ encyclopedie_du_personnage.title }}</h1>
+
+ <div class="box" style="flex-flow: row wrap;">
+    {% if personnages is not null %}
+       
+
+        {% for personnage in personnages %}
+            <a href="{{ path('encyclopedie_du_personnage', {'id': personnage.id }) }}" class="flex">
+                <div class="image">
+                    <img src=" {{ asset('img/logoencyclopediedupersonnage/' ~ personnage.img) }} " alt="" />
+                </div>
+                <div class="text">
+                    <p>{{ personnage.title }}</p>
+                </div>
+            </a>
+        {% endfor %}
+    {% else %}
+        <h1>T'as encore rien créé mec !</h1>
+    {% endif %}
+{% endblock %}

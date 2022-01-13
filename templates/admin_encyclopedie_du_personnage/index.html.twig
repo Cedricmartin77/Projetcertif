@@ -1,0 +1,39 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}Encyclopedie du Personnage{% endblock %}
+
+{% block body %}
+    <h1>Encyclopedie du Personnage</h1>
+
+    <a href="{{ path('admin_encyclopedie_du_personnage_new') }}" class="text-light">Crée une nouvelle Encyclopédie du Personnage</a>
+
+    <table class="table text-light">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Img</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for encyclopedie_du_personnage in encyclopedie_du_personnages %}
+            <tr>
+                <td>{{ encyclopedie_du_personnage.id }}</td>
+                <td>{{ encyclopedie_du_personnage.title }}</td>
+                <td><img src="{{ asset('img/logoencyclopediedupersonnage/' ~ encyclopedie_du_personnage.img) }}" alt=""></td>
+                <td>
+                    <a href="{{ path('admin_encyclopedie_du_personnage_show', {'id': encyclopedie_du_personnage.id}) }}" class="text-light">Voir</a>
+                    <a href="{{ path('admin_encyclopedie_du_personnage_edit', {'id': encyclopedie_du_personnage.id}) }}" class="text-light">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4 text-light">Aucun résultat trouvée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_encyclopedie_du_personnage_new') }}" class="text-light">Crée une nouvelle Encyclopédie du Personnage</a>
+{% endblock %}

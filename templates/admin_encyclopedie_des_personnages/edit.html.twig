@@ -1,0 +1,13 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}Modifer Encyclopedie des Personnages{% endblock %}
+
+{% block body %}
+    <h1>Modifer Encyclopedie des Personnages</h1>
+
+    {{ include('admin_encyclopedie_des_personnages/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+    <a href="{{ path('admin_encyclopedie_des_personnages_index') }}" class="text-light">Retour a la liste</a>
+
+    {{ include('admin_encyclopedie_des_personnages/_delete_form.html.twig') }}
+{% endblock %}

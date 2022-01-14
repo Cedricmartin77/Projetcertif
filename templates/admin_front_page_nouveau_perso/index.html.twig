@@ -6,6 +6,8 @@
 {% block body %}
     <h1>Front Page Nouveau Persos index</h1>
 
+    <a href="{{ path('admin_front_page_nouveau_perso_new') }}" class="text-light">Crée un nouveau Perso en Accueil</a>
+    
     <table class="table text-light">
         <thead>
             <tr>
@@ -36,7 +38,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="8 text-light">no records found</td>
+                <td colspan="8 text-light">Aucun résultat trouvée/td>
             </tr>
         {% endfor %}
         </tbody>

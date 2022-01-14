@@ -16,43 +16,43 @@
                 <td><img src="{{ asset('img/fichepersonnageartwork/' ~ fiche_personnage_rarete_ssr.img) }}" alt=""></td>
             </tr>
             <tr>
-                <th>Description Leader Skill</th>
+                <th>Description leader Skill</th>
                 <td>{{ fiche_personnage_rarete_ssr.descriptionleaderskill }}</td>
             </tr>
             <tr>
-                <th>Nom Super Attaque</th>
+                <th>Nom super Attaque</th>
                 <td>{{ fiche_personnage_rarete_ssr.nomsuperattaque }}</td>
             </tr>
             <tr>
-                <th>Description Super Attaque</th>
+                <th>Description super Attaque</th>
                 <td>{{ fiche_personnage_rarete_ssr.descriptionsuperattaque }}</td>
             </tr>
             <tr>
-                <th>Nom Passive Skill</th>
+                <th>Nom passive Skill</th>
                 <td>{{ fiche_personnage_rarete_ssr.nompassiveskill }}</td>
             </tr>
             <tr>
-                <th>Description Passive Skill</th>
+                <th>Description passive Skill</th>
                 <td>{{ fiche_personnage_rarete_ssr.descriptionpassiveskill }}</td>
             </tr>
             <tr>
-                <th>Liste Des Liens du Personnages</th>
+                <th>Liste des Liens du Personnages</th>
                 <td>{{ fiche_personnage_rarete_ssr.listedesliensdupersonnages }}</td>
             </tr>
             <tr>
-                <th>Listes Des Categories du Personnage</th>
+                <th>Listes des Categories du Personnage</th>
                 <td>{{ fiche_personnage_rarete_ssr.listesdescategoriesdupersonnage }}</td>
             </tr>
             <tr>
-                <th>Hp De Base</th>
+                <th>Hp de Base</th>
                 <td>{{ fiche_personnage_rarete_ssr.hpdebase }}</td>
             </tr>
             <tr>
-                <th>Attaque De Base</th>
+                <th>Attaque de Base</th>
                 <td>{{ fiche_personnage_rarete_ssr.attaquedebase }}</td>
             </tr>
             <tr>
-                <th>Defense De Base</th>
+                <th>Defense de Base</th>
                 <td>{{ fiche_personnage_rarete_ssr.defensedebase }}</td>
             </tr>
             <tr>
@@ -72,7 +72,7 @@
 
     <a href="{{ path('admin_fiche_personnage_rarete_ssr_index') }}" class="text-light">Retour a la liste des Fiches</a>
 
-    <a href="{{ path('admin_fiche_personnage_rarete_ssr_edit', {'id': fiche_personnage_rarete_ssr.id}) }}" class="text-light">edit</a>
+    <a href="{{ path('admin_fiche_personnage_rarete_ssr_edit', {'id': fiche_personnage_rarete_ssr.id}) }}" class="text-light">Modifier</a>
 
     {{ include('admin_fiche_personnage_rarete_ssr/_delete_form.html.twig') }}
 {% endblock %}

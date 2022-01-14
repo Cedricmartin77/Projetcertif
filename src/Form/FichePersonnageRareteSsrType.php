@@ -86,7 +86,8 @@ class FichePersonnageRareteSsrType extends AbstractType
             ])
             ->add('encyclopediedupersonnage', EntityType::class, [
                 'class' => EncyclopedieDuPersonnage::class,
-                'choice_label' => 'title'
+                'choice_label' => 'title',
+                'multiple' => 'true'
             ])
             ->add('hpdebase', IntegerType::class, [
                 'label' => 'Hp de Base',

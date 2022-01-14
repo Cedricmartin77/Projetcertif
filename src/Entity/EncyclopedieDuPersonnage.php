@@ -25,13 +25,8 @@ class EncyclopedieDuPersonnage
     #[ORM\JoinColumn(nullable: false)]
     private $encyclopedieDesPersonnages;
 
-    #[ORM\OneToMany(mappedBy: 'encyclopediedupersonnage', targetEntity: FichePersonnageRareteSsr::class)]
-    private $fichePersonnageRareteSsrs;
-
-    public function __construct()
-    {
-        $this->fichePersonnageRareteSsrs = new ArrayCollection();
-    }
+    #[ORM\ManyToOne(targetEntity: FichePersonnageRareteSsr::class, inversedBy: 'encyclopediedupersonnage')]
+    private $fichePersonnageRareteSsr;
 
     public function getId(): ?int
     {
@@ -74,34 +69,15 @@ class EncyclopedieDuPersonnage
         return $this;
     }
 
-    /**
-     * @return Collection|FichePersonnageRareteSsr[]
-     */
-    public function getFichePersonnageRareteSsrs(): Collection
+    public function getFichePersonnageRareteSsr(): ?FichePersonnageRareteSsr
     {
-        return $this->fichePersonnageRareteSsrs;
+        return $this->fichePersonnageRareteSsr;
     }
 
-    public function addFichePersonnageRareteSsr(FichePersonnageRareteSsr $fichePersonnageRareteSsr): self
+    public function setFichePersonnageRareteSsr(?FichePersonnageRareteSsr $fichePersonnageRareteSsr): self
     {
-        if (!$this->fichePersonnageRareteSsrs->contains($fichePersonnageRareteSsr)) {
-            $this->fichePersonnageRareteSsrs[] = $fichePersonnageRareteSsr;
-            $fichePersonnageRareteSsr->setEncyclopediedupersonnage($this);
-        }
+        $this->fichePersonnageRareteSsr = $fichePersonnageRareteSsr;
 
         return $this;
-    }
-
-    public function removeFichePersonnageRareteSsr(FichePersonnageRareteSsr $fichePersonnageRareteSsr): self
-    {
-        if ($this->fichePersonnageRareteSsrs->removeElement($fichePersonnageRareteSsr)) {
-            // set the owning side to null (unless already changed)
-            if ($fichePersonnageRareteSsr->getEncyclopediedupersonnage() === $this) {
-                $fichePersonnageRareteSsr->setEncyclopediedupersonnage(null);
-            }
-        }
-
-        return $this;
-    }
-
+    } 
 }

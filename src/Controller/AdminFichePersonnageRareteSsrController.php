@@ -83,7 +83,7 @@ class AdminFichePersonnageRareteSsrController extends AbstractController
             $manager->persist( $fichePersonnageRareteSsr);
             $manager->flush();
             $this->addFlash('success', 'L\'encyclopédie des personnages bien été modifiée');
-            return $this->redirectToRoute('admin_fiche_personnage_rare_ssr_index');
+            return $this->redirectToRoute('admin_fiche_personnage_rarete_ssr_index');
         }
         return $this->render('admin_fiche_personnage_rarete_ssr/edit.html.twig', [
             ' fichePersonnageRareteSsr' =>  $fichePersonnageRareteSsr,

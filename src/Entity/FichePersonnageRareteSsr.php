@@ -57,6 +57,9 @@ class FichePersonnageRareteSsr
     #[ORM\Column(type: 'integer')]
     private $defensemax;
 
+    #[ORM\ManyToOne(targetEntity: EncyclopedieDuPersonnage::class, inversedBy: 'fichePersonnageRareteSsrs')]
+    private $encyclopediedupersonnage;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -226,6 +229,18 @@ class FichePersonnageRareteSsr
     public function setDefensemax(int $defensemax): self
     {
         $this->defensemax = $defensemax;
+
+        return $this;
+    }
+
+    public function getEncyclopediedupersonnage(): ?EncyclopedieDuPersonnage
+    {
+        return $this->encyclopediedupersonnage;
+    }
+
+    public function setEncyclopediedupersonnage(?EncyclopedieDuPersonnage $encyclopediedupersonnage): self
+    {
+        $this->encyclopediedupersonnage = $encyclopediedupersonnage;
 
         return $this;
     }

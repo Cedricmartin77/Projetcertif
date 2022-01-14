@@ -25,6 +25,14 @@ class EncyclopedieDuPersonnage
     #[ORM\JoinColumn(nullable: false)]
     private $encyclopedieDesPersonnages;
 
+    #[ORM\OneToMany(mappedBy: 'encyclopediedupersonnage', targetEntity: FichePersonnageRareteSsr::class)]
+    private $fichePersonnageRareteSsrs;
+
+    public function __construct()
+    {
+        $this->fichePersonnageRareteSsrs = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -62,6 +70,36 @@ class EncyclopedieDuPersonnage
     public function setEncyclopedieDesPersonnages(?EncyclopedieDesPersonnages $encyclopedieDesPersonnages): self
     {
         $this->encyclopedieDesPersonnages = $encyclopedieDesPersonnages;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|FichePersonnageRareteSsr[]
+     */
+    public function getFichePersonnageRareteSsrs(): Collection
+    {
+        return $this->fichePersonnageRareteSsrs;
+    }
+
+    public function addFichePersonnageRareteSsr(FichePersonnageRareteSsr $fichePersonnageRareteSsr): self
+    {
+        if (!$this->fichePersonnageRareteSsrs->contains($fichePersonnageRareteSsr)) {
+            $this->fichePersonnageRareteSsrs[] = $fichePersonnageRareteSsr;
+            $fichePersonnageRareteSsr->setEncyclopediedupersonnage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFichePersonnageRareteSsr(FichePersonnageRareteSsr $fichePersonnageRareteSsr): self
+    {
+        if ($this->fichePersonnageRareteSsrs->removeElement($fichePersonnageRareteSsr)) {
+            // set the owning side to null (unless already changed)
+            if ($fichePersonnageRareteSsr->getEncyclopediedupersonnage() === $this) {
+                $fichePersonnageRareteSsr->setEncyclopediedupersonnage(null);
+            }
+        }
 
         return $this;
     }

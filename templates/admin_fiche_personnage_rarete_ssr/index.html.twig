@@ -30,7 +30,7 @@
         {% for fiche_personnage_rarete_ssr in fiche_personnage_rarete_ssrs %}
             <tr>
                 <td>{{ fiche_personnage_rarete_ssr.id }}</td>
-                <td>{{ fiche_personnage_rarete_ssr.img }}</td>
+                <td><img src="{{ asset('img/fichepersonnageartwork/' ~ fiche_personnage_rarete_ssr.img) }}" alt=""></td>
                 <td>{{ fiche_personnage_rarete_ssr.descriptionleaderskill }}</td>
                 <td>{{ fiche_personnage_rarete_ssr.nomsuperattaque }}</td>
                 <td>{{ fiche_personnage_rarete_ssr.descriptionsuperattaque }}</td>

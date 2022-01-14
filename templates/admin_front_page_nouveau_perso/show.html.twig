@@ -1,0 +1,47 @@
+{% extends 'base.Admin.html.twig' %}
+
+
+{% block title %}Front Pag Nouveau Perso{% endblock %}
+
+{% block body %}
+    <h1>Front Pag Nouveau Perso</h1>
+
+    <table class="table text-light">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ front_page_nouveau_perso.id }}</td>
+            </tr>
+            <tr>
+                <th>Img1</th>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img1) }}" alt=""></td>
+            </tr>
+            <tr>
+                <th>Img2</th>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img2) }}" alt=""></td>
+            </tr>
+            <tr>
+                <th>Img3</th>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img3) }}" alt=""></td>
+            </tr>
+            <tr>
+                <th>Img4</th>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img4) }}" alt=""></td>
+            </tr>
+            <tr>
+                <th>Img5</th>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img5) }}" alt=""></td>
+            </tr>
+            <tr>
+                <th>Img6</th>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img6) }}" alt=""></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="text-light">back to list</a>
+
+    <a href="{{ path('admin_front_page_nouveau_perso_edit', {'id': front_page_nouveau_perso.id}) }}" class="text-light">edit</a>
+
+    {{ include('admin_front_page_nouveau_perso/_delete_form.html.twig') }}
+{% endblock %}

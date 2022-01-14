@@ -1,0 +1,14 @@
+{% extends 'base.Admin.html.twig' %}
+
+
+{% block title %}Modifier un Perso en page d'Accueil{% endblock %}
+
+{% block body %}
+    <h1>Modifier un Perso en page d'Accueil</h1>
+
+    {{ include('admin_front_page_nouveau_perso/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="text-light">back to list</a>
+
+    {{ include('admin_front_page_nouveau_perso/_delete_form.html.twig') }}
+{% endblock %}

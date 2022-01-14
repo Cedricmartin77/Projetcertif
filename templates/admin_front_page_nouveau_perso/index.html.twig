@@ -1,0 +1,46 @@
+{% extends 'base.Admin.html.twig' %}
+
+
+{% block title %}Front Page Nouveau Persos{% endblock %}
+
+{% block body %}
+    <h1>Front Page Nouveau Persos index</h1>
+
+    <table class="table text-light">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Img1</th>
+                <th>Img2</th>
+                <th>Img3</th>
+                <th>Img4</th>
+                <th>Img5</th>
+                <th>Img6</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for front_page_nouveau_perso in front_page_nouveau_persos %}
+            <tr>
+                <td>{{ front_page_nouveau_perso.id }}</td>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img1) }}" alt=""></td>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img2) }}" alt=""></td>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img3) }}" alt=""></td>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img4) }}" alt=""></td>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img5) }}" alt=""></td>
+                <td><img src="{{ asset('img/frontpageartworkpersonnage/' ~ front_page_nouveau_perso.img6) }}" alt=""></td>
+                <td>
+                    <a href="{{ path('admin_front_page_nouveau_perso_show', {'id': front_page_nouveau_perso.id}) }}">Voir</a>
+                    <a href="{{ path('admin_front_page_nouveau_perso_edit', {'id': front_page_nouveau_perso.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8 text-light">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_front_page_nouveau_perso_new') }}" class="text-light">Crée un nouveau Perso en Accueil</a>
+{% endblock %}

@@ -87,7 +87,7 @@ class AdminEncyclopedieDesPersonnagesController extends AbstractController
             return $this->redirectToRoute('admin_encyclopedie_des_personnages_index');
         }
         return $this->render('admin_encyclopedie_des_personnages/edit.html.twig', [
-            '$encyclopedieDesPersonnages' => $encyclopedieDesPersonnages,
+            'encyclopedieDesPersonnages' => $encyclopedieDesPersonnages,
             'form' => $form->createView()
         ]);
     }

@@ -22,7 +22,7 @@ class FichePersonnageRareteSsrController extends AbstractController
     //     ]);
     // }
 
-    #[Route('/fiche/personnage/rarete/ssr/{id}', name: 'fiche_personnage_rarete_ssr_show', methods: ['GET'])]
+    #[Route('/fiche/personnage/rarete/ssr/{id}', name: 'fiche_personnage_rarete_ssr', methods: ['GET'])]
     public function show(FichePersonnageRareteSsrRepository $fichePersonnageRareteSsrRepository, $id): Response
     {
         $fichePersonnageRareteSsr = $fichePersonnageRareteSsrRepository->find($id);

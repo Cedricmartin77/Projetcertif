@@ -57,11 +57,6 @@ class FichePersonnageRareteSsr
     #[ORM\Column(type: 'integer')]
     private $defensemax;
 
-    public function __construct()
-    {
-        $this->encyclopediedupersonnage = new ArrayCollection();
-    }
-
     public function getId(): ?int
     {
         return $this->id;
@@ -234,5 +229,4 @@ class FichePersonnageRareteSsr
 
         return $this;
     }
- 
 }

@@ -34,7 +34,7 @@ class AdminFichePersonnageRareteSsrController extends AbstractController
             $infoImg = $form['img']->getData(); // récupère les informations de l'Img 
             $extensionImg = $infoImg->guessExtension(); // récupère l'extension de fichier de l'Img 
             $nomImg = time() . '-3.' . $extensionImg; // reconstitue un nom d'Img unique pour l'Img 
-            $infoImg->move($this->getParameter('fichePersonnage_pictures_directory'), $nomImg); // déplace l'Img  dans le dossier adéquat
+            $infoImg->move($this->getParameter('fichePersonnageRareteSsr_pictures_directory'), $nomImg); // déplace l'Img  dans le dossier adéquat
             $fichePersonnageRareteSsr->setImg($nomImg); // définit le nom de l'image à mettre en base de données
 
             $manager = $managerRegistry->getManager(); // récupère le manager de Doctrine
@@ -69,7 +69,7 @@ class AdminFichePersonnageRareteSsrController extends AbstractController
             $infoImg = $form['img']->getData();
             $nomOldImg = $fichePersonnageRareteSsr->getImg(); // récupère le nom de l'ancienne img1
             if ($infoImg !== null) { // vérifie si il y a une img1 dans le formulaire
-                $cheminOldImg = $this->getParameter('fichePersonnage_pictures_directory') . '/' .$nomOldImg;
+                $cheminOldImg = $this->getParameter('fichePersonnageRareteSsr_pictures_directory') . '/' .$nomOldImg;
                 if (file_exists($cheminOldImg)) {
                     unlink($cheminOldImg); // supprime l'ancienne img1
                 }
@@ -100,7 +100,7 @@ class AdminFichePersonnageRareteSsrController extends AbstractController
     {
         $logo = $fichePersonnageRareteSsrRepository->find($id);
         // throw new \Exception('TODO: gérer la suppression des images du dossier img');
-        $img = $this->getParameter('fichePersonnage_pictures_directory') . '/' . $logo->getImg();
+        $img = $this->getParameter('fichePersonnageRareteSsr_pictures_directory') . '/' . $logo->getImg();
         if ($logo->getImg() && file_exists($img)) {
             unlink($img);
         }

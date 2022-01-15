@@ -1,0 +1,13 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}Modifier Fiche Personnage Rarete Ssr{% endblock %}
+
+{% block body %}
+    <h1>Modifier Fiche Personnage Rarete Ssr</h1>
+
+    {{ include('admin_fiche_personnage_rarete_ssr/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
+
+    <a href="{{ path('admin_fiche_personnage_rarete_ssr_index') }}" class="text-light">Retour a la liste des Fiches Personnages</a>
+
+    {{ include('admin_fiche_personnage_rarete_ssr/_delete_form.html.twig') }}
+{% endblock %}

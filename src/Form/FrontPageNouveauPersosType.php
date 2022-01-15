@@ -16,7 +16,7 @@ class FrontPageNouveauPersosType extends AbstractType
         $builder
         ->add('img1', FileType::class, [
             'required' => false,
-            'label' => 'Logo du Personnage',
+            'label' => 'Artwork du Nouveau Personnage',
             'mapped' => false,
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
@@ -37,7 +37,7 @@ class FrontPageNouveauPersosType extends AbstractType
         ])
         ->add('img2', FileType::class, [
             'required' => false,
-            'label' => 'Logo du Personnage',
+            'label' => 'Artwork du Nouveau Personnage',
             'mapped' => false,
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
@@ -58,7 +58,7 @@ class FrontPageNouveauPersosType extends AbstractType
         ])
         ->add('img3', FileType::class, [
             'required' => false,
-            'label' => 'Logo du Personnage',
+            'label' => 'Artwork du Nouveau Personnage',
             'mapped' => false,
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
@@ -79,7 +79,7 @@ class FrontPageNouveauPersosType extends AbstractType
         ])
         ->add('img4', FileType::class, [
             'required' => false,
-            'label' => 'Logo du Personnage',
+            'label' => 'Artwork du Nouveau Personnage',
             'mapped' => false,
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
@@ -100,7 +100,7 @@ class FrontPageNouveauPersosType extends AbstractType
         ])
         ->add('img5', FileType::class, [
             'required' => false,
-            'label' => 'Logo du Personnage',
+            'label' => 'Artwork du Nouveau Personnage',
             'mapped' => false,
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
@@ -121,7 +121,7 @@ class FrontPageNouveauPersosType extends AbstractType
         ])
         ->add('img6', FileType::class, [
             'required' => false,
-            'label' => 'Logo du Personnage',
+            'label' => 'Artwork du Nouveau Personnage',
             'mapped' => false,
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [

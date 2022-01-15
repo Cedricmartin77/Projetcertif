@@ -60,7 +60,7 @@ class AdminEncyclopedieDuPersonnageController extends AbstractController
     #[Route('/{id}/edit', name: 'admin_encyclopedie_du_personnage_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, EncyclopedieDuPersonnageRepository $encyclopedieDuPersonnageRepository, int $id, ManagerRegistry $managerRegistry): Response
     {
-        $encyclopedieDuPersonnage = $encyclopedieDuPersonnageRepository->find($id);;
+        $encyclopedieDuPersonnage = $encyclopedieDuPersonnageRepository->find($id);
         $form = $this->createForm(EncyclopedieDuPersonnageType::class, $encyclopedieDuPersonnage);
         $form->handleRequest($request);
 

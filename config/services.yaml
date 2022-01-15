@@ -7,7 +7,7 @@ parameters:
     encyclopedieDesPersonnages_pictures_directory: '%kernel.project_dir%/public/img/logoencyclopediedespersonnages'
     encyclopedieDuPersonnage_pictures_directory: '%kernel.project_dir%/public/img/logoencyclopediedupersonnage'
     fichePersonnageRareteSsr_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnageartwork'
-    frontPageNouveauPersos_pictures_directory: '%kernel.project_dir%/public/img/frontpageartworkpersonnage'
+    frontPageNouveauPersonnage_pictures_directory: '%kernel.project_dir%/public/img/frontpageartworknouveaupersonnage'
 services:
     # default configuration for services in *this* file
     _defaults:

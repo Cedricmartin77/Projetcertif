@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fiche Personnage Rarete Ssr{% endblock %}
+
+{% block body %}
+    <h1>Fiche Personnage Rarete Ssr</h1>
+
+    <table class="table text-light">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fiche_personnage_rarete_ssr.id }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ fiche_personnage_rarete_ssr.img }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionaptitudeleader</th>
+                <td>{{ fiche_personnage_rarete_ssr.descriptionaptitudeleader }}</td>
+            </tr>
+            <tr>
+                <th>Nomsuperattaque</th>
+                <td>{{ fiche_personnage_rarete_ssr.nomsuperattaque }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionsuperattaque</th>
+                <td>{{ fiche_personnage_rarete_ssr.descriptionsuperattaque }}</td>
+            </tr>
+            <tr>
+                <th>Nompassiveskill</th>
+                <td>{{ fiche_personnage_rarete_ssr.nompassiveskill }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionpassiveskill</th>
+                <td>{{ fiche_personnage_rarete_ssr.descriptionpassiveskill }}</td>
+            </tr>
+            <tr>
+                <th>Listedesliensdupersonnage</th>
+                <td>{{ fiche_personnage_rarete_ssr.listedesliensdupersonnage }}</td>
+            </tr>
+            <tr>
+                <th>Listedescategoriesdupersonnage</th>
+                <td>{{ fiche_personnage_rarete_ssr.listedescategoriesdupersonnage }}</td>
+            </tr>
+            <tr>
+                <th>Hpdebase</th>
+                <td>{{ fiche_personnage_rarete_ssr.hpdebase }}</td>
+            </tr>
+            <tr>
+                <th>Attaquedebase</th>
+                <td>{{ fiche_personnage_rarete_ssr.attaquedebase }}</td>
+            </tr>
+            <tr>
+                <th>Defensedebase</th>
+                <td>{{ fiche_personnage_rarete_ssr.defensedebase }}</td>
+            </tr>
+            <tr>
+                <th>Hpmax</th>
+                <td>{{ fiche_personnage_rarete_ssr.hpmax }}</td>
+            </tr>
+            <tr>
+                <th>Attaquemax</th>
+                <td>{{ fiche_personnage_rarete_ssr.attaquemax }}</td>
+            </tr>
+            <tr>
+                <th>Defensemax</th>
+                <td>{{ fiche_personnage_rarete_ssr.defensemax }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,1 @@
+php bin/console d:s:u --force POUR FORCER LA MISE A JOUR DE LA TABLE CAR ELLE NE VEUX PLUS

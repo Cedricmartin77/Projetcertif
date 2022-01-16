@@ -25,9 +25,6 @@ class EncyclopedieDuPersonnage
     #[ORM\JoinColumn(nullable: false)]
     private $encyclopedieDesPersonnages;
 
-    #[ORM\ManyToOne(targetEntity: FichePersonnageRareteSsr::class, inversedBy: 'encyclopediedupersonnage')]
-    private $fichePersonnageRareteSsr;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -65,18 +62,6 @@ class EncyclopedieDuPersonnage
     public function setEncyclopedieDesPersonnages(?EncyclopedieDesPersonnages $encyclopedieDesPersonnages): self
     {
         $this->encyclopedieDesPersonnages = $encyclopedieDesPersonnages;
-
-        return $this;
-    }
-
-    public function getFichePersonnageRareteSsr(): ?FichePersonnageRareteSsr
-    {
-        return $this->fichePersonnageRareteSsr;
-    }
-
-    public function setFichePersonnageRareteSsr(?FichePersonnageRareteSsr $fichePersonnageRareteSsr): self
-    {
-        $this->fichePersonnageRareteSsr = $fichePersonnageRareteSsr;
 
         return $this;
     }

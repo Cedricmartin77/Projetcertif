@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fiche Personnage Ssr{% endblock %}
+
+{% block body %}
+    <h1>Fiche Personnage Ssr</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fiche_personnage_ssr.id }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ fiche_personnage_ssr.img }}</td>
+            </tr>
+            <tr>
+                <th>Aptitudeleader</th>
+                <td>{{ fiche_personnage_ssr.aptitudeleader }}</td>
+            </tr>
+            <tr>
+                <th>Nomattaquespecial</th>
+                <td>{{ fiche_personnage_ssr.nomattaquespecial }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionattaquespecial</th>
+                <td>{{ fiche_personnage_ssr.descriptionattaquespecial }}</td>
+            </tr>
+            <tr>
+                <th>Nomaptitudepassive</th>
+                <td>{{ fiche_personnage_ssr.nomaptitudepassive }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionaptitudepassive</th>
+                <td>{{ fiche_personnage_ssr.descriptionaptitudepassive }}</td>
+            </tr>
+            <tr>
+                <th>Listedesliensdupersonnage</th>
+                <td>{{ fiche_personnage_ssr.listedesliensdupersonnage }}</td>
+            </tr>
+            <tr>
+                <th>Listedescategoriesdupersonnage</th>
+                <td>{{ fiche_personnage_ssr.listedescategoriesdupersonnage }}</td>
+            </tr>
+            <tr>
+                <th>Hpdebase</th>
+                <td>{{ fiche_personnage_ssr.hpdebase }}</td>
+            </tr>
+            <tr>
+                <th>Attaquedebase</th>
+                <td>{{ fiche_personnage_ssr.attaquedebase }}</td>
+            </tr>
+            <tr>
+                <th>Defensedebase</th>
+                <td>{{ fiche_personnage_ssr.defensedebase }}</td>
+            </tr>
+            <tr>
+                <th>Hpmax</th>
+                <td>{{ fiche_personnage_ssr.hpmax }}</td>
+            </tr>
+            <tr>
+                <th>Attaquemax</th>
+                <td>{{ fiche_personnage_ssr.attaquemax }}</td>
+            </tr>
+            <tr>
+                <th>Defensemax</th>
+                <td>{{ fiche_personnage_ssr.defensemax }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}Les Fiche Personnage Ssr{% endblock %}
+
+{% block body %}
+    <h1>Les Fiche Personnage Ssr</h1>
+
+    <a href="{{ path('admin_fiche_personnage_ssr_new') }}" class="text-light">Crée une nouvelle Fiche</a>
+    
+    <table class="table text-light">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Aptitude Leader</th>
+                <th>Nom Attaque Special</th>
+                <th>Description Attaque Special</th>
+                <th>Nom Aptitude Passive</th>
+                <th>Description Aptitude Passive</th>
+                <th>Liste Des Liens Du Personnage</th>
+                <th>Liste Des Categories Du Personnage</th>
+                <th>Hp De Base</th>
+                <th>Attaque De Base</th>
+                <th>Defense De Base</th>
+                <th>Hp Max</th>
+                <th>Attaque Max</th>
+                <th>Defense Max</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fiche_personnage_ssr in fiche_personnage_ssrs %}
+            <tr>
+                <td>{{ fiche_personnage_ssr.id }}</td>
+                <td><img src="{{ asset('img/fichepersonnageartwork/' ~ fiche_personnage_ssr.img) }}" alt=""></td>
+                <td>{{ fiche_personnage_ssr.aptitudeleader }}</td>
+                <td>{{ fiche_personnage_ssr.nomattaquespecial }}</td>
+                <td>{{ fiche_personnage_ssr.descriptionattaquespecial }}</td>
+                <td>{{ fiche_personnage_ssr.nomaptitudepassive }}</td>
+                <td>{{ fiche_personnage_ssr.descriptionaptitudepassive }}</td>
+                <td>{{ fiche_personnage_ssr.listedesliensdupersonnage }}</td>
+                <td>{{ fiche_personnage_ssr.listedescategoriesdupersonnage }}</td>
+                <td>{{ fiche_personnage_ssr.hpdebase }}</td>
+                <td>{{ fiche_personnage_ssr.attaquedebase }}</td>
+                <td>{{ fiche_personnage_ssr.defensedebase }}</td>
+                <td>{{ fiche_personnage_ssr.hpmax }}</td>
+                <td>{{ fiche_personnage_ssr.attaquemax }}</td>
+                <td>{{ fiche_personnage_ssr.defensemax }}</td>
+                <td>
+                    <a href="{{ path('admin_fiche_personnage_ssr_show', {'id': fiche_personnage_ssr.id}) }}" class="text-light">Voir</a>
+                    <a href="{{ path('admin_fiche_personnage_ssr_edit', {'id': fiche_personnage_ssr.id}) }}" class="text-light">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="16 text-light">Aucun résultat trouvée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_fiche_personnage_ssr_new') }}" class="text-light">Crée une nouvelle Fiche</a>
+{% endblock %}

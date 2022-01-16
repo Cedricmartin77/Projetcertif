@@ -1,0 +1,78 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}Fiche Personnage Ssr{% endblock %}
+
+{% block body %}
+    <h1>Fiche Personnage Ssr</h1>
+
+    <table class="table text-light">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fiche_personnage_ssr.id }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td><img src="{{ asset('img/fichepersonnageartwork/' ~ fiche_personnage_ssr.img) }}" alt=""></td>
+            </tr>
+            <tr>
+                <th>Aptitude Leader</th>
+                <td>{{ fiche_personnage_ssr.aptitudeleader }}</td>
+            </tr>
+            <tr>
+                <th>Nom Attaque Special</th>
+                <td>{{ fiche_personnage_ssr.nomattaquespecial }}</td>
+            </tr>
+            <tr>
+                <th>Description Attaques Special</th>
+                <td>{{ fiche_personnage_ssr.descriptionattaquespecial }}</td>
+            </tr>
+            <tr>
+                <th>Nom Aptitude Passive</th>
+                <td>{{ fiche_personnage_ssr.nomaptitudepassive }}</td>
+            </tr>
+            <tr>
+                <th>Description Aptitude Passive</th>
+                <td>{{ fiche_personnage_ssr.descriptionaptitudepassive }}</td>
+            </tr>
+            <tr>
+                <th>Liste Des Liens Du Personnage</th>
+                <td>{{ fiche_personnage_ssr.listedesliensdupersonnage }}</td>
+            </tr>
+            <tr>
+                <th>Liste Des Categories Du Personnage</th>
+                <td>{{ fiche_personnage_ssr.listedescategoriesdupersonnage }}</td>
+            </tr>
+            <tr>
+                <th>Hp de Base</th>
+                <td>{{ fiche_personnage_ssr.hpdebase }}</td>
+            </tr>
+            <tr>
+                <th>Attaque De Base</th>
+                <td>{{ fiche_personnage_ssr.attaquedebase }}</td>
+            </tr>
+            <tr>
+                <th>Defense De Base</th>
+                <td>{{ fiche_personnage_ssr.defensedebase }}</td>
+            </tr>
+            <tr>
+                <th>Hp Max</th>
+                <td>{{ fiche_personnage_ssr.hpmax }}</td>
+            </tr>
+            <tr>
+                <th>Attaque Max</th>
+                <td>{{ fiche_personnage_ssr.attaquemax }}</td>
+            </tr>
+            <tr>
+                <th>Defense Max</th>
+                <td>{{ fiche_personnage_ssr.defensemax }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_fiche_personnage_ssr_index') }}" class="text-light">Retour a la liste des Fiches</a>
+
+    <a href="{{ path('admin_fiche_personnage_ssr_edit', {'id': fiche_personnage_ssr.id}) }}" class="text-light">Modifier</a>
+
+    {{ include('admin_fiche_personnage_ssr/_delete_form.html.twig') }}
+{% endblock %}

@@ -7,79 +7,86 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/flexencyclopediedupersonnage.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnage.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/statpersonnage.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/descriptionperso.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/textedescriptionperso.css') }}">
 
 {% endblock %}
 
 {% block body %}
-    <h1>Fiche Personnage</h1>
 
     {% for personnages in fiche_personnage_ssr %}
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ personnages.id }}</td>
-            </tr>
-            <tr>
-                <th>Img</th>
-                <td><img src="{{ asset('img/fichepersonnageartwork/' ~ personnages.img) }}" alt=""></td>
-            </tr>
-            <tr>
-                <th>Aptitudeleader</th>
-                <td>{{ personnages.aptitudeleader }}</td>
-            </tr>
-            <tr>
-                <th>Nomattaquespecial</th>
-                <td>{{ personnages.nomattaquespecial }}</td>
-            </tr>
-            <tr>
-                <th>Descriptionattaquespecial</th>
-                <td>{{ personnages.descriptionattaquespecial }}</td>
-            </tr>
-            <tr>
-                <th>Nomaptitudepassive</th>
-                <td>{{ personnages.nomaptitudepassive }}</td>
-            </tr>
-            <tr>
-                <th>Descriptionaptitudepassive</th>
-                <td>{{ personnages.descriptionaptitudepassive }}</td>
-            </tr>
-            <tr>
-                <th>Listedesliensdupersonnage</th>
-                <td>{{ personnages.listedesliensdupersonnage }}</td>
-            </tr>
-            <tr>
-                <th>Listedescategoriesdupersonnage</th>
-                <td>{{ personnages.listedescategoriesdupersonnage }}</td>
-            </tr>
-            <tr>
-                <th>Hpdebase</th>
-                <td>{{ personnages.hpdebase }}</td>
-            </tr>
-            <tr>
-                <th>Attaquedebase</th>
-                <td>{{ personnages.attaquedebase }}</td>
-            </tr>
-            <tr>
-                <th>Defensedebase</th>
-                <td>{{ personnages.defensedebase }}</td>
-            </tr>
-            <tr>
-                <th>Hpmax</th>
-                <td>{{ personnages.hpmax }}</td>
-            </tr>
-            <tr>
-                <th>Attaquemax</th>
-                <td>{{ personnages.attaquemax }}</td>
-            </tr>
-            <tr>
-                <th>Defensemax</th>
-                <td>{{ personnages.defensemax }}</td>
-            </tr>
-        </tbody>
-    </table>
+
+    <div class="container-fluid container2 row-12">
+        <img src="{{ asset('img/fichepersonnageartwork/' ~ personnages.img) }}" alt="">
+    <div class="box">
+        <div class="flex">
+            <div class="row">
+                <div class="col">
+                    <p class="text0">Leader skill :</p>
+                    <p class="text1">{{ personnages.aptitudeleader }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="text2">{{ personnages.nomattaquespecial }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="text3">{{ personnages.descriptionattaquespecial }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ personnages.nomaptitudepassive}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ personnages.descriptionaptitudepassive }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ personnages.listedesliensdupersonnage }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ personnages.listedescategoriesdupersonnage }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ personnages.hpdebase }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ personnages.attaquedebase}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ personnages.defensedebase}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ personnages.hpmax}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ personnages.attaquemax}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ personnages.defensemax}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
     {% endfor %}
     
 {% endblock %}

@@ -1,12 +1,17 @@
+.text0 {
+  margin-bottom: 6px;
+  margin-right: 100px;
+}
+
 .text1 {
   margin-bottom: 6px;
   margin-right: 100px;
+  border-bottom: white solid;
 }
 
 .text2 {
   margin-bottom: 167px;
   margin-right: 50px;
-  border-bottom: white solid;
 }
 
 .text3 {
@@ -17,7 +22,6 @@
 .text4 {
   margin-bottom: 108px;
   margin-right: 100px;
-  border-bottom: white solid;
 }
 
 .text5 {
@@ -28,5 +32,4 @@
 .text6 {
   margin-bottom: 80px;
   margin-right: 100px;
-  border-bottom: white solid;
 }

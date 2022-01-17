@@ -51,7 +51,7 @@ class FichePersonnageSsrType extends AbstractType
                 ]
             ])
             ->add('nomattaquespecial', TextType::class, [
-                'label' => 'Aptitude Leader',
+                'label' => 'Nom Attaque Spécial',
                 'attr' => [
                     'placeholder' => 'Ex.: Big Bang !'
                 ]

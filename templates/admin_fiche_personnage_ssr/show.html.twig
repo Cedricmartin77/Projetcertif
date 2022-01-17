@@ -2,6 +2,14 @@
 
 {% block title %}Fiche Personnage Ssr{% endblock %}
 
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
+
+
+{% endblock %}
+
 {% block body %}
     <h1>Fiche Personnage Ssr</h1>
 
@@ -13,7 +21,7 @@
             </tr>
             <tr>
                 <th>Img</th>
-                <td><img src="{{ asset('img/fichepersonnageartwork/' ~ fiche_personnage_ssr.img) }}" alt=""></td>
+                <td><img src="{{ asset('img/fichepersonnageartwork/' ~ fiche_personnage_ssr.img) }}" class="img" alt=""></td>
             </tr>
             <tr>
                 <th>Aptitude Leader</th>

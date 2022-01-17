@@ -2,6 +2,13 @@
 
 {% block title %}Encyclopedie des Personnages{% endblock %}
 
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/encyclopediedespersonnages.css') }}">
+
+{% endblock %}
+
 {% block body %}
     <h1>Encyclopedie des Personnages</h1>
 
@@ -21,7 +28,7 @@
             <tr>
                 <td>{{ encyclopedie_des_personnage.id }}</td>
                 <td>{{ encyclopedie_des_personnage.title }}</td>
-                <td><img src="{{ asset('img/logoencyclopediedespersonnages/' ~ encyclopedie_des_personnage.img) }}" alt=""></td>
+                <td><img src="{{ asset('img/logoencyclopediedespersonnages/' ~ encyclopedie_des_personnage.img) }}" class="img" alt=""></td>
                 <td>
                     <a href="{{ path('admin_encyclopedie_des_personnages_show', {'id': encyclopedie_des_personnage.id}) }}" class="text-light">Voir</a>
                     <a href="{{ path('admin_encyclopedie_des_personnages_edit', {'id': encyclopedie_des_personnage.id}) }}" class="text-light">Modifier</a>

@@ -2,6 +2,13 @@
 
 {% block title %}Encyclopedie des Personnages{% endblock %}
 
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/encyclopediedespersonnages.css') }}">
+
+{% endblock %}
+
 {% block body %}
     <h1>Encyclopedie des Personnages</h1>
 
@@ -17,7 +24,7 @@
             </tr>
             <tr>
                 <th>Image</th>
-                <td><img src="{{ asset('img/logoencyclopediedespersonnages/' ~ encyclopedie_des_personnage.img) }}" alt=""></td>
+                <td><img src="{{ asset('img/logoencyclopediedespersonnages/' ~ encyclopedie_des_personnage.img) }}" class="img" alt=""></td>
             </tr>
         </tbody>
     </table>

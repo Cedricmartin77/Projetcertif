@@ -30,24 +30,14 @@ h2 {
   align-items: center;
   width: 900px;
   height: 654px;
-  margin-bottom: 25px;
+  margin-bottom: 113px;
+  margin-top: -1071px;
+  margin-left: 916px;
 }
 
 .image {
   display: flex;
   width: 30%;
-}
-
-.box {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
-body {
-  background-color: black;
 }
 
 .container2 {

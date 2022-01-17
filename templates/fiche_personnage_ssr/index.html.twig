@@ -1,9 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Fiche Personnage Ssr{% endblock %}
+{% block title %}Fiche de{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/flexencyclopediedupersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/statpersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/descriptionperso.css') }}">
+
+{% endblock %}
 
 {% block body %}
-    <h1>Fiche Personnage Ssr</h1>
+    <h1>Fiche de</h1>
 
     <table class="table">
         <thead>

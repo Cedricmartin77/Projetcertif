@@ -40,7 +40,7 @@
         {% for fiche_personnage_ssr in fiche_personnage_ssrs %}
             <tr>
                 <td>{{ fiche_personnage_ssr.id }}</td>
-                <td>{{ fiche_personnage_ssr.img }}</td>
+                <td><img src="{{ asset('img/fichepersonnageartwork/' ~ fiche_personnage_ssr.img) }}" alt=""></td>
                 <td>{{ fiche_personnage_ssr.aptitudeleader }}</td>
                 <td>{{ fiche_personnage_ssr.nomattaquespecial }}</td>
                 <td>{{ fiche_personnage_ssr.descriptionattaquespecial }}</td>

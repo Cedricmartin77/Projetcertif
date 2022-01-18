@@ -28,11 +28,11 @@ h2 {
   align-content: center;
   justify-content: center;
   align-items: center;
-  width: 900px;
-  height: 654px;
+  width: 956px;
+  height: 656px;
   margin-bottom: 113px;
-  margin-top: -1071px;
-  margin-left: 916px;
+  margin-top: -657px;
+  margin-left: 708px;
 }
 
 .image {
@@ -52,9 +52,9 @@ h2 {
 
 .img {
   border-radius: 7%;
-  height: 605px;
-  margin-left: -215px;
-  margin-top: 34px;
+  height: 654px;
+  margin-left: -362px;
+  margin-top: 20px;
 }
 
 .text0 {
@@ -67,7 +67,7 @@ h2 {
  }
  .text1 {
   margin-left: 100px;
-  margin-top: 122px;
+  margin-top: 425px;
   border-bottom: thick solid white;
   color:white
  }

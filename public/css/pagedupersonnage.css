@@ -22,7 +22,7 @@ h2 {
   border: solid 10px;
   border-radius: 20px;
   border-color: white;
-  color: white;
+  color: grey;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
@@ -60,10 +60,7 @@ h2 {
 .text0 {
   margin-left: 150px;
   margin-top: 20px;
-  position: absolute;
-  top: 128px;
-  left: 995px;
-  color:white
+  color:white;
  }
  .text1 {
   margin-left: 100px;

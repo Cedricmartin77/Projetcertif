@@ -6,13 +6,13 @@
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnage.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/descriptionperso.css') }}">
 
 {% endblock %}
 
 {% block body %}
    
     {% for personnages in fiche_personnage_ssr %}
+    <p class="text0">Leader Skill:</p>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
@@ -21,12 +21,12 @@
             <div class="col-md-4 flex container2">
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="text">{{ personnages.aptitudeleader }}</p>
+                        <p class="text1">{{ personnages.aptitudeleader }}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p>{{ personnages.nomattaquespecial }}</p>
+                        <p class="text2">{{ personnages.nomattaquespecial }}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -46,7 +46,17 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        <p>Liste des Liens:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
                         <p>{{ personnages.listedesliensdupersonnage }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Liste des Catégories:</p>
                     </div>
                 </div>
                 <div class="row">

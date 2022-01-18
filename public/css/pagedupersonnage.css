@@ -44,14 +44,37 @@ h2 {
   margin: 270px;
   display: flex;
   height: 645px;
-  width: 723px;
+  width: 855px;
   border-radius: 20%;
   margin-top: -624px;
-  margin-left: 802px;
+  margin-left: 779px;
 }
 
 .img {
   border-radius: 7%;
   height: 605px;
-  margin-left: -179px;
+  margin-left: -215px;
+  margin-top: 34px;
 }
+
+.text0 {
+  margin-left: 150px;
+  margin-top: 20px;
+  position: absolute;
+  top: 128px;
+  left: 995px;
+  color:white
+ }
+ .text1 {
+  margin-left: 100px;
+  margin-top: 30px;
+  border-bottom: thick solid white;
+  border-bottom: length ;
+  color:white
+ }
+
+ .text2 {
+  margin-left: 100px;
+  margin-top: 30px;
+  color:white
+ }

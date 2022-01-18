@@ -43,12 +43,15 @@ h2 {
 .container2 {
   margin: 270px;
   display: flex;
-  height: 650px;
-  width: 450px;
+  height: 645px;
+  width: 723px;
   border-radius: 20%;
-  margin-top: 50px;
+  margin-top: -624px;
+  margin-left: 802px;
 }
 
-img {
+.img {
   border-radius: 7%;
+  height: 605px;
+  margin-left: -179px;
 }

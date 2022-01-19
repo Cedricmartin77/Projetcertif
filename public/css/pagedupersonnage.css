@@ -1,20 +1,3 @@
-body {
-  background: black;
-  font-family: Georgia, "Times New Roman", Times, serif, Courier, monospace;
-  font-weight: 250;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-h1,
-h2 {
-  color: white;
-  margin-top: 350px;
-  margin-left: 540px;
-  margin-bottom: 160px;
-}
-
 .flex {
   display: flex;
   background-color: gray;
@@ -58,9 +41,9 @@ h2 {
 }
 
 .text0 {
-  margin-left: 150px;
+  margin-left: 97px;
   margin-top: 20px;
-  color:white;
+  color: white;
  }
  .text1 {
   margin-left: 100px;

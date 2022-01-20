@@ -1,0 +1,12 @@
+{% extends 'base.Admin.html.twig' %}
+
+
+{% block title %}Crée une nouvelle Fiche Personnage Ur{% endblock %}
+
+{% block body %}
+    <h1>Crée une nouvelle Fiche Personnage Ur</h1>
+
+    {{ include('admin_fiche_personnage_ur/_form.html.twig') }}
+
+    <a href="{{ path('admin_fiche_personnage_ur_index') }}" class="text-light">Retour a la listes des Fiches</a>
+{% endblock %}

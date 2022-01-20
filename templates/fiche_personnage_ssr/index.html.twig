@@ -1,106 +1,52 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Fiche de{% endblock %}
+{% block title %}Fiche Personnage{% endblock %}
 
 {% block stylesheets %}
 
-<link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnagessr.css') }}">
 
 {% endblock %}
 
 {% block body %}
-<div class="flex">
-        
-</div>
+
     {% for personnages in fiche_personnage_ssr %}
-    
-    <div class="container-fluid">
+   
+    <div class="container">
         <div class="row-7">
             <div class="col-5">
                 <img src="{{ asset('img/fichepersonnageartwork/' ~ personnages.img) }}" class="img" alt="">
             </div>
         </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text0">Leader Skill :</p>
-            </div>
+    </div>
+    <div class="container flex">
+        <div class="row">
+            <p>Leader Skill :</p>
+            <p class="border-bottom">{{ personnages.aptitudeleader }}</p>
+            {# <div class="dropdown-divider m-3 text-light"></div> #}
+            <p>Attaque Spé : {{ personnages.nomattaquespecial }}</p>
+            <p class="border-bottom">{{ personnages.descriptionattaquespecial }}</p>
+            <p>Aptitude Passive : {{ personnages.nomaptitudepassive }}</p>
+            <p class="border-bottom">{{ personnages.descriptionaptitudepassive }}</p>
+            <p>Liste des Liens :</p>
+            <p class="border-bottom">{{ personnages.listedesliensdupersonnage }}</p>
+            <p>Liste des Catégories :</p>
+            <p class="border-bottom">{{ personnages.listedescategoriesdupersonnage }}</p>
         </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text1">{{ personnages.aptitudeleader }}</p>
+        <div class="row">
+            <div class="col-6">
+                <p class="">PDV : {{ personnages.hpdebase }}</p>
+                <p class="">ATTAQUE : {{ personnages.attaquedebase }}</p>
+                <p class="">DEFENSE : {{ personnages.defensedebase }}</p>
             </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text2">Attaque Spé : {{ personnages.nomattaquespecial }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text3">{{ personnages.descriptionattaquespecial }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text4">Aptitude Passive : {{ personnages.nomaptitudepassive }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text5">{{ personnages.descriptionaptitudepassive }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text6">Liste des Liens :</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text7">{{ personnages.listedesliensdupersonnage }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text8">Liste des Catégories :</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text9">{{ personnages.listedescategoriesdupersonnage }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text10">PDV: {{ personnages.hpdebase }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text11">ATTAQUE: {{ personnages.attaquedebase }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text12">DEFENSE: {{ personnages.defensedebase }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text13">PDV MAX: {{ personnages.hpmax }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text14">ATTAQUE MAX: {{ personnages.attaquemax }}</p>
-            </div>
-        </div>
-        <div class="row-7">
-            <div class="col-5">
-                <p class="text15">DEFENSE MAX :{{ personnages.defensemax }}</p>
+            <div class="col-6">
+                <p class="">PDV MAX : {{ personnages.hpmax }}</p>
+                <p class="">ATTAQUE MAX : {{ personnages.attaquemax }}</p>
+                <p class="">DEFENSE MAX : {{ personnages.defensemax }}</p>
             </div>
         </div>
     </div>
+        
         {# <div class="row-md-7">
             <div class="col-md-5">
                 <img src="{{ asset('img/fichepersonnageartwork/' ~ personnages.img) }}" class="img" alt="">

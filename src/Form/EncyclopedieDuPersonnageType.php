@@ -34,7 +34,7 @@ class EncyclopedieDuPersonnageType extends AbstractType
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
                 new Image([
-                    'maxSize' => '1024k',
+                    'maxSize' => '4M',
                     'mimeTypes' => [
                         'image/png',
                         'image/jpg',

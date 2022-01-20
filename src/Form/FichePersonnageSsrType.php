@@ -30,7 +30,7 @@ class FichePersonnageSsrType extends AbstractType
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
                 new Image([
-                    'maxSize' => '1024k',
+                    'maxSize' => '10M',
                     'mimeTypes' => [
                         'image/png',
                         'image/jpg',
@@ -40,7 +40,7 @@ class FichePersonnageSsrType extends AbstractType
                         'image/svg',
                         'image/gif'
                     ],
-                    'mimeTypesMessage' => 'Merci de sélectionner une image au format PNG, JPG, JPEG ou JP2'
+                    'mimeTypesMessage' => 'Merci de sélectionner une iamge au format PNG, JPG, JPEG ou JP2'
                 ])
             ]
         ])

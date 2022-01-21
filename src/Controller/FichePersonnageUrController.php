@@ -22,6 +22,7 @@ class FichePersonnageUrController extends AbstractController
         $fichePersonnageUr = $personnages->getFichePersonnageUrs();
         return $this->render('fiche_personnage_ur/show.html.twig', [
             'fiche_personnage_ur' => $fichePersonnageUr,
+            'personnages' => $personnages
         ]);
     }
 }

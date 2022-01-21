@@ -11,7 +11,8 @@
 {% block body %}
     <h1>Encyclopedie des Personnages</h1>
 
-    <a href="{{ path('admin_encyclopedie_des_personnages_new') }}" class="text-light">Crée une nouvelle encyclopédie</a>
+    <a href="{{ path('admin_encyclopedie_des_personnages_new') }}" class="text-light btn btn-primary btn-lg active" role="button" aria-pressed="true">Crée une nouvelle Encyclopédie des Personnage</a>
+    <h1><a href="{{ path('admin_encyclopedie_du_personnage_index') }}" class="text-light btn btn-primary btn-lg active" role="button" aria-pressed="true">Retour vers Encyclopédie du Personnage</a></h1>    
 
     <table class="table text-light">
         <thead>
@@ -41,5 +42,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_encyclopedie_des_personnages_new') }}" class="text-light">Crée une nouvelle Encyclopédie des Personnages</a>
+    <a href="{{ path('admin_encyclopedie_des_personnages_new') }}" class="text-light btn btn-primary btn-lg active" role="button" aria-pressed="true">Crée une nouvelle Encyclopédie des Personnages</a>
 {% endblock %}

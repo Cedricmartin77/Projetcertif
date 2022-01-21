@@ -10,8 +10,12 @@
 
 {% block body %}
     <h1>Les Fiches Personnage Ssr</h1>
+    
+    <h1><a href="{{ path('admin_fiche_personnage_ssr_new') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Crée une nouvelle Fiche Ssr</a></h1>
 
-    <a href="{{ path('admin_fiche_personnage_ssr_new') }}" class="text-light">Crée une nouvelle Fiche</a>
+    <a href="{{ path('admin_fiche_personnage_ur_index') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Retour vers fiche Personnage Ur</a>
+
+    <a href="{{ path('admin_fiche_personnage_lr_index') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Retour vers fiche Personnage Lr</a>
     
     <table class="table text-light">
         <thead>
@@ -65,5 +69,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_fiche_personnage_ssr_new') }}" class="text-light">Crée une nouvelle Fiche</a>
+    <h1><a href="{{ path('admin_fiche_personnage_ssr_new') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Crée une nouvelle Fiche Ssr</a></h1>
 {% endblock %}

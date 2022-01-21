@@ -23,6 +23,7 @@ class FichePersonnageLrController extends AbstractController
         $fichePersonnageLr = $personnages->getFichePersonnageLrs();
         return $this->render('fiche_personnage_lr/show.html.twig', [
             'fiche_personnage_lr' => $fichePersonnageLr,
+            'personnages' => $personnages
         ]);
     }
     

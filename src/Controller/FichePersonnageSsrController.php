@@ -23,6 +23,7 @@ class FichePersonnageSsrController extends AbstractController
         $fichePersonnageSsr = $personnages->getFichePersonnageSsrs();
         return $this->render('fiche_personnage_ssr/show.html.twig', [
             'fiche_personnage_ssr' => $fichePersonnageSsr,
+            'personnages' => $personnages
         ]);
     }
 

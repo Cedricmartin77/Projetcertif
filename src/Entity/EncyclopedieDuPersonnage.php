@@ -31,10 +31,14 @@ class EncyclopedieDuPersonnage
     #[ORM\OneToMany(mappedBy: 'encyclopediedupersonnage', targetEntity: FichePersonnageUr::class, orphanRemoval: true)]
     private $fichePersonnageUrs;
 
+    #[ORM\OneToMany(mappedBy: 'encyclopediedupersonnage', targetEntity: FichePersonnageLr::class, orphanRemoval: true)]
+    private $fichePersonnageLrs;
+
     public function __construct()
     {
         $this->fichePersonnageSsrs = new ArrayCollection();
         $this->fichePersonnageUrs = new ArrayCollection();
+        $this->fichePersonnageLrs = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -132,6 +136,36 @@ class EncyclopedieDuPersonnage
             // set the owning side to null (unless already changed)
             if ($fichePersonnageUr->getEncyclopediedupersonnage() === $this) {
                 $fichePersonnageUr->setEncyclopediedupersonnage(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|FichePersonnageLr[]
+     */
+    public function getFichePersonnageLrs(): Collection
+    {
+        return $this->fichePersonnageLrs;
+    }
+
+    public function addFichePersonnageLr(FichePersonnageLr $fichePersonnageLr): self
+    {
+        if (!$this->fichePersonnageLrs->contains($fichePersonnageLr)) {
+            $this->fichePersonnageLrs[] = $fichePersonnageLr;
+            $fichePersonnageLr->setEncyclopediedupersonnage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFichePersonnageLr(FichePersonnageLr $fichePersonnageLr): self
+    {
+        if ($this->fichePersonnageLrs->removeElement($fichePersonnageLr)) {
+            // set the owning side to null (unless already changed)
+            if ($fichePersonnageLr->getEncyclopediedupersonnage() === $this) {
+                $fichePersonnageLr->setEncyclopediedupersonnage(null);
             }
         }
 

@@ -9,7 +9,7 @@ parameters:
     fichePersonnageSsr_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnageartworkssr'
     fichePersonnageUr_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnageartworkur'
     fichePersonnageLr_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnageartworklr'
-    frontPageNouveauPersonnage_pictures_directory: '%kernel.project_dir%/public/img/frontpagenouveauperso'
+    frontPageNouveauPersonnage_pictures_directory: '%kernel.project_dir%/public/img/frontpagenouveaupersos'
 services:
     # default configuration for services in *this* file
     _defaults:

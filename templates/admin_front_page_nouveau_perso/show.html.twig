@@ -1,0 +1,54 @@
+{% extends 'base.Admin.html.twig' %}
+
+
+{% block title %}Nouveau Personnage{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
+
+{% endblock %}
+
+
+{% block body %}
+    <h1>Nouveau Personnage</h1>
+
+    <table class="table text-light">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ front_page_nouveau_perso.id }}</td>
+            </tr>
+            <tr>
+                <th>Image1</th>
+                <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img1) }}" class="img" alt=""></td>
+            </tr>
+            <tr>
+                <th>Image2</th>
+                <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img2) }}" class="img" alt=""></td>
+            </tr>
+            <tr>
+                <th>Image3</th>
+                <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img3) }}" class="img" alt=""></td>
+            </tr>
+            <tr>
+                <th>Image4</th>
+                <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img4) }}" class="img" alt=""></td>
+            </tr>
+            <tr>
+                <th>Image5</th>
+                <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img5) }}" class="img" alt=""></td>
+            </tr>
+            <tr>
+                <th>Image6</th>
+                <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img6) }}" class="img" alt=""></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="text-light">Retour a la liste des Nouveaux Persos</a>
+
+    <a href="{{ path('admin_front_page_nouveau_perso_edit', {'id': front_page_nouveau_perso.id}) }}" class="text-light">Modifier</a>
+
+    {{ include('admin_front_page_nouveau_perso/_delete_form.html.twig') }}
+{% endblock %}

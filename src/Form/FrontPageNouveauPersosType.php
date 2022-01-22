@@ -21,7 +21,7 @@ class FrontPageNouveauPersosType extends AbstractType
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
                 new Image([
-                    'maxSize' => '1024k',
+                    'maxSize' => '400M',
                     'mimeTypes' => [
                         'image/png',
                         'image/jpg',
@@ -42,7 +42,7 @@ class FrontPageNouveauPersosType extends AbstractType
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
                 new Image([
-                    'maxSize' => '1024k',
+                    'maxSize' => '400M',
                     'mimeTypes' => [
                         'image/png',
                         'image/jpg',
@@ -63,7 +63,7 @@ class FrontPageNouveauPersosType extends AbstractType
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
                 new Image([
-                    'maxSize' => '1024k',
+                    'maxSize' => '400M',
                     'mimeTypes' => [
                         'image/png',
                         'image/jpg',
@@ -84,7 +84,7 @@ class FrontPageNouveauPersosType extends AbstractType
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
                 new Image([
-                    'maxSize' => '1024k',
+                    'maxSize' => '400M',
                     'mimeTypes' => [
                         'image/png',
                         'image/jpg',
@@ -105,7 +105,7 @@ class FrontPageNouveauPersosType extends AbstractType
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
                 new Image([
-                    'maxSize' => '1024k',
+                    'maxSize' => '400M',
                     'mimeTypes' => [
                         'image/png',
                         'image/jpg',
@@ -126,7 +126,7 @@ class FrontPageNouveauPersosType extends AbstractType
             'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
             'constraints' => [
                 new Image([
-                    'maxSize' => '1024k',
+                    'maxSize' => '400M',
                     'mimeTypes' => [
                         'image/png',
                         'image/jpg',

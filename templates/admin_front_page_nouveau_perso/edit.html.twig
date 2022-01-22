@@ -1,0 +1,14 @@
+{% extends 'base.Admin.html.twig' %}
+
+
+{% block title %}Modifier Nouveau Persos{% endblock %}
+
+{% block body %}
+    <h1>Modifier Nouveau Persos</h1>
+
+    {{ include('admin_front_page_nouveau_perso/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
+
+    <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="text-light">Retour a la listes des nouveau Persos</a>
+
+    {{ include('admin_front_page_nouveau_perso/_delete_form.html.twig') }}
+{% endblock %}

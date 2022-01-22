@@ -17,5 +17,8 @@
 {% block body %}
 
     <h1>Nouvelle Unité en jeux :</h1>
+    {% for encyclopediedespersos in encyclopedie_des_personnages %}
+    <img src=" {{ asset('img/logoencyclopediedespersonnages/' ~ encyclopediedespersos.img) }} " alt=""/>
+    {% endfor %}
 
 {% endblock %}

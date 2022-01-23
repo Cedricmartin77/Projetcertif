@@ -1,7 +1,6 @@
 {% extends 'base.Admin.html.twig' %}
 
-
-{% block title %}Nouveau Personnage{% endblock %}
+{% block title %}Front PageNouveau Perso{% endblock %}
 
 {% block stylesheets %}
 
@@ -9,33 +8,29 @@
 
 {% endblock %}
 
-
 {% block body %}
-    <h1>Nouveau Personnage</h1>
+    <h1>Front Page Nouveau Perso</h1>
 
-    <h1><a href="{{ path('admin_front_page_nouveau_perso_new') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Crée un nouveau Perso en Accueil</a></h1>
-
-    <a href="{{ path('admin_fiche_personnage_ssr_index') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Retour vers fiche Personnage Ssr</a>
-
-    <a href="{{ path('admin_fiche_personnage_lr_index') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Retour vers fiche Personnage Lr</a>
+    <h1><a href="{{ path('admin_front_page_nouveau_perso_new') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Crée un nouveau Perso</a></h1>
 
     <table class="table text-light">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Image1</th>
+                <th>Image</th>
                 <th>Image2</th>
                 <th>Image3</th>
                 <th>Image4</th>
                 <th>Image5</th>
                 <th>Image6</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for front_page_nouveau_perso in front_page_nouveau_persos %}
             <tr>
                 <td>{{ front_page_nouveau_perso.id }}</td>
-                <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img1) }}" class="img" alt=""></td>
+                <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img) }}" class="img" alt=""></td>
                 <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img2) }}" class="img" alt=""></td>
                 <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img3) }}" class="img" alt=""></td>
                 <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img4) }}" class="img" alt=""></td>
@@ -48,11 +43,11 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="16 text-light">Aucun résultat trouvée</td>
+                <td colspan="8 text-light">Aucun résultat trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <h1><a href="{{ path('admin_front_page_nouveau_perso_new') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Crée un nouveau Perso en Accueil</a></h1>
+    <h1><a href="{{ path('admin_front_page_nouveau_perso_new') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Crée un nouveau Perso</a></h1>
 {% endblock %}

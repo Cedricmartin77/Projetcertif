@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\EncyclopedieDesPersonnages;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Repository\FrontPageNouveauPersoRepository;
 use App\Repository\FrontPageNouveauPersosRepository;
 use App\Repository\EncyclopedieDesPersonnagesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,14 +13,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'home')]
-    public function index(EncyclopedieDesPersonnagesRepository $encyclopedieDesPersonnagesRepository): Response
+    public function index(FrontPageNouveauPersoRepository $frontPageNouveauPersoRepository): Response
     {
         return $this->render('home/index.html.twig', [
-            'encyclopedie_des_personnages' => $encyclopedieDesPersonnagesRepository->findBy(
+            'front_page_nouveau_perso' => $frontPageNouveauPersoRepository->findBy(
                 array(),
                 array('id'=> 'DESC'),
                 6,
-                0
             )
         ]);
     }

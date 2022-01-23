@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\FrontPageNouveauPersosRepository;
+use App\Repository\FrontPageNouveauPersoRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: FrontPageNouveauPersosRepository::class)]
-class FrontPageNouveauPersos
+#[ORM\Entity(repositoryClass: FrontPageNouveauPersoRepository::class)]
+class FrontPageNouveauPerso
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -14,21 +14,21 @@ class FrontPageNouveauPersos
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $img1;
+    private $img;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[ORM\Column(type: 'string', length: 255)]
     private $img2;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[ORM\Column(type: 'string', length: 255)]
     private $img3;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[ORM\Column(type: 'string', length: 255)]
     private $img4;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[ORM\Column(type: 'string', length: 255)]
     private $img5;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[ORM\Column(type: 'string', length: 255)]
     private $img6;
 
     public function getId(): ?int
@@ -36,14 +36,14 @@ class FrontPageNouveauPersos
         return $this->id;
     }
 
-    public function getImg1(): ?string
+    public function getImg(): ?string
     {
-        return $this->img1;
+        return $this->img;
     }
 
-    public function setImg1(string $img1): self
+    public function setImg(string $img): self
     {
-        $this->img1 = $img1;
+        $this->img = $img;
 
         return $this;
     }
@@ -53,7 +53,7 @@ class FrontPageNouveauPersos
         return $this->img2;
     }
 
-    public function setImg2(?string $img2): self
+    public function setImg2(string $img2): self
     {
         $this->img2 = $img2;
 
@@ -65,7 +65,7 @@ class FrontPageNouveauPersos
         return $this->img3;
     }
 
-    public function setImg3(?string $img3): self
+    public function setImg3(string $img3): self
     {
         $this->img3 = $img3;
 
@@ -77,7 +77,7 @@ class FrontPageNouveauPersos
         return $this->img4;
     }
 
-    public function setImg4(?string $img4): self
+    public function setImg4(string $img4): self
     {
         $this->img4 = $img4;
 
@@ -89,7 +89,7 @@ class FrontPageNouveauPersos
         return $this->img5;
     }
 
-    public function setImg5(?string $img5): self
+    public function setImg5(string $img5): self
     {
         $this->img5 = $img5;
 
@@ -101,7 +101,7 @@ class FrontPageNouveauPersos
         return $this->img6;
     }
 
-    public function setImg6(?string $img6): self
+    public function setImg6(string $img6): self
     {
         $this->img6 = $img6;
 

@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\FrontPageNouveauPersos;
+use App\Entity\FrontPageNouveauPerso;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method FrontPageNouveauPersos|null find($id, $lockMode = null, $lockVersion = null)
- * @method FrontPageNouveauPersos|null findOneBy(array $criteria, array $orderBy = null)
- * @method FrontPageNouveauPersos[]    findAll()
- * @method FrontPageNouveauPersos[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method FrontPageNouveauPerso|null find($id, $lockMode = null, $lockVersion = null)
+ * @method FrontPageNouveauPerso|null findOneBy(array $criteria, array $orderBy = null)
+ * @method FrontPageNouveauPerso[]    findAll()
+ * @method FrontPageNouveauPerso[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class FrontPageNouveauPersosRepository extends ServiceEntityRepository
+class FrontPageNouveauPersoRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, FrontPageNouveauPersos::class);
+        parent::__construct($registry, FrontPageNouveauPerso::class);
     }
 
     // /**
-    //  * @return FrontPageNouveauPersos[] Returns an array of FrontPageNouveauPersos objects
+    //  * @return FrontPageNouveauPerso[] Returns an array of FrontPageNouveauPerso objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class FrontPageNouveauPersosRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?FrontPageNouveauPersos
+    public function findOneBySomeField($value): ?FrontPageNouveauPerso
     {
         return $this->createQueryBuilder('f')
             ->andWhere('f.exampleField = :val')

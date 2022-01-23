@@ -1,7 +1,6 @@
 {% extends 'base.Admin.html.twig' %}
 
-
-{% block title %}Nouveau Personnage{% endblock %}
+{% block title %}Front Page Nouveau Perso{% endblock %}
 
 {% block stylesheets %}
 
@@ -9,9 +8,8 @@
 
 {% endblock %}
 
-
 {% block body %}
-    <h1>Nouveau Personnage</h1>
+    <h1>Front Page Nouveau Perso</h1>
 
     <table class="table text-light">
         <tbody>
@@ -20,8 +18,8 @@
                 <td>{{ front_page_nouveau_perso.id }}</td>
             </tr>
             <tr>
-                <th>Image1</th>
-                <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img1) }}" class="img" alt=""></td>
+                <th>Image</th>
+                <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img) }}" class="img" alt=""></td>
             </tr>
             <tr>
                 <th>Image2</th>
@@ -46,7 +44,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="text-light">Retour a la liste des Nouveaux Persos</a>
+    <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="text-light">Retour a la listes des Nouveau Perso en Front Page</a>
 
     <a href="{{ path('admin_front_page_nouveau_perso_edit', {'id': front_page_nouveau_perso.id}) }}" class="text-light">Modifier</a>
 

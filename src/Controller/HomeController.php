@@ -18,7 +18,7 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig', [
             'front_page_nouveau_perso' => $frontPageNouveauPersoRepository->findBy(
                 array(),
-                array('id'=> 'DESC'),
+                array('id'=> 'ASC'),
                 6,
             )
         ]);

@@ -1,19 +1,13 @@
 {% extends 'base.Admin.html.twig' %}
 
-{% block title %}Modifier Front Page Nouveau Perso{% endblock %}
-
-{% block stylesheets %}
-
-<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
-
-{% endblock %}
+{% block title %}Edit FrontPageNouveauPerso{% endblock %}
 
 {% block body %}
-    <h1>Modifier Front Page Nouveau Perso</h1>
+    <h1>Edit FrontPageNouveauPerso</h1>
 
     {{ include('admin_front_page_nouveau_perso/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
 
-    <a href="{{ path('admin_front_page_nouveau_perso_index') }}">Retour a la listes des Nouveau Perso en Front Page</a>
+    <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="text-light" class="text-light">Retour a la liste des Nouveau Personnages</a>
 
     {{ include('admin_front_page_nouveau_perso/_delete_form.html.twig') }}
 {% endblock %}

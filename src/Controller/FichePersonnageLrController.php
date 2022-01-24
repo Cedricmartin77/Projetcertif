@@ -15,7 +15,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 #[Route('/fiche/personnage/lr')]
 class FichePersonnageLrController extends AbstractController
 {
-
     #[Route('/fiche/personnage/lr/{id}', name: 'fiche_personnage_lr', methods: ['GET'])]
     public function show(EncyclopedieDuPersonnageRepository $encyclopedieDuPersonnageRepository, int $id): Response
     {

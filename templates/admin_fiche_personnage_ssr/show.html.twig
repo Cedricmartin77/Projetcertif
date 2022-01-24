@@ -5,17 +5,20 @@
 {% block stylesheets %}
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbuttonficheperso.css') }}">
 
 {% endblock %}
 
 {% block body %}
     <h1>Fiche Personnage Ssr</h1>
+    
+    <div class="espace2">
+      <a href="{{ path('admin_fiche_personnage_ssr_index') }}" class="btn2">Retour a la liste des Fiches Ssr</a>
 
-    <a href="{{ path('admin_fiche_personnage_ssr_index') }}" type="button" class="btn btn-info">Retour a la liste des Fiches Ssr</a>
+     <a href="{{ path('admin_fiche_personnage_ssr_edit', {'id': fiche_personnage_ssr.id}) }}" class="btn4">Modifier</a>
 
-    <a href="{{ path('admin_fiche_personnage_ssr_edit', {'id': fiche_personnage_ssr.id}) }}" type="button" class="btn btn-warning">Modifier</a>
-
-    {{ include('admin_fiche_personnage_ssr/_delete_form.html.twig') }}
+     {{ include('admin_fiche_personnage_ssr/_delete_form.html.twig') }}
+    </div>
 
     <table class="table text-light">
         <tbody>
@@ -81,10 +84,11 @@
             </tr>
         </tbody>
     </table>
+    <div class="espace2">
+     <a href="{{ path('admin_fiche_personnage_ssr_index') }}" class="btn2">Retour a la liste des Fiches Ssr</a>
 
-    <a href="{{ path('admin_fiche_personnage_ssr_index') }}" type="button" class="btn btn-info">Retour a la liste des Fiches Ssr</a>
+     <a href="{{ path('admin_fiche_personnage_ssr_edit', {'id': fiche_personnage_ssr.id}) }}" class="btn4">Modifier</a>
 
-    <a href="{{ path('admin_fiche_personnage_ssr_edit', {'id': fiche_personnage_ssr.id}) }}" type="button" class="btn btn-warning">Modifier</a>
-
-    {{ include('admin_fiche_personnage_ssr/_delete_form.html.twig') }}
+     {{ include('admin_fiche_personnage_ssr/_delete_form.html.twig') }}
+    </div>
 {% endblock %}

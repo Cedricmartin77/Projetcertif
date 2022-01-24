@@ -2,9 +2,18 @@
 
 {% block title %}Crée un Nouveau Perso en Front Page{% endblock %}
 
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
+
+{% endblock %}
+
 {% block body %}
     <h1>Crée un Nouveau Perso en Front Page</h1>
 
     {{ include('admin_front_page_nouveau_perso/_form.html.twig') }}
+
+    <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="btn2">Retour a la listes des Nouveau Personnage </a>
 
 {% endblock %}

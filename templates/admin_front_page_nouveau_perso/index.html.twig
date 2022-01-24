@@ -5,16 +5,17 @@
 {% block stylesheets %}
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
 
 {% endblock %}
 
 {% block body %}
     <h1>Front Page Nouveau Perso</h1>
 
-    <h1><a href="{{ path('admin_front_page_nouveau_perso_new') }}" type="button" class="btn btn-success">Crée un Nouveau Perso en Front Page</a></h1>
+    <h1><a href="{{ path('admin_front_page_nouveau_perso_new') }}" class="btn1">Crée un Nouveau Perso en Front Page</a></h1>
 
-    <a href="{{ path('admin_encyclopedie_des_personnages_index') }}" type="button" class="btn btn-info">Retour vers Encyclopédie des Personnage</a>
-    <a href="{{ path('admin_encyclopedie_du_personnage_index') }}" type="button" class="btn btn-info">Retour vers Encyclopédie des Personnage</a>
+    <a href="{{ path('admin_encyclopedie_des_personnages_index') }}" class="btn2">Retour vers Encyclopédie des Personnages</a>
+    <a href="{{ path('admin_encyclopedie_du_personnage_index') }}" class="btn2">Retour vers Encyclopédie du Personnage</a>
 
 
     <table class="table text-light">
@@ -31,8 +32,8 @@
                 <td>{{ front_page_nouveau_perso.id }}</td>
                 <td><img src="{{ asset('img/frontpagenouveaupersos/' ~ front_page_nouveau_perso.img) }}" class="img" alt=""></td>
                 <td>
-                    <a href="{{ path('admin_front_page_nouveau_perso_show', {'id': front_page_nouveau_perso.id}) }}" class="text-light btn btn-primary" type="button">Voir</a>
-                    <a href="{{ path('admin_front_page_nouveau_perso_edit', {'id': front_page_nouveau_perso.id}) }}" class="text-light btn btn-warning" type="button">Modifier</a>
+                    <a href="{{ path('admin_front_page_nouveau_perso_show', {'id': front_page_nouveau_perso.id}) }}" class="btn3">Voir</a>
+                    <a href="{{ path('admin_front_page_nouveau_perso_edit', {'id': front_page_nouveau_perso.id}) }}" class="btn4">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -43,5 +44,5 @@
         </tbody>
     </table>
 
-    <h1><a href="{{ path('admin_front_page_nouveau_perso_new') }}" type="button" class="btn btn-success">Crée un Nouveau Perso en Front Page</a></h1>
+    <h1><a href="{{ path('admin_front_page_nouveau_perso_new') }}" class="btn1">Crée un Nouveau Perso en Front Page</a></h1>
 {% endblock %}

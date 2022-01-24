@@ -5,17 +5,18 @@
 {% block stylesheets %}
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbuttonficheperso.css') }}">
 
 {% endblock %}
 
 {% block body %}
     <h1> Les Fiche Personnage Lr</h1>
 
-    <h1><a href="{{ path('admin_fiche_personnage_lr_new') }}" type="button" class="btn btn-success">Crée une nouvelle Fiche LR</a></h1>
+    <h1><a href="{{ path('admin_fiche_personnage_lr_new') }}" class="btn1">Crée une nouvelle Fiche LR</a></h1>
 
-    <a href="{{ path('admin_fiche_personnage_ssr_index') }}" type="button" class="btn btn-info">Retour vers fiche Personnage Ssr</a>
+    <a href="{{ path('admin_fiche_personnage_ssr_index') }}" class="btn2">Retour vers fiche Personnage Ssr</a>
 
-    <a href="{{ path('admin_fiche_personnage_ur_index') }}" type="button" class="btn btn-info">Retour vers fiche Personnage Ur</a>
+    <a href="{{ path('admin_fiche_personnage_ur_index') }}" class="btn2">Retour vers fiche Personnage Ur</a>
     
     <table class="table text-light">
         <thead>
@@ -61,8 +62,10 @@
                 <td>{{ fiche_personnage_lr.attaquemax }}</td>
                 <td>{{ fiche_personnage_lr.defensemax }}</td>
                 <td>
-                    <a href="{{ path('admin_fiche_personnage_lr_show', {'id': fiche_personnage_lr.id}) }}" type="button" class="btn btn-primary">Voir</a>
-                    <a href="{{ path('admin_fiche_personnage_lr_edit', {'id': fiche_personnage_lr.id}) }}" type="button" class="btn btn-warning">Modifier</a>
+                    <div class="espace">
+                    <a href="{{ path('admin_fiche_personnage_lr_show', {'id': fiche_personnage_lr.id}) }}" class="btn3">Voir</a>
+                    <a href="{{ path('admin_fiche_personnage_lr_edit', {'id': fiche_personnage_lr.id}) }}" class="btn4">Modifier</a>
+                </div>
                 </td>
             </tr>
         {% else %}
@@ -73,5 +76,5 @@
         </tbody>
     </table>
 
-    <h1><a href="{{ path('admin_fiche_personnage_lr_new') }}" type="button" class="btn btn-success">Crée une nouvelle Fiche LR</a></h1>
+    <h1><a href="{{ path('admin_fiche_personnage_lr_new') }}" class="btn1">Crée une nouvelle Fiche LR</a></h1>
 {% endblock %}

@@ -5,14 +5,15 @@
 {% block stylesheets %}
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/encyclopediedespersonnages.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
 
 {% endblock %}
 
 {% block body %}
     <h1>Encyclopedie des Personnages</h1>
 
-    <a href="{{ path('admin_encyclopedie_des_personnages_new') }}" type="button" class="btn btn-success">Crée une nouvelle Encyclopédie des Personnage</a>
-    <h1><a href="{{ path('admin_encyclopedie_du_personnage_index') }}" type="button" class="btn btn-info">Retour vers Encyclopédie du Personnage</a></h1>    
+    <a href="{{ path('admin_encyclopedie_des_personnages_new') }}" class="btn1">Crée une nouvelle Encyclopédie des Personnage</a>
+    <h1><a href="{{ path('admin_encyclopedie_du_personnage_index') }}" class="btn2">Retour vers Encyclopédie du Personnage</a></h1>    
 
     <table class="table text-light">
         <thead>
@@ -30,8 +31,8 @@
                 <td>{{ encyclopedie_des_personnage.title }}</td>
                 <td><img src="{{ asset('img/logoencyclopediedespersonnages/' ~ encyclopedie_des_personnage.img) }}" class="img" alt=""></td>
                 <td>
-                    <a href="{{ path('admin_encyclopedie_des_personnages_show', {'id': encyclopedie_des_personnage.id}) }}" type="button" class="btn btn-primary">Voir</a>
-                    <a href="{{ path('admin_encyclopedie_des_personnages_edit', {'id': encyclopedie_des_personnage.id}) }}" type="button" class="btn btn-warning">Modifier</a>
+                    <a href="{{ path('admin_encyclopedie_des_personnages_show', {'id': encyclopedie_des_personnage.id}) }}" class="btn3">Voir</a>
+                    <a href="{{ path('admin_encyclopedie_des_personnages_edit', {'id': encyclopedie_des_personnage.id}) }}" class="btn4">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -42,5 +43,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_encyclopedie_des_personnages_new') }}" type="button" class="btn btn-success">Crée une nouvelle Encyclopédie des Personnages</a>
+    <a href="{{ path('admin_encyclopedie_des_personnages_new') }}" class="btn1">Crée une nouvelle Encyclopédie des Personnages</a>
 {% endblock %}

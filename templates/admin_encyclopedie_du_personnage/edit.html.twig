@@ -2,12 +2,19 @@
 
 {% block title %}Modifier Encyclopedie du Personnage{% endblock %}
 
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/encyclopediedupersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
+
+{% endblock %}
+
 {% block body %}
     <h1>Modifier Encyclopedie Du Personnage</h1>
 
     {{ include('admin_encyclopedie_du_personnage/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
 
-    <a href="{{ path('admin_encyclopedie_du_personnage_index') }}" type="button" class="btn btn-info">Retour a la liste</a>
+    <a href="{{ path('admin_encyclopedie_du_personnage_index') }}" class="btn2">Retour a la liste</a>
 
     {{ include('admin_encyclopedie_du_personnage/_delete_form.html.twig') }}
 {% endblock %}

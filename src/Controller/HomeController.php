@@ -19,7 +19,7 @@ class HomeController extends AbstractController
             'front_page_nouveau_perso' => $frontPageNouveauPersoRepository->findBy(
                 array(),
                 array('id'=> 'ASC'),
-                6,
+                15,
             )
         ]);
     }

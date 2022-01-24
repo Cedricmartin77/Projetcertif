@@ -11,6 +11,12 @@
 {% block body %}
     <h1>Fiche Personnage Lr</h1>
 
+    <a href="{{ path('admin_fiche_personnage_lr_index') }}" type="button" class="btn btn-info">Retour a la listes des Fiches LR</a>
+
+    <a href="{{ path('admin_fiche_personnage_lr_edit', {'id': fiche_personnage_lr.id}) }}" type="button" class="btn btn-warning">Modifier</a>
+
+    {{ include('admin_fiche_personnage_lr/_delete_form.html.twig') }}
+
     <table class="table text-light">
         <tbody>
             <tr>
@@ -84,9 +90,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_fiche_personnage_lr_index') }}" class="text-light">Retour a la listes des Fiches LR</a>
+    <a href="{{ path('admin_fiche_personnage_lr_index') }}" type="button" class="btn btn-info">Retour a la listes des Fiches LR</a>
 
-    <a href="{{ path('admin_fiche_personnage_lr_edit', {'id': fiche_personnage_lr.id}) }}" class="text-light">Modifier</a>
+    <a href="{{ path('admin_fiche_personnage_lr_edit', {'id': fiche_personnage_lr.id}) }}" type="button" class="btn btn-warning">Modifier</a>
 
     {{ include('admin_fiche_personnage_lr/_delete_form.html.twig') }}
 {% endblock %}

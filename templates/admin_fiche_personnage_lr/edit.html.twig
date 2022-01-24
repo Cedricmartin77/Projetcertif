@@ -7,7 +7,7 @@
 
     {{ include('admin_fiche_personnage_lr/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
 
-    <a href="{{ path('admin_fiche_personnage_lr_index') }}" class="text-light">Retour a la listes des Fiches LR</a>
+    <a href="{{ path('admin_fiche_personnage_lr_index') }}" type="button" class="btn btn-info">Retour a la listes des Fiches LR</a>
 
     {{ include('admin_fiche_personnage_lr/_delete_form.html.twig') }}
 {% endblock %}

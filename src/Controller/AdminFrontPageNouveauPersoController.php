@@ -46,28 +46,28 @@ class AdminFrontPageNouveauPersoController extends AbstractController
             $infoImg3 = $form['img3']->getData();
             if ($infoImg3 !== null) {
                 $extensionImg3 = $infoImg3->guessExtension(); // récupère les informations de l'image 2
-                $nomImg3 = time() . '-2.' . $extensionImg3; // reconstitue un nom d'image unique pour l'image 2
+                $nomImg3 = time() . '-3.' . $extensionImg3; // reconstitue un nom d'image unique pour l'image 2
                 $infoImg3->move($this->getParameter('frontPageNouveauPersonnage_pictures_directory'), $nomImg3); // déplace l'image 2 dans le dossier adéquat
                 $frontPageNouveauPerso->setImg3($nomImg3); // définit le nom de l'iamge 2 à mettre en base de données
             }
             $infoImg4 = $form['img4']->getData();
             if ($infoImg4 !== null) {
                 $extensionImg4 = $infoImg4->guessExtension(); // récupère les informations de l'image 2
-                $nomImg4 = time() . '-2.' . $extensionImg4; // reconstitue un nom d'image unique pour l'image 2
+                $nomImg4 = time() . '-4.' . $extensionImg4; // reconstitue un nom d'image unique pour l'image 2
                 $infoImg4->move($this->getParameter('frontPageNouveauPersonnage_pictures_directory'), $nomImg4); // déplace l'image 2 dans le dossier adéquat
                 $frontPageNouveauPerso->setImg4($nomImg4); // définit le nom de l'iamge 2 à mettre en base de données
             }
             $infoImg5 = $form['img5']->getData();
             if ($infoImg5 !== null) {
                 $extensionImg5 = $infoImg5->guessExtension(); // récupère les informations de l'image 2
-                $nomImg5 = time() . '-2.' . $extensionImg5; // reconstitue un nom d'image unique pour l'image 2
+                $nomImg5 = time() . '-5.' . $extensionImg5; // reconstitue un nom d'image unique pour l'image 2
                 $infoImg5->move($this->getParameter('frontPageNouveauPersonnage_pictures_directory'), $nomImg5); // déplace l'image 2 dans le dossier adéquat
                 $frontPageNouveauPerso->setImg5($nomImg5); // définit le nom de l'iamge 2 à mettre en base de données
             }
             $infoImg6 = $form['img6']->getData();
             if ($infoImg6 !== null) {
                 $extensionImg6 = $infoImg6->guessExtension(); // récupère les informations de l'image 2
-                $nomImg6 = time() . '-2.' . $extensionImg6; // reconstitue un nom d'image unique pour l'image 2
+                $nomImg6 = time() . '-6.' . $extensionImg6; // reconstitue un nom d'image unique pour l'image 2
                 $infoImg6->move($this->getParameter('frontPageNouveauPersonnage_pictures_directory'), $nomImg6); // déplace l'image 2 dans le dossier adéquat
                 $frontPageNouveauPerso->setImg6($nomImg6); // définit le nom de l'iamge 2 à mettre en base de données
             }

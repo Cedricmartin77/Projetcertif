@@ -1,5 +1,5 @@
 <form method="post" action="{{ path('admin_front_page_nouveau_perso_delete', {'id': front_page_nouveau_perso.id}) }}" onsubmit="return confirm('Es-tu sur de vouloir supprimer ce Personnage en Front Page?');">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ front_page_nouveau_perso.id) }}">
-    <button class="btn">Supprimer</button>
+    <button type="button" class="btn btn-danger">Supprimer</button>
 </form>
 

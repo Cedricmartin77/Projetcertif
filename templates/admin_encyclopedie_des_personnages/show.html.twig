@@ -28,9 +28,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_encyclopedie_des_personnages_index') }}" class="text-light">Retour a la liste</a>
+    <a href="{{ path('admin_encyclopedie_des_personnages_index') }}" type="button" class="btn btn-info">Retour a la liste des Encylopédie des Personnages</a>
 
-    <a href="{{ path('admin_encyclopedie_des_personnages_edit', {'id': encyclopedie_des_personnage.id}) }}" class="text-light">Modifier</a>
+    <a href="{{ path('admin_encyclopedie_des_personnages_edit', {'id': encyclopedie_des_personnage.id}) }}" type="button" class="btn btn-warning">Modifier</a>
 
     {{ include('admin_encyclopedie_des_personnages/_delete_form.html.twig') }}
 {% endblock %}

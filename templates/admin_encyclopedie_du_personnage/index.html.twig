@@ -11,8 +11,8 @@
 {% block body %}
     <h1>Encyclopedie du Personnage</h1>
 
-    <a href="{{ path('admin_encyclopedie_du_personnage_new') }}" class="text-light btn btn-primary btn-lg active" role="button" aria-pressed="true">Crée une nouvelle Encyclopédie du Personnage</a>
-    <h1><a href="{{ path('admin_encyclopedie_des_personnages_index') }}" class="text-light btn btn-primary btn-lg active" role="button" aria-pressed="true">Retour vers Encyclopédie des Personnages</a></h1>
+    <a href="{{ path('admin_encyclopedie_du_personnage_new') }}" type="button" class="btn btn-success">Crée une nouvelle Encyclopédie du Personnage</a>
+    <h1><a href="{{ path('admin_encyclopedie_des_personnages_index') }}" type="button" class="btn btn-info">Retour vers Encyclopédie des Personnages</a></h1>
 
 
     <table class="table text-light">
@@ -31,8 +31,8 @@
                 <td>{{ encyclopedie_du_personnage.title }}</td>
                 <td><img src="{{ asset('img/logoencyclopediedupersonnage/' ~ encyclopedie_du_personnage.img) }}" alt=""></td>
                 <td>
-                    <a href="{{ path('admin_encyclopedie_du_personnage_show', {'id': encyclopedie_du_personnage.id}) }}" class="text-light">Voir</a>
-                    <a href="{{ path('admin_encyclopedie_du_personnage_edit', {'id': encyclopedie_du_personnage.id}) }}" class="text-light">Modifier</a>
+                    <a href="{{ path('admin_encyclopedie_du_personnage_show', {'id': encyclopedie_du_personnage.id}) }}" type="button" class="btn btn-primary">Voir</a>
+                    <a href="{{ path('admin_encyclopedie_du_personnage_edit', {'id': encyclopedie_du_personnage.id}) }}" type="button" class="btn btn-warning">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -43,5 +43,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_encyclopedie_du_personnage_new') }}" class="text-light btn btn-primary btn-lg active" role="button" aria-pressed="true">Crée une nouvelle Encyclopédie du Personnage</a>
+    <a href="{{ path('admin_encyclopedie_du_personnage_new') }}" type="button" class="btn btn-success">Crée une nouvelle Encyclopédie du Personnage</a>
 {% endblock %}

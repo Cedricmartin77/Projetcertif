@@ -34,11 +34,15 @@ class EncyclopedieDuPersonnage
     #[ORM\OneToMany(mappedBy: 'encyclopediedupersonnage', targetEntity: FichePersonnageLr::class, orphanRemoval: true)]
     private $fichePersonnageLrs;
 
+    #[ORM\OneToMany(mappedBy: 'encyclopediedupersonnage', targetEntity: FichePersonnageUrActiveSkill::class, orphanRemoval: true)]
+    private $fichePersonnageUrActiveSkills;
+
     public function __construct()
     {
         $this->fichePersonnageSsrs = new ArrayCollection();
         $this->fichePersonnageUrs = new ArrayCollection();
         $this->fichePersonnageLrs = new ArrayCollection();
+        $this->fichePersonnageUrActiveSkills = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -166,6 +170,36 @@ class EncyclopedieDuPersonnage
             // set the owning side to null (unless already changed)
             if ($fichePersonnageLr->getEncyclopediedupersonnage() === $this) {
                 $fichePersonnageLr->setEncyclopediedupersonnage(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|FichePersonnageUrActiveSkill[]
+     */
+    public function getFichePersonnageUrActiveSkills(): Collection
+    {
+        return $this->fichePersonnageUrActiveSkills;
+    }
+
+    public function addFichePersonnageUrActiveSkill(FichePersonnageUrActiveSkill $fichePersonnageUrActiveSkill): self
+    {
+        if (!$this->fichePersonnageUrActiveSkills->contains($fichePersonnageUrActiveSkill)) {
+            $this->fichePersonnageUrActiveSkills[] = $fichePersonnageUrActiveSkill;
+            $fichePersonnageUrActiveSkill->setEncyclopediedupersonnage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFichePersonnageUrActiveSkill(FichePersonnageUrActiveSkill $fichePersonnageUrActiveSkill): self
+    {
+        if ($this->fichePersonnageUrActiveSkills->removeElement($fichePersonnageUrActiveSkill)) {
+            // set the owning side to null (unless already changed)
+            if ($fichePersonnageUrActiveSkill->getEncyclopediedupersonnage() === $this) {
+                $fichePersonnageUrActiveSkill->setEncyclopediedupersonnage(null);
             }
         }
 

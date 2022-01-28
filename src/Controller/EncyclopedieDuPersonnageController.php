@@ -15,14 +15,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 #[Route('/encyclopedie/du/personnage')]
 class EncyclopedieDuPersonnageController extends AbstractController
 {
-    // #[Route('/', name: 'encyclopedie_du_personnage_index', methods: ['GET'])]
-    // public function index(EncyclopedieDuPersonnageRepository $encyclopedieDuPersonnageRepository): Response
-    // {
-    //     return $this->render('encyclopedie_du_personnage/index.html.twig', [
-    //         'encyclopedie_du_personnages' => $encyclopedieDuPersonnageRepository->findAll(),
-    //     ]);
-    // }
-
     #[Route('/encyclopedie/du/personnage/{id}', name: 'encyclopedie_du_personnage', methods: ['GET'])]
     public function show(EncyclopedieDesPersonnagesRepository $encyclopedieDesPersonnagesRepository, EncyclopedieDuPersonnageRepository $encyclopedieDuPersonnageRepository, $id): Response
     {

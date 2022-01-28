@@ -1,0 +1,18 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}New FichePersonnageUrActiveSkill{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbuttonficheperso.css') }}">
+
+{% endblock %}
+
+{% block body %}
+    <h1>Create new FichePersonnageUrActiveSkill</h1>
+
+    {{ include('admin_fiche_personnage_ur_active_skill/_form.html.twig') }}
+
+    <a href="{{ path('admin_fiche_personnage_ur_active_skill_index') }}">back to list</a>
+{% endblock %}

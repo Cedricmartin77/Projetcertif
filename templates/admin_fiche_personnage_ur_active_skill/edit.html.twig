@@ -1,0 +1,13 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}Edit FichePersonnageUrActiveSkill{% endblock %}
+
+{% block body %}
+    <h1>Edit FichePersonnageUrActiveSkill</h1>
+
+    {{ include('admin_fiche_personnage_ur_active_skill/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('admin_fiche_personnage_ur_active_skill_index') }}">back to list</a>
+
+    {{ include('admin_fiche_personnage_ur_active_skill/_delete_form.html.twig') }}
+{% endblock %}

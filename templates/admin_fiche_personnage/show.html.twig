@@ -1,0 +1,102 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}FichePersonnage{% endblock %}
+
+{% block body %}
+    <h1>FichePersonnage</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fiche_personnage.id }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td><img src="{{ asset('img/fichepersonnage/' ~ fiche_personnage.img) }}" class="img" alt=""></td>
+            </tr>
+            <tr>
+                <th>Aptitudeleader</th>
+                <td>{{ fiche_personnage.aptitudeleader }}</td>
+            </tr>
+            <tr>
+                <th>Nomattaquespecial</th>
+                <td>{{ fiche_personnage.nomattaquespecial }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionattaquespecial</th>
+                <td>{{ fiche_personnage.descriptionattaquespecial }}</td>
+            </tr>
+            <tr>
+                <th>Nomattaquespecialultime</th>
+                <td>{{ fiche_personnage.nomattaquespecialultime }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionattaquespecialultime</th>
+                <td>{{ fiche_personnage.descriptionattaquespecialultime }}</td>
+            </tr>
+            <tr>
+                <th>Nomunitsuperattaque</th>
+                <td>{{ fiche_personnage.nomunitsuperattaque }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionunitsuperattaque</th>
+                <td>{{ fiche_personnage.descriptionunitsuperattaque }}</td>
+            </tr>
+            <tr>
+                <th>Nomactiveskill</th>
+                <td>{{ fiche_personnage.nomactiveskill }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionactiveskill</th>
+                <td>{{ fiche_personnage.descriptionactiveskill }}</td>
+            </tr>
+            <tr>
+                <th>Nompassiveskill</th>
+                <td>{{ fiche_personnage.nompassiveskill }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionpassiveskill</th>
+                <td>{{ fiche_personnage.descriptionpassiveskill }}</td>
+            </tr>
+            <tr>
+                <th>Listedesliensdupersonnage</th>
+                <td>{{ fiche_personnage.listedesliensdupersonnage }}</td>
+            </tr>
+            <tr>
+                <th>Listedescategoriedupersonnage</th>
+                <td>{{ fiche_personnage.listedescategoriedupersonnage }}</td>
+            </tr>
+            <tr>
+                <th>Hpdebase</th>
+                <td>{{ fiche_personnage.hpdebase }}</td>
+            </tr>
+            <tr>
+                <th>Attaquedebase</th>
+                <td>{{ fiche_personnage.attaquedebase }}</td>
+            </tr>
+            <tr>
+                <th>Defensedebase</th>
+                <td>{{ fiche_personnage.defensedebase }}</td>
+            </tr>
+            <tr>
+                <th>Hpmax</th>
+                <td>{{ fiche_personnage.hpmax }}</td>
+            </tr>
+            <tr>
+                <th>Attaquemax</th>
+                <td>{{ fiche_personnage.attaquemax }}</td>
+            </tr>
+            <tr>
+                <th>Defensemax</th>
+                <td>{{ fiche_personnage.defensemax }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_fiche_personnage_index') }}">back to list</a>
+
+    <a href="{{ path('admin_fiche_personnage_edit', {'id': fiche_personnage.id}) }}">edit</a>
+
+    {{ include('admin_fiche_personnage/_delete_form.html.twig') }}
+{% endblock %}

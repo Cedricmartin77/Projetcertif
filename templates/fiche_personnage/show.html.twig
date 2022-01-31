@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fiche Personnage{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnage.css') }}">
+
+{% endblock %}
+
+{% block body %}
+
+
+    {% for personnages in fiche_personnage %}
+   
+    <div class="container">
+        <div class="row-7">
+            <div class="col-5">
+                <img src="{{ asset('img/fichepersonnage/' ~ personnages.img) }}" class="img" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container flex">
+        <div class="row">
+            <p>Leader Skill :</p>
+            <p class="border-bottom">{{ personnages.aptitudeleader }}</p>
+            {# <div class="dropdown-divider m-3 text-light"></div> #}
+            <p>Attaque Spé : {{ personnages.nomattaquespecial }}</p>
+            <p class="border-bottom">{{ personnages.descriptionattaquespecial }}</p>
+            {% if personnages is null %}
+            <p>Attaque Spé Ultime : {{ personnages.nomattaquespecialultime }}</p>
+            <p class="border-bottom">{{ personnages.descriptionattaquespecialultime }}</p>
+            <p>Unit Super Attaque : {{ personnages.nomunitsuperattaque }}</p>
+            <p class="border-bottom">{{ personnages.descriptionunitsuperattaque }}</p>
+            <p>Nom Active Skill : {{ personnages.nomactiveskill }}</p>
+            <p class="border-bottom">{{ personnages.descriptionactiveskill }}</p>
+            {% endif %}
+            <p>Aptitude Passive : {{ personnages.nompassiveskill }}</p>
+            <p class="border-bottom">{{ personnages.descriptionpassiveskill }}</p>
+            <p>Liste des Liens :</p>
+            <p class="border-bottom">{{ personnages.listedesliensdupersonnage }}</p>
+            <p>Liste des Catégories :</p>
+            <p class="border-bottom">{{ personnages.listedescategoriedupersonnage }}</p>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p class="">PDV : {{ personnages.hpdebase }}</p>
+                <p class="">ATTAQUE : {{ personnages.attaquedebase }}</p>
+                <p class="">DEFENSE : {{ personnages.defensedebase }}</p>
+            </div>
+            <div class="col-6">
+                <p class="">PDV MAX : {{ personnages.hpmax }}</p>
+                <p class="">ATTAQUE MAX : {{ personnages.attaquemax }}</p>
+                <p class="">DEFENSE MAX : {{ personnages.defensemax }}</p>
+            </div>
+        </div>
+    </div>
+        
+    {% endfor %}
+    {% endblock %}

@@ -17,7 +17,7 @@
        
 
         {% for personnage in personnages %}
-            <a href="{{ path('fiche_personnage_ssr', {'id': personnage.id }) }}" class="flex">
+            <a href="{{ path('fiche_personnage', {'id': personnage.id }) }}" class="flex">
                 <div class="image">
                     <img src=" {{ asset('img/logoencyclopediedupersonnage/' ~ personnage.img) }} " alt="" />
                 </div>

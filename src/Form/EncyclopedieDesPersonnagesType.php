@@ -47,7 +47,6 @@ class EncyclopedieDesPersonnagesType extends AbstractType
                 ])
             ]
         ])
-        ->add('valider', SubmitType::class)
         ;
     }
 

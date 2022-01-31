@@ -11,6 +11,7 @@ parameters:
     fichePersonnageUrActiveSkill_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnageuractiverskill'
     fichePersonnageLr_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnageartworklr'
     frontPageNouveauPersonnage_pictures_directory: '%kernel.project_dir%/public/img/frontpagenouveaupersos'
+    fichePersonnage_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnage'
 services:
     # default configuration for services in *this* file
     _defaults:

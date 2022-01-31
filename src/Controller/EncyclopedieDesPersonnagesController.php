@@ -22,12 +22,4 @@ class EncyclopedieDesPersonnagesController extends AbstractController
             'encyclopedie_des_personnages' => $encyclopediedespersos
         ]);
     }
-
-    // #[Route('/{id}', name: 'encyclopedie_des_personnages_show', methods: ['GET'])]
-    // public function show(EncyclopedieDesPersonnages $encyclopedieDesPersonnage): Response
-    // {
-    //     return $this->render('encyclopedie_des_personnages/show.html.twig', [
-    //         'encyclopedie_des_personnage' => $encyclopedieDesPersonnage,
-    //     ]);
-    // }
 }

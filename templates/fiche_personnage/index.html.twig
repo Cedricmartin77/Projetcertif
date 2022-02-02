@@ -10,6 +10,7 @@
 
 {% block body %}
 
+
     {% for personnages in fiche_personnage %}
    
     <div class="container">
@@ -26,12 +27,22 @@
             {# <div class="dropdown-divider m-3 text-light"></div> #}
             <p>Attaque Spé : {{ personnages.nomattaquespecial }}</p>
             <p class="border-bottom">{{ personnages.descriptionattaquespecial }}</p>
-            {% if personnages is null %}
+            {% if personnages.nomattaquespecialultime  is not empty %}
             <p>Attaque Spé Ultime : {{ personnages.nomattaquespecialultime }}</p>
+            {% endif %}
+            {% if personnages.descriptionattaquespecialultime is not empty %}
             <p class="border-bottom">{{ personnages.descriptionattaquespecialultime }}</p>
+            {% endif %}
+            {% if personnages.nomunitsuperattaque is not empty %}
             <p>Unit Super Attaque : {{ personnages.nomunitsuperattaque }}</p>
+            {% endif %}
+            {% if personnages.descriptionunitsuperattaque is not empty %}
             <p class="border-bottom">{{ personnages.descriptionunitsuperattaque }}</p>
+            {% endif %}
+            {% if personnages.nomactiveskill is not empty %}
             <p>Nom Active Skill : {{ personnages.nomactiveskill }}</p>
+            {% endif %}
+            {% if personnages.descriptionactiveskill  is not empty %}
             <p class="border-bottom">{{ personnages.descriptionactiveskill }}</p>
             {% endif %}
             <p>Aptitude Passive : {{ personnages.nompassiveskill }}</p>
@@ -56,5 +67,4 @@
     </div>
         
     {% endfor %}
-    {% endif %}
     {% endblock %}

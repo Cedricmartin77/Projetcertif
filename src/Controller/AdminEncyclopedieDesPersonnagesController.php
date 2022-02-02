@@ -45,7 +45,7 @@ class AdminEncyclopedieDesPersonnagesController extends AbstractController
             return $this->redirectToRoute('admin_encyclopedie_des_personnages_index', [], Response::HTTP_SEE_OTHER);
         }
         return $this->renderForm('admin_encyclopedie_des_personnages/new.html.twig', [
-            'encyclopedieDesPersonnage' => $encyclopedieDesPersonnages,
+            'encyclopedie_des_personnages' => $encyclopedieDesPersonnages,
             'form' => $form, // création de la vue du formulaire et envoi à la vue (fichier)
         ]);
     }
@@ -87,7 +87,7 @@ class AdminEncyclopedieDesPersonnagesController extends AbstractController
             return $this->redirectToRoute('admin_encyclopedie_des_personnages_index');
         }
         return $this->render('admin_encyclopedie_des_personnages/edit.html.twig', [
-            'encyclopedieDesPersonnages' => $encyclopedieDesPersonnages,
+            'encyclopedie_des_personnages' => $encyclopedieDesPersonnages,
             'form' => $form->createView()
         ]);
     }

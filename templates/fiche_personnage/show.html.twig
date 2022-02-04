@@ -5,6 +5,17 @@
 {% block stylesheets %}
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnage.css') }}">
+{% for personnages in fiche_personnage %}
+
+{% if (personnages.nomattaquespecialultime is not empty ) or (personnages.descriptionattaquespecialultime is not empty) %}
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnagelr.css') }}">
+{% endif %}
+
+{% if personnages.nomunitsuperattaque is not empty %}
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnageunitsuperattaque.css') }}">
+{% endif %}
+
+{% endfor %}
 
 {% endblock %}
 
@@ -20,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="container flex flex1">
+    <div class="container flex">
         <div class="row">
             <p>Leader Skill :</p>
             <p class="border-bottom">{{ personnages.aptitudeleader }}</p>

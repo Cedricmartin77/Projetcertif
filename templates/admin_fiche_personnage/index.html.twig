@@ -2,37 +2,44 @@
 
 {% block title %}FichePersonnage index{% endblock %}
 
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
+
+{% endblock %}
+
 {% block body %}
     <h1>FichePersonnage index</h1>
 
     <a href="{{ path('admin_fiche_personnage_new') }}">Create new</a>
 
 
-    <table class="table">
+    <table class="table text-light">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Img</th>
-                <th>Aptitudeleader</th>
-                <th>Nomattaquespecial</th>
-                <th>Descriptionattaquespecial</th>
-                <th>Nomattaquespecialultime</th>
-                <th>Descriptionattaquespecialultime</th>
-                <th>Nomunitsuperattaque</th>
-                <th>Descriptionunitsuperattaque</th>
-                <th>Nomactiveskill</th>
-                <th>Descriptionactiveskill</th>
-                <th>Nompassiveskill</th>
-                <th>Descriptionpassiveskill</th>
-                <th>Listedesliensdupersonnage</th>
-                <th>Listedescategoriedupersonnage</th>
-                <th>Hpdebase</th>
-                <th>Attaquedebase</th>
-                <th>Defensedebase</th>
-                <th>Hpmax</th>
-                <th>Attaquemax</th>
-                <th>Defensemax</th>
-                <th>actions</th>
+                <th>Image</th>
+                <th>Aptitude Leader</th>
+                <th>Nom Attaque Special</th>
+                <th>Description Attaque Special</th>
+                <th>Nom Attaque Special Ultime</th>
+                <th>Description Attaque Special Ultime</th>
+                <th>Nom Unit Super Attaque</th>
+                <th>Description Unit Super Attaque</th>
+                <th>Nom Active Skill</th>
+                <th>Description Active Skill</th>
+                <th>Nom Passive Skill</th>
+                <th>Description Passive Skill</th>
+                <th>Liste Des Liens Du Personnage</th>
+                <th>Liste Des Categories Du Personnage</th>
+                <th>Hp De Base</th>
+                <th>Attaque De Base</th>
+                <th>Defense De Base</th>
+                <th>Hp Max</th>
+                <th>Attaque Max</th>
+                <th>Defense Max</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>

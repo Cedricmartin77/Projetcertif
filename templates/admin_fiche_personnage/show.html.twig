@@ -2,93 +2,101 @@
 
 {% block title %}FichePersonnage{% endblock %}
 
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
+
+{% endblock %}
+
+
 {% block body %}
     <h1>FichePersonnage</h1>
 
-    <table class="table">
+    <table class="table text-light">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>{{ fiche_personnage.id }}</td>
             </tr>
             <tr>
-                <th>Img</th>
+                <th>Image</th>
                 <td><img src="{{ asset('img/fichepersonnage/' ~ fiche_personnage.img) }}" class="img" alt=""></td>
             </tr>
             <tr>
-                <th>Aptitudeleader</th>
+                <th>Aptitude Leader</th>
                 <td>{{ fiche_personnage.aptitudeleader }}</td>
             </tr>
             <tr>
-                <th>Nomattaquespecial</th>
+                <th>Nom Attaque Special</th>
                 <td>{{ fiche_personnage.nomattaquespecial }}</td>
             </tr>
             <tr>
-                <th>Descriptionattaquespecial</th>
+                <th>Description Attaque Special</th>
                 <td>{{ fiche_personnage.descriptionattaquespecial }}</td>
             </tr>
             <tr>
-                <th>Nomattaquespecialultime</th>
+                <th>Nom Attaque Special Ultime</th>
                 <td>{{ fiche_personnage.nomattaquespecialultime }}</td>
             </tr>
             <tr>
-                <th>Descriptionattaquespecialultime</th>
+                <th>Description Attaque Special Ultime</th>
                 <td>{{ fiche_personnage.descriptionattaquespecialultime }}</td>
             </tr>
             <tr>
-                <th>Nomunitsuperattaque</th>
+                <th>Nom Unit Super Attaque</th>
                 <td>{{ fiche_personnage.nomunitsuperattaque }}</td>
             </tr>
             <tr>
-                <th>Descriptionunitsuperattaque</th>
+                <th>Description Unit Super Attaque</th>
                 <td>{{ fiche_personnage.descriptionunitsuperattaque }}</td>
             </tr>
             <tr>
-                <th>Nomactiveskill</th>
+                <th>Nom Active Skill</th>
                 <td>{{ fiche_personnage.nomactiveskill }}</td>
             </tr>
             <tr>
-                <th>Descriptionactiveskill</th>
+                <th>Description Active Skill</th>
                 <td>{{ fiche_personnage.descriptionactiveskill }}</td>
             </tr>
             <tr>
-                <th>Nompassiveskill</th>
+                <th>Nom Passive Skill</th>
                 <td>{{ fiche_personnage.nompassiveskill }}</td>
             </tr>
             <tr>
-                <th>Descriptionpassiveskill</th>
+                <th>Description Passive Skill</th>
                 <td>{{ fiche_personnage.descriptionpassiveskill }}</td>
             </tr>
             <tr>
-                <th>Listedesliensdupersonnage</th>
+                <th>Liste Des Liens Du Personnage</th>
                 <td>{{ fiche_personnage.listedesliensdupersonnage }}</td>
             </tr>
             <tr>
-                <th>Listedescategoriedupersonnage</th>
+                <th>Liste Des Categories Du Personnage</th>
                 <td>{{ fiche_personnage.listedescategoriedupersonnage }}</td>
             </tr>
             <tr>
-                <th>Hpdebase</th>
+                <th>Hp De Base</th>
                 <td>{{ fiche_personnage.hpdebase }}</td>
             </tr>
             <tr>
-                <th>Attaquedebase</th>
+                <th>Attaque De Base</th>
                 <td>{{ fiche_personnage.attaquedebase }}</td>
             </tr>
             <tr>
-                <th>Defensedebase</th>
+                <th>Defense De Base</th>
                 <td>{{ fiche_personnage.defensedebase }}</td>
             </tr>
             <tr>
-                <th>Hpmax</th>
+                <th>Hp Max</th>
                 <td>{{ fiche_personnage.hpmax }}</td>
             </tr>
             <tr>
-                <th>Attaquemax</th>
+                <th>Attaque Max</th>
                 <td>{{ fiche_personnage.attaquemax }}</td>
             </tr>
             <tr>
-                <th>Defensemax</th>
+                <th>Defense Max</th>
                 <td>{{ fiche_personnage.defensemax }}</td>
             </tr>
         </tbody>

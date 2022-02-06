@@ -6,10 +6,6 @@
 parameters:
     encyclopedieDesPersonnages_pictures_directory: '%kernel.project_dir%/public/img/logoencyclopediedespersonnages'
     encyclopedieDuPersonnage_pictures_directory: '%kernel.project_dir%/public/img/logoencyclopediedupersonnage'
-    fichePersonnageSsr_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnageartworkssr'
-    fichePersonnageUr_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnageartworkur'
-    fichePersonnageUrActiveSkill_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnageuractiverskill'
-    fichePersonnageLr_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnageartworklr'
     frontPageNouveauPersonnage_pictures_directory: '%kernel.project_dir%/public/img/frontpagenouveaupersos'
     fichePersonnage_pictures_directory: '%kernel.project_dir%/public/img/fichepersonnage'
 services:

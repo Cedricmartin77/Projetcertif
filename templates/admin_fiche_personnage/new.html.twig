@@ -11,9 +11,9 @@
 
 
 {% block body %}
-    <h1>Crée une nouvelle Fiche Personnage</h1>
+    <h1 class="text-light">Crée une nouvelle Fiche Personnage</h1>
 
     {{ include('admin_fiche_personnage/_form.html.twig') }}
 
-    <a href="{{ path('admin_fiche_personnage_index') }}">Retour a la list des Fiches Personnages</a>
+    <a href="{{ path('admin_fiche_personnage_index') }}" class="btn2">Retour a la list des Fiches Personnages</a>
 {% endblock %}

@@ -11,11 +11,11 @@
 
 
 {% block body %}
-    <h1>Edit FichePersonnage</h1>
+    <h1>Modifier Fiche Personnage</h1>
 
-    {{ include('admin_fiche_personnage/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin_fiche_personnage/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
 
-    <a href="{{ path('admin_fiche_personnage_index') }}">back to list</a>
+    <a href="{{ path('admin_fiche_personnage_index') }}">Retour a la liste des Fiches</a>
 
     {{ include('admin_fiche_personnage/_delete_form.html.twig') }}
 {% endblock %}

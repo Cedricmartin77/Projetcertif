@@ -30,10 +30,6 @@ class EncyclopedieDuPersonnage
 
     public function __construct()
     {
-        $this->fichePersonnageSsrs = new ArrayCollection();
-        $this->fichePersonnageUrs = new ArrayCollection();
-        $this->fichePersonnageLrs = new ArrayCollection();
-        $this->fichePersonnageUrActiveSkills = new ArrayCollection();
         $this->fichePersonnages = new ArrayCollection();
     }
 

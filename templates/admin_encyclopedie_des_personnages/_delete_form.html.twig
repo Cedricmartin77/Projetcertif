@@ -1,4 +1,4 @@
-<form method="post" action="{{ path('admin_encyclopedie_des_personnages_delete', {'id': encyclopedie_des_personnage.id}) }}" onsubmit="return confirm('Es-tu sûr de vouloir supprimer cette Encyclopedie des Personnages?');">
-    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ encyclopedie_des_personnage.id) }}">
+<form method="post" action="{{ path('admin_encyclopedie_des_personnages_delete', {'id': encyclopedie_des_personnages.id}) }}" onsubmit="return confirm('Es-tu sûr de vouloir supprimer cette Encyclopedie des Personnages?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ encyclopedie_des_personnages.id) }}">
     <button class="btn6">Supprimer</button>
 </form>

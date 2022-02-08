@@ -1,10 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}S'inscrire{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
+
+{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
-
+    <h1>S'inscrire</h1>
+<div class="text-light">
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
@@ -12,6 +18,7 @@
         }) }}
         {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">S'inscrire</button>
+        <button type="submit" class="btn2">S'inscrire</button>
     {{ form_end(registrationForm) }}
+</div>
 {% endblock %}

@@ -5,6 +5,19 @@
 {% block stylesheets %}
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/buttontest.css') }}">
+
+{% for personnages in fiche_personnage %}
+
+{% if (personnages.nomattaquespecialultime is not empty ) or (personnages.descriptionattaquespecialultime is not empty) %}
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnagelr.css') }}">
+{% endif %}
+
+{% if personnages.nomunitsuperattaque is not empty %}
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnageunitsuperattaque.css') }}">
+{% endif %}
+
+{% endfor %}
 
 {% endblock %}
 

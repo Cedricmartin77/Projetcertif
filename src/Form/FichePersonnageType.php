@@ -11,6 +11,7 @@ use Symfony\Component\Validator\Constraints\Image;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class FichePersonnageType extends AbstractType
@@ -46,18 +47,21 @@ class FichePersonnageType extends AbstractType
         ])
         ->add('aptitudeleader', TextareaType::class, [
             'label' => 'Aptitude Leader',
+            'required' => false,
             'attr' => [
                 'placeholder' => 'Ex.: Atk et def +170%'
             ]
         ])
         ->add('nomattaquespecial', TextType::class, [
             'label' => 'Nom Attaque Spécial',
+            'required' => false,
             'attr' => [
                 'placeholder' => 'Ex.: Big Bang !'
             ]
         ])
         ->add('descriptionattaquespecial', TextareaType::class, [
             'label' => 'Description Attaque Spécial',
+            'required' => false,
             'attr' => [
                 'placeholder' => 'Ex.: Bloque lennemie'
             ]
@@ -106,34 +110,80 @@ class FichePersonnageType extends AbstractType
             ])
             ->add('nompassiveskill', TextType::class, [
                 'label' => 'Nom Passive Skill',
+                'required' => false,
                 'attr' => [
                     'placeholder' => 'Ex.: Saiyan au coeur d\'or'
                 ]
             ])
             ->add('descriptionpassiveskill', TextareaType::class, [
                 'label' => 'Description Passive Skill',
+                'required' => false,
                 'attr' => [
                     'placeholder' => 'Ex.: Bloque lennemie'
                 ]
             ])
             ->add('listedesliensdupersonnage', TextareaType::class, [
                 'label' => 'Listes des Liens du Personnage',
+                'required' => false,
                 'attr' => [
                     'placeholder' => 'Ex.: Super Saiyan - Guerrier Z ..'
                 ]
             ])
             ->add('listedescategoriedupersonnage', TextareaType::class, [
                 'label' => 'Listes des Catégories du Personnage',
+                'required' => false,
                 'attr' => [
                     'placeholder' => 'Ex.: Tenkaichi Budokai - Super Saiyan..'
                 ]
             ])
-            ->add('hpdebase')
-            ->add('attaquedebase')
-            ->add('defensedebase')
-            ->add('hpmax')
-            ->add('attaquemax')
-            ->add('defensemax')
+            ->add('hpdebase', IntegerType::class, [
+                'label' => 'Point de vie de base',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => 'Ex.: 8',
+                    'min' => 0
+                ]
+            ])
+            ->add('attaquedebase', IntegerType::class, [
+                'label' => 'Attaque de base',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => 'Ex.: 8',
+                    'min' => 0
+                ]
+            ])
+            ->add('defensedebase', IntegerType::class, [
+                'label' => 'Défense de base',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => 'Ex.: 8',
+                    'min' => 0
+                ]
+            ])
+            ->add('hpmax', IntegerType::class, [
+                'label' => 'Point de vie max',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => 'Ex.: 8',
+                    'min' => 0
+                ]
+            ])
+            ->add('attaquemax', IntegerType::class, [
+                'label' => 'Attaque max',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => 'Ex.: 8',
+                    'min' => 0
+                ]
+            ])
+            ->add('defensemax', IntegerType::class, [
+                'label' => 'Defense max',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => 'Ex.: 8',
+                    'min' => 0
+                ]
+            ])
         ;
     }
 

@@ -86,6 +86,7 @@ Vie artificielle -> Artificial Life Forms
 '' -> Fused Fighters
 ----------------------------------------------
 Liste des liens traduit :
+-------------------------->
 Armée de Freezer -> Frieza's Army 
 Armée du nouveau Freezer -> New Frieza Army 
 Absorbeur d'énergie -> Energy Absorption

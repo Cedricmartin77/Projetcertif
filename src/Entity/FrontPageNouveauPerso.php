@@ -16,6 +16,10 @@ class FrontPageNouveauPerso
     #[ORM\Column(type: 'string', length: 255)]
     private $img;
 
+    #[ORM\ManyToOne(targetEntity: FichePersonnage::class, inversedBy: 'frontPageNouveauPersos')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $fichepersonnage;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,6 +33,18 @@ class FrontPageNouveauPerso
     public function setImg(string $img): self
     {
         $this->img = $img;
+
+        return $this;
+    }
+
+    public function getFichepersonnage(): ?FichePersonnage
+    {
+        return $this->fichepersonnage;
+    }
+
+    public function setFichepersonnage(?FichePersonnage $fichepersonnage): self
+    {
+        $this->fichepersonnage = $fichepersonnage;
 
         return $this;
     }

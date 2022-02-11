@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\FichePersonnageRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: FichePersonnageRepository::class)]
@@ -76,6 +78,14 @@ class FichePersonnage
     #[ORM\ManyToOne(targetEntity: EncyclopedieDuPersonnage::class, inversedBy: 'fichePersonnages')]
     #[ORM\JoinColumn(nullable: false)]
     private $encyclopediedupersonnage;
+
+    #[ORM\OneToMany(mappedBy: 'fichepersonnage', targetEntity: FrontPageNouveauPerso::class, orphanRemoval: true)]
+    private $frontPageNouveauPersos;
+
+    public function __construct()
+    {
+        $this->frontPageNouveauPersos = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -330,6 +340,36 @@ class FichePersonnage
     public function setEncyclopediedupersonnage(?EncyclopedieDuPersonnage $encyclopediedupersonnage): self
     {
         $this->encyclopediedupersonnage = $encyclopediedupersonnage;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|FrontPageNouveauPerso[]
+     */
+    public function getFrontPageNouveauPersos(): Collection
+    {
+        return $this->frontPageNouveauPersos;
+    }
+
+    public function addFrontPageNouveauPerso(FrontPageNouveauPerso $frontPageNouveauPerso): self
+    {
+        if (!$this->frontPageNouveauPersos->contains($frontPageNouveauPerso)) {
+            $this->frontPageNouveauPersos[] = $frontPageNouveauPerso;
+            $frontPageNouveauPerso->setFichepersonnage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFrontPageNouveauPerso(FrontPageNouveauPerso $frontPageNouveauPerso): self
+    {
+        if ($this->frontPageNouveauPersos->removeElement($frontPageNouveauPerso)) {
+            // set the owning side to null (unless already changed)
+            if ($frontPageNouveauPerso->getFichepersonnage() === $this) {
+                $frontPageNouveauPerso->setFichepersonnage(null);
+            }
+        }
 
         return $this;
     }

@@ -17,10 +17,10 @@ class HomeController extends AbstractController
     public function index(FichePersonnageRepository $fichePersonnageRepository, FrontPageNouveauPersoRepository $frontPageNouveauPersoRepository, int $id): Response
     {
         return $this->render('home/index.html.twig', [
-            $fichePersonnage = $frontPageNouveauPersoRepository->find($id),
-            $personnages = $fichePersonnageRepository->findBy(['fichePersonnage' => $id], ['id' => 'ASC']),
-            'fichePersonnage' => $fichePersonnage,
+            $fichePersonnage = $fichePersonnageRepository->find($id),
+            $personnages = $fichePersonnageRepository->findBy(['fichePersonnages' => $id], ['id' => 'ASC']),
             'personnages' => $personnages,
+            'fiche_personnage' => $fichePersonnage,
             'front_page_nouveau_perso' => $frontPageNouveauPersoRepository->findBy(
                 array(),
                 array('id'=> 'ASC'),

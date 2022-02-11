@@ -14,7 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'home')]
-    public function index(FichePersonnageRepository $fichePersonnageRepository,FrontPageNouveauPersoRepository $frontPageNouveauPersoRepository): Response
+    public function index(FrontPageNouveauPersoRepository $frontPageNouveauPersoRepository): Response
     {
         return $this->render('home/index.html.twig', [
             'front_page_nouveau_perso' => $frontPageNouveauPersoRepository->findBy(

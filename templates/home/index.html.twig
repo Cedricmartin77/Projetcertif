@@ -20,6 +20,5 @@
     {% for frontPageNouveauPerso in front_page_nouveau_perso %}
     <a href="{{ path('fiche_personnage', {id:frontPageNouveauPerso.fichepersonnage.id}) }}"><img src=" {{ asset('img/frontpagenouveaupersos/' ~ frontPageNouveauPerso.img) }} " class="img" alt=""/></a>
     {% endfor %}
-    {{ dump(front_page_nouveau_perso) }}
 
 {% endblock %}

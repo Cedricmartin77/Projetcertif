@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\EncyclopedieDuPersonnage;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Form\EncyclopedieDuPersonnage1Type;
+use App\Repository\FichePersonnageRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,6 +20,8 @@ class EncyclopedieDuPersonnageController extends AbstractController
     public function show(EncyclopedieDesPersonnagesRepository $encyclopedieDesPersonnagesRepository, EncyclopedieDuPersonnageRepository $encyclopedieDuPersonnageRepository, $id): Response
     {
         $encyclopedieDuPersonnage = $encyclopedieDesPersonnagesRepository->find($id);
+        // dump($encyclopedieDuPersonnage); die ;
+        
         $personnages = $encyclopedieDuPersonnageRepository->findBy(['encyclopedieDesPersonnages' => $id], ['id' => 'ASC']);
         return $this->render('encyclopedie_du_personnage/show.html.twig', [
             'encyclopedie_du_personnage' => $encyclopedieDuPersonnage,

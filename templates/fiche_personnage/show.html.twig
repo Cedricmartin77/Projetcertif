@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/buttontest.css') }}">
 
-{% for personnages in fiche_personnage %}
+{#{% for personnages in fiche_personnage %}#}
 
 {% if (personnages.nomattaquespecialultime is not empty ) or (personnages.descriptionattaquespecialultime is not empty) %}
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnagelr.css') }}">
@@ -18,14 +18,14 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnageunitsuperattaque.css') }}">
 {% endif %}
 
-{% endfor %}
+{#{% endfor %}#}
 
 {% endblock %}
 
 {% block body %}
 
 
-    {% for personnages in fiche_personnage %}
+    {#{% for personnages in fiche_personnage %}#}
 
     {# <div class="btn-1">
         BUTTON
@@ -90,6 +90,6 @@
         </div>
     </div>
 
-    {% endfor %}
+    {#{% endfor %}#}
     {% endblock %}
     

@@ -45,6 +45,20 @@ class FichePersonnageType extends AbstractType
             'choice_label' => 'title',
             'label' => 'Encyclopedie Du Personnage'
         ])
+        ->add('title', TextType::class, [
+            'label' => 'Nom du personnage',
+            'required' => false,
+            'attr' => [
+                'placeholder' => 'Ex.: Vegeta - Super Saiyan',
+            ]
+        ])
+        ->add('secondtitle', TextType::class, [
+            'label' => 'Second nom du personnage',
+            'required' => false,
+            'attr' => [
+                'placeholder' => 'Ex.: Le plus fort',
+            ]
+        ])
         ->add('aptitudeleader', TextareaType::class, [
             'label' => 'Aptitude Leader',
             'required' => false,

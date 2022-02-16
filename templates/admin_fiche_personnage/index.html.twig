@@ -22,6 +22,8 @@
             <tr>
                 <th>Id</th>
                 <th>Image</th>
+                <th>Nom Personnage</th>
+                <th>Second Nom</th>
                 <th>Aptitude Leader</th>
                 <th>Nom Attaque Special</th>
                 <th>Description Attaque Special</th>
@@ -49,6 +51,8 @@
             <tr>
                 <td>{{ fiche_personnage.id }}</td>
                 <td><img src="{{ asset('img/fichepersonnage/' ~ fiche_personnage.img) }}" class="img" alt=""></td>
+                <td>{{ fiche_personnage.title}}</td>
+                <td>{{ fiche_personnage.secondtitle }}</td>
                 <td>{{ fiche_personnage.aptitudeleader }}</td>
                 <td>{{ fiche_personnage.nomattaquespecial }}</td>
                 <td>{{ fiche_personnage.descriptionattaquespecial|u.truncate(90, '...', false) }}</td>

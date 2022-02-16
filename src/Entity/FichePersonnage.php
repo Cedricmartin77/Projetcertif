@@ -82,6 +82,12 @@ class FichePersonnage
     #[ORM\OneToMany(mappedBy: 'fichepersonnage', targetEntity: FrontPageNouveauPerso::class, orphanRemoval: true)]
     private $frontPageNouveauPersos;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private $title;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $secondtitle;
+
     public function __construct()
     {
         $this->frontPageNouveauPersos = new ArrayCollection();
@@ -370,6 +376,30 @@ class FichePersonnage
                 $frontPageNouveauPerso->setFichepersonnage(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getSecondtitle(): ?string
+    {
+        return $this->secondtitle;
+    }
+
+    public function setSecondtitle(string $secondtitle): self
+    {
+        $this->secondtitle = $secondtitle;
 
         return $this;
     }

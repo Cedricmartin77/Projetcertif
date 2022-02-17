@@ -10,7 +10,7 @@
     text-decoration: none;
   }
   
-  .btn:hover {
+  .btn1:hover {
     background: #3cfc9f;
     background-image: -webkit-linear-gradient(top, #3cfc9f, #3cfc9f);
     background-image: -moz-linear-gradient(top, #3cfc9f, #3cfc9f);
@@ -32,7 +32,7 @@
     text-decoration: none;
   }
   
-  .btn:hover {
+  .btn2:hover {
     background: #00abfa;
     text-decoration: none;
   }
@@ -49,7 +49,7 @@
     text-decoration: none;
   }
   
-  .btn:hover {
+  .btn3:hover {
     background: #434fcc;
     text-decoration: none;
   }
@@ -66,7 +66,7 @@
     text-decoration: none;
   }
   
-  .btn:hover {
+  .btn4:hover {
     background: #ffc107;
     text-decoration: none;
   }
@@ -83,7 +83,7 @@
     text-decoration: none;
   }
   
-  .btn:hover {
+  .btn5:hover {
     background: #34d9a2;
     text-decoration: none;
   }
@@ -100,7 +100,7 @@
     text-decoration: none;
   }
   
-  .btn:hover {
+  .btn6:hover {
     background: #ff0f0f;
     text-decoration: none;
   }

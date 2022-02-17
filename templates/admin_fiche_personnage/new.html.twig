@@ -11,9 +11,11 @@
 
 
 {% block body %}
+<div class="container">
     <h1 class="text-light"><img src=" {{ asset('img/adminimage/balls7.png') }} " class="img1"alt="">Crée une nouvelle Fiche Personnage<img src=" {{ asset('img/adminimage/balls7.png') }} " class="img2"alt=""></h1>
 
     {{ include('admin_fiche_personnage/_form.html.twig') }}
 
     <a href="{{ path('admin_fiche_personnage_index') }}" class="btn2">Retour a la list des Fiches Personnages</a>
+</div>
 {% endblock %}

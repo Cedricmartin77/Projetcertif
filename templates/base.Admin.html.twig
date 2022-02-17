@@ -48,7 +48,8 @@
       {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
       <a href="{{ path('app_logout') }}"><button class="btn btn-success ml-5 my-2 my-sm-0" type="button">Se déconnecter</button></a>
     {% else %}
-      <a href="{{ asset('login') }}"><button class="btn btn-success ml-5 my-2 my-sm-0" type="button">S'inscrire / Se Connecter</button></a>
+      <a href="{{ asset('login') }}"><button class="btn btn-success ml-5 my-2 my-sm-0" type="button">S'inscrire</button></a>
+      <a href="{{ asset('login') }}"><button class="btn btn-success ml-5 my-2 my-sm-0" type="button">Se Connecter</button></a>
     {% endif %}
     </div>
     <!--Fin Container -->

@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/encyclopediedespersonnages.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
 
+
 {% endblock %}
 
 {% block body %}
@@ -35,6 +36,7 @@
         </tbody>
     </table>
 
+    
     <a href="{{ path('admin_encyclopedie_des_personnages_index') }}" class="btn2">Retour a la liste des Encylopédie des Personnages</a>
 
     <a href="{{ path('admin_encyclopedie_des_personnages_edit', {'id': encyclopedie_des_personnage.id}) }}" class="btn4">Modifier</a>

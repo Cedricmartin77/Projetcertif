@@ -12,13 +12,11 @@
 {% block body %}
     <h1><img src=" {{ asset('img/adminimage/balls5.png') }} " class="img1"alt="">Front Page Nouveau Perso<img src=" {{ asset('img/adminimage/balls6.png') }} " class="img2"alt=""></h1>
 
-    <div class="espace2">
      <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="btn2">Retour vers Nouveau Perso en Front Page </a>
 
      <a href="{{ path('admin_front_page_nouveau_perso_edit', {'id': front_page_nouveau_perso.id}) }}" class="btn4">Modifier</a>
 
      {{ include('admin_front_page_nouveau_perso/_delete_form.html.twig') }}
-    </div>
     
     <table class="table text-light">
         <tbody>
@@ -33,11 +31,9 @@
         </tbody>
     </table>
 
-    <div class="espace2">
         <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="btn2">Retour vers Nouveau Perso en Front Page </a>
    
         <a href="{{ path('admin_front_page_nouveau_perso_edit', {'id': front_page_nouveau_perso.id}) }}" class="btn4">Modifier</a>
    
         {{ include('admin_front_page_nouveau_perso/_delete_form.html.twig') }}
-       </div>
 {% endblock %}

@@ -6,7 +6,6 @@
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/encyclopediedupersonnage.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbuttonficheperso.css') }}">
 
 {% endblock %}
 
@@ -38,11 +37,9 @@
         </tbody>
     </table>
 
-    <div class="espace2">
      <a href="{{ path('admin_encyclopedie_du_personnage_index') }}" class="btn2">Retour a la liste des Encyclopédie du Personnage</a>
 
      <a href="{{ path('admin_encyclopedie_du_personnage_edit', {'id': encyclopedie_du_personnage.id}) }}" class="btn4">Modifier</a>
 
      {{ include('admin_encyclopedie_du_personnage/_delete_form.html.twig') }}
-    </div>
 {% endblock %}

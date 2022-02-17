@@ -2,6 +2,15 @@
 
 {% block title %}Espace Admin{% endblock %}
 
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/accueilimage.css') }}">
+
+
+{% endblock %}
+
 {% block body %}
-<h1>Bien le bonjour cher Dokkanneur</h1>
+<h1><img src=" {{ asset('img/adminimage/gokussj2.png') }} " class="img3" alt=""/>Bien le bonjour cher Admin Dokkanneur<img src=" {{ asset('img/adminimage/vegetassj2.png') }} " class="img3" alt=""/></h1>
+<img src=" {{ asset('img/adminimage/whisadvice.png') }} " class="img4" alt=""/>
+
 {% endblock %}

@@ -1,5 +1,8 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    globals:
+        adresse_mail: 'c.cedric.martin@gmail.com'
+        copyright: 'Copyright © 2021 - Cédric Martin'
     form_themes : ['bootstrap_5_layout.html.twig']
 
 when@test:

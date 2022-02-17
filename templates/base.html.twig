@@ -13,6 +13,7 @@
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
 
     {% block stylesheets %}{% endblock %}
 
@@ -21,7 +22,7 @@
 <body>
 
     <header>
-        <div class="navbar navbar-expand-lg navbar-light bg-grey">
+        <div class="navbar navbarcss navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand text-light" href="{{ path('home') }}">Accueil</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -41,17 +42,54 @@
             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
       <a href="{{ path('app_logout') }}"><button class="btn btn-outline-success ml-5 my-2 my-sm-0" type="button">Se déconnecter</button></a>
     {% else %}
-      <a href="{{ asset('login') }}"><button class="btn btn-outline-success ml-5 my-2 my-sm-0" type="button">S'inscrire / Se Connecter</button></a>
+      <a href="{{ asset('login') }}"><button class="btn btn-outline-success ml-5 my-2 my-sm-0" type="button">Se connecter</button></a>
+      <a href="{{ asset('register') }}"><button class="btn btn-outline-success ml-5 my-2 my-sm-0" type="button">S'inscrire</button></a>
     {% endif %}
         </div>
     </header>
 
     <main>
         {% block body %}{% endblock %}
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Liens utile :</h3>
+                            <ul>
+                                <li><a href="{{ path('home') }}">Haut de page</a></li>
+                                <li><a href="{{ path('encyclopedie_des_personnages') }}">Encyclopédie des Personnages</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>A propos</h3>
+                            <ul>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Team</a></li>
+                                <p>{{ adresse_mail }}</p>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3>Dokkan Battle | France</h3>
+                            <p>Dokkan Battle | France est un site crée par un fan de la licence Dragon Ball et joueur du jeu mobile Dragon Ball Z : Dokkan Battle,ce site
+                                sers a informer ces joueurs en France sur tout nouveau Personnage en Jeu.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="copyright">{{ copyright }}</p>
+                </div>
+            </footer>
+        </div>
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 

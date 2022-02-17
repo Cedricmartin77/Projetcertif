@@ -5,11 +5,12 @@
 {% block stylesheets %}
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
-
+<link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
 {% endblock %}
 
 {% block body %}
     <h1>S'inscrire</h1>
+<div class="container">
 <div class="text-light">
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
@@ -20,5 +21,6 @@
 
         <button type="submit" class="btn2">S'inscrire</button>
     {{ form_end(registrationForm) }}
+</div>
 </div>
 {% endblock %}

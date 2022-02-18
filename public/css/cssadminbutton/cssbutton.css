@@ -18,6 +18,7 @@
     background-image: -o-linear-gradient(top, #3cfc9f, #3cfc9f);
     background-image: linear-gradient(to bottom, #3cfc9f, #3cfc9f);
     text-decoration: none;
+    color: white;
   }
 
   .btn2 {
@@ -35,6 +36,7 @@
   .btn2:hover {
     background: #00abfa;
     text-decoration: none;
+    color: white;
   }
 
   .btn3 {
@@ -52,6 +54,7 @@
   .btn3:hover {
     background: #434fcc;
     text-decoration: none;
+    color: white;
   }
 
   .btn4 {
@@ -69,6 +72,7 @@
   .btn4:hover {
     background: #ffc107;
     text-decoration: none;
+    color: white;
   }
 
   .btn5 {
@@ -86,6 +90,7 @@
   .btn5:hover {
     background: #34d9a2;
     text-decoration: none;
+    color: white;
   }
 
   .btn6 {
@@ -103,4 +108,5 @@
   .btn6:hover {
     background: #ff0f0f;
     text-decoration: none;
+    color: white;
   }

@@ -12,6 +12,7 @@
   
   .btn1:hover {
     background: #3cfc9f;
+    color: white;
     background-image: -webkit-linear-gradient(top, #3cfc9f, #3cfc9f);
     background-image: -moz-linear-gradient(top, #3cfc9f, #3cfc9f);
     background-image: -ms-linear-gradient(top, #3cfc9f, #3cfc9f);
@@ -33,6 +34,7 @@
   }
   
   .btn2:hover {
+    color: white;
     background: #00abfa;
     text-decoration: none;
   }
@@ -50,6 +52,7 @@
   }
   
   .btn3:hover {
+    color: white;
     background: #434fcc;
     text-decoration: none;
   }
@@ -67,6 +70,7 @@
   }
   
   .btn4:hover {
+    color: white;
     background: #ffc107;
     text-decoration: none;
   }
@@ -84,6 +88,7 @@
   }
   
   .btn5:hover {
+    color: white;
     background: #34d9a2;
     text-decoration: none;
   }
@@ -101,6 +106,7 @@
   }
   
   .btn6:hover {
+    color: white;
     background: #ff0f0f;
     text-decoration: none;
   }

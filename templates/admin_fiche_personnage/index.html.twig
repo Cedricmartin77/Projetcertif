@@ -6,6 +6,8 @@
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadmin/artworkfichepersonnage.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/buttonfiche.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/espacebutton.css') }}">
+
 
 {% endblock %}
 
@@ -50,8 +52,12 @@
         {% for fiche_personnage in fiche_personnages %}
             <tr>
                 <td>
-                    <a href="{{ path('admin_fiche_personnage_show', {'id': fiche_personnage.id}) }}" class="btn3">Voir</a>
-                    <a href="{{ path('admin_fiche_personnage_edit', {'id': fiche_personnage.id}) }}" class="btn4">Modifier</a>
+                    <div class="espace">
+                        <div>
+                        <a href="{{ path('admin_fiche_personnage_show', {'id': fiche_personnage.id}) }}" class="btn3 espace1">Voir</a>
+                        </div>
+                        <a href="{{ path('admin_fiche_personnage_edit', {'id': fiche_personnage.id}) }}" class="btn4 espace2">Modifier</a>
+                    </div>
                 </td>
                 <td>{{ fiche_personnage.id }}</td>
                 <td><img src="{{ asset('img/fichepersonnage/' ~ fiche_personnage.img) }}" class="img" alt=""></td>
@@ -77,8 +83,12 @@
                 <td>{{ fiche_personnage.attaquemax }}</td>
                 <td>{{ fiche_personnage.defensemax }}</td>
                 <td>
-                    <a href="{{ path('admin_fiche_personnage_show', {'id': fiche_personnage.id}) }}" class="btn3">Voir</a>
-                    <a href="{{ path('admin_fiche_personnage_edit', {'id': fiche_personnage.id}) }}" class="btn4">Modifier</a>
+                    <div class="espace">
+                        <div>
+                        <a href="{{ path('admin_fiche_personnage_show', {'id': fiche_personnage.id}) }}" class="btn3 espace1">Voir</a>
+                        </div>
+                        <a href="{{ path('admin_fiche_personnage_edit', {'id': fiche_personnage.id}) }}" class="btn4 espace2">Modifier</a>
+                    </div>
                 </td>
             </tr>
         {% else %}

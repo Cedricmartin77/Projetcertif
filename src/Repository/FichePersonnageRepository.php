@@ -19,6 +19,16 @@ class FichePersonnageRepository extends ServiceEntityRepository
         parent::__construct($registry, FichePersonnage::class);
     }
 
+    public function findFichesPersonnages($encyclopedieDesPersonnageId)
+    {
+        return $this->createQueryBuilder('f')
+            ->select('e', 'f')
+            ->join('f.encyclopediedupersonnage', 'e')
+            ->andWhere('e.encyclopedieDesPersonnages = :edpId')
+            ->setParameter('edpId', $encyclopedieDesPersonnageId)
+            ->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return FichePersonnage[] Returns an array of FichePersonnage objects
     //  */

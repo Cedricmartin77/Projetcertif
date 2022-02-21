@@ -19,6 +19,17 @@ class EncyclopedieDuPersonnageRepository extends ServiceEntityRepository
         parent::__construct($registry, EncyclopedieDuPersonnage::class);
     }
 
+    public function findEncyclopedieDuPersonnages($encyclopedieDesPersonnageId)
+    {
+        return $this->createQueryBuilder('e')
+            ->select('e', 'f')
+            ->leftJoin('e.fichePersonnages', 'f')
+            ->andWhere('e.encyclopedieDesPersonnages = :edpId')
+            ->setParameter('edpId', $encyclopedieDesPersonnageId)
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return EncyclopedieDuPersonnage[] Returns an array of EncyclopedieDuPersonnage objects
     //  */

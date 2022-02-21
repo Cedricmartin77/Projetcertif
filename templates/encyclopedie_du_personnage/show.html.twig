@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Encyclopedie de {{ encyclopedie_du_personnage.title }}{% endblock %}
+{% block title %}Encyclopedie de {{ encyclopedieDuPersonnages[0].encyclopedieDesPersonnages.title }}{% endblock %}
 
 {% block stylesheets %}
 
@@ -10,23 +10,23 @@
 
 {% block body %}
   
- <h1 class="text-light">Encyclopedie de {{ encyclopedie_du_personnage.title }}</h1>
+ <h1 class="text-light">Encyclopedie de {{ encyclopedieDuPersonnages[0].encyclopedieDesPersonnages.title }}</h1>
 
  <form>
     <input type="button" value="Retour en arrière" onclick="history.go(-1)">
   </form>
 
  <div class="box" style="flex-flow: row wrap;">
-    {% if personnages is not null %}
+    {% if encyclopedieDuPersonnages is not null %}
        
 
-        {% for personnage in personnages %}
-            <a href="{{ path('fiche_personnage', {'id': personnage.id }) }}" class="flex">
+        {% for encyclopedieDuPersonnage in encyclopedieDuPersonnages %}
+            <a href="{{ path('fiche_personnage', {'id':encyclopedieDuPersonnage.fichePersonnages.get(0).id|default("#")}) }}" class="flex">
                 <div class="image">
-                    <img src=" {{ asset('img/logoencyclopediedupersonnage/' ~ personnage.img) }} " alt="" />
+                    <img src=" {{ asset('img/logoencyclopediedupersonnage/' ~ encyclopedieDuPersonnage.img) }} " alt="" />
                 </div>
                 <div class="text">
-                    <p>{{ personnage.title }}</p>
+                    <p>{{ encyclopedieDuPersonnage.title }}</p>
                 </div>
             </a>
         {% endfor %}

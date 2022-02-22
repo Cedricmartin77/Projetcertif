@@ -36,7 +36,19 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/admin_encyclopedie_des_personnages, roles: ROLE_ADMIN }
+        - { path: ^/admin_encyclopedie_du_personnage, roles: ROLE_ADMIN }
+        - { path: ^/admin_fiche_personnage, roles: ROLE_ADMIN }
+        - { path: ^/admin_front_page_nouveau_perso, roles: ROLE_ADMIN }
+        - { path: ^/admin_user, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
+        # - { path: ^/encyclopedie_des_personnages, roles: ROLE_USER }
+        # - { path: ^/encyclopedie_du_personnage, roles: ROLE_USER }
+        # - { path: ^/fiche_personnage, roles: ROLE_USER }
+        # - { path: ^/registration, roles: ROLE_USER }
+        # - { path: ^/home, roles: ROLE_USER }
+        # - { path: ^/login, roles: ROLE_USER }
+        # - { path: ^/register, roles: ROLE_USER }
 
 when@test:
     security:

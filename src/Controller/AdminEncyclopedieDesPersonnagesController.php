@@ -51,43 +51,44 @@ class AdminEncyclopedieDesPersonnagesController extends AbstractController
     }
 
     #[Route('/admin/encyclopedie/des/personnages-{id}', name: 'admin_encyclopedie_des_personnages_show', methods: ['GET'])]
-    public function show(EncyclopedieDesPersonnages $encyclopedieDesPersonnages, EncyclopedieDuPersonnageRepository $encyclopedieDuPersonnageRepository, int $id): Response
+    public function show(EncyclopedieDesPersonnagesRepository $encyclopedieDesPersonnagesRepository, EncyclopedieDuPersonnageRepository $encyclopedieDuPersonnageRepository, int $id): Response
     {
-        $personnages = $encyclopedieDuPersonnageRepository->findBy(['encyclopedieDesPersonnages' => $id]);
+        // $personnages = $encyclopedieDuPersonnageRepository->findBy(['encyclopedieDesPersonnages' => $id]);
+        $personnage = $encyclopedieDesPersonnagesRepository->find($id);
         return $this->render('admin_encyclopedie_des_personnages/show.html.twig', [
-            'personnages' => $personnages,
+            'personnage' => $personnage,
         ]);
     }
 
     #[Route('/{id}/edit', name: 'admin_encyclopedie_des_personnages_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, EncyclopedieDesPersonnagesRepository $encyclopedieDesPersonnagesRepository, int $id, ManagerRegistry $managerRegistry): Response
     {
-        $encyclopedieDesPersonnages = $encyclopedieDesPersonnagesRepository->find($id);
-        $form = $this->createForm(EncyclopedieDesPersonnagesType::class, $encyclopedieDesPersonnages);
+        $personnage = $encyclopedieDesPersonnagesRepository->find($id);
+        $form = $this->createForm(EncyclopedieDesPersonnagesType::class, $personnage);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $infoImg = $form['img']->getData();
-            $nomOldImg = $encyclopedieDesPersonnages->getImg(); // récupère le nom de l'ancienne img1
+            $nomOldImg =$personnage->getImg(); // récupère le nom de l'ancienne img1
             if ($infoImg !== null) { // vérifie si il y a une img1 dans le formulaire
                 $cheminOldImg = $this->getParameter('encyclopedieDesPersonnages_pictures_directory') . '/' .$nomOldImg;
                 if (file_exists($cheminOldImg)) {
                     unlink($cheminOldImg); // supprime l'ancienne img1
                 }
                 $nomOldImg = time() . '-1.' . $infoImg->guessExtension(); // reconstitue le nom de la nouvelle img1
-                $encyclopedieDesPersonnages->setImg($nomOldImg); // définit le nom de l'img1 de l'objet Maison
+                $personnage->setImg($nomOldImg); // définit le nom de l'img1 de l'objet Maison
                 $infoImg->move($this->getParameter('encyclopedieDesPersonnages_pictures_directory'), $nomOldImg); // upload
             } else {
-                $encyclopedieDesPersonnages->setImg($nomOldImg); // re-définit le nom de l'img1 à mettre en bdd
+                $personnage->setImg($nomOldImg); // re-définit le nom de l'img1 à mettre en bdd
             }
             $manager = $managerRegistry->getManager();
-            $manager->persist($encyclopedieDesPersonnages);
+            $manager->persist($personnage);
             $manager->flush();
             $this->addFlash('success', 'L\'encyclopédie des personnages bien été modifiée');
             return $this->redirectToRoute('admin_encyclopedie_des_personnages_index');
         }
         return $this->render('admin_encyclopedie_des_personnages/edit.html.twig', [
-            'encyclopedie_des_personnages' => $encyclopedieDesPersonnages,
+            'personnage' => $personnage,
             'form' => $form->createView()
         ]);
     }

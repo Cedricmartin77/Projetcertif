@@ -1,0 +1,17 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}Crée un nouvelle Utilisateur{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
+
+{% endblock %}
+
+{% block body %}
+    <h1>Crée un nouvelle Utilisateur</h1>
+
+    {{ include('admin_user/_form.html.twig') }}
+
+    <h1><a href="{{ path('admin_user_index') }}" class="btn2">Retour a la liste des Utilisateurs</a></h1>
+{% endblock %}

@@ -12,8 +12,11 @@
 {% block body %}
     <h1><img src=" {{ asset('img/adminimage/balls3.png') }} " class="img1"alt="">Encyclopedie du Personnage<img src=" {{ asset('img/adminimage/balls4.png') }} " class="img2"alt=""></h1>
 
-    <a href="{{ path('admin_encyclopedie_du_personnage_new') }}" class="btn1">Crée une nouvelle Encyclopédie du Personnage</a>
-    <h1><a href="{{ path('admin_encyclopedie_des_personnages_index') }}" class="btn2">Retour vers Encyclopédie des Personnages</a></h1>
+    <h1><a href="{{ path('admin_encyclopedie_du_personnage_new') }}" class="btn1">Crée une nouvelle Encyclopédie du Personnage</a></h1>
+    <a href="{{ path('admin_encyclopedie_des_personnages_index') }}" class="btn2">Retour vers  Encyclopédie Des Personnage</a>
+    <a href="{{ path('admin_fiche_personnage_index') }}" class="btn2">Retour vers Fiche Personnage</a>
+    <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="btn2">Retour vers Front Page Nouveau Perso</a>
+    <a href="{{ path('admin_user_index') }}" class="btn2">Retour vers Gérer Utilisateur</a>
 
 
     <table class="table text-light">

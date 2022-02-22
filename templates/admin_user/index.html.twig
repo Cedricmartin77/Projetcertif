@@ -1,0 +1,56 @@
+{% extends 'base.Admin.html.twig' %}
+
+{% block title %}Les Utilisateurs{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
+
+{% endblock %}
+
+{% block body %}
+    <h1>Les Utilisateurs</h1>
+
+    <h1><a href="{{ path('admin_user_new') }}" class="btn1">Crée un nouvelle Utilisateur</a></h1>
+    <a href="{{ path('admin_encyclopedie_des_personnages_index') }}" class="btn2">Retour vers Encyclopédie des Personnages</a>
+    <a href="{{ path('admin_encyclopedie_du_personnage_index') }}" class="btn2">Retour vers Encyclopédie du Personnage</a>
+    <a href="{{ path('admin_fiche_personnage_index') }}" class="btn2">Retour vers Fiche Personnage</a>
+    <a href="{{ path('admin_front_page_nouveau_perso_index') }}" class="btn2">Retour vers Front Page Nouveau Perso</a>
+
+    <table class="table text-light">
+        <thead>
+            <tr>
+                <th>Actions</th>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>
+                    <a href="{{ path('admin_user_show', {'id': user.id}) }}" class="btn3">Voir</a>
+                    <a href="{{ path('admin_user_edit', {'id': user.id}) }}" class="btn4">Modifier</a>
+                </td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                <td>{{ user.password }}</td>
+                <td>
+                    <a href="{{ path('admin_user_show', {'id': user.id}) }}" class="btn3">Voir</a>
+                    <a href="{{ path('admin_user_edit', {'id': user.id}) }}" class="btn4">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5 text-light">Aucun résultat trouvée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h1><a href="{{ path('admin_user_new') }}" class="btn1">Crée un nouvelle Utilisateur</a></h1>
+{% endblock %}

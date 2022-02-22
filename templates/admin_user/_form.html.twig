@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+  <div class="text-light">
+    <p>Email</p>
+    {{ form_widget(form.email) }}
+    <p>Password</p>
+    {{ form_widget(form.password) }}
+    <button class="btn5">{{ button_label|default('Enregistrer') }}</button>
+</div>
+{{ form_end(form) }}

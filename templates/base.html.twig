@@ -59,6 +59,7 @@
                     <div class="dropdown-divider" style="border-color:white;"></div>
                         <p><a href="{{ path('home') }}">Retour Page d'accueil</a></p>
                         <p><a href="{{ path('encyclopedie_des_personnages') }}">Encyclopédie des Personnages</a></p>
+                        <p><a href="{{ path('contact') }}">Contact</a></p>
                     </div>
   <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 my-auto order-sm-2 order-md-3 order-lg-2">
       <img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" alt="logo" class="logo">
@@ -66,7 +67,7 @@
   <div class="col-12 col-md-6 col-lg-4 order-sm-3 order-md-2 order-lg-3 p-5">
       <h5>COORDONNÉES</h5>
       <div class="dropdown-divider" style="border-color:white;"></div>
-      <p>{{ adresse_mail }}</p>
+      <p><a href="{{ path('contact') }}">{{ adresse_mail }}</a></p>
   </div>
 </div>
 <div class="row" id="copyright">

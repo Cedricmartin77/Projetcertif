@@ -1,39 +1,35 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}User index{% endblock %}
+{% block title %}Votre espace utilisateur{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssbuttonuser.css') }}">
+
+{% endblock %}
 
 {% block body %}
-    <h1>User index</h1>
+{% for user in users %}
+<h1>Profile de {{ user.pseudo }}</h1>
+    <div id="example-sidenav" data-ax="sidenav" class="sidenav shadow-1 sidenav-fixed white">
+      <a href="#" class="btn1">Modifier votre mot de Passe</a>
+      <a href="#" class="btn2">Modifier profil</a>
+      <a href="{{ path('home') }}" class="btn3">Retour vers Accueil</a>
+    </div>
+    <h1>Descriptif de votre compte</h1>
+    <div class="grix xs2 container">
+        <div class="col-xs1">Adrese mail :</div>
+        <div class="col-xs3">{{ user.email }}</div>
+        <div class="col-xs1">Pseudo :</div>
+        <div class="col-xs3">{{ user.pseudo }}</div>
+    </div>
+    
+    
+{% endfor %}
+    <main>
+    
+    </main>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Email</th>
-                <th>Roles</th>
-                <th>Password</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for user in users %}
-            <tr>
-                <td>{{ user.id }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-                <td>{{ user.password }}</td>
-                <td>
-                    <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('user_new') }}">Create new</a>
+  </body>
+</html>
 {% endblock %}

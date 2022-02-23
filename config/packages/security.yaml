@@ -41,7 +41,7 @@ security:
         - { path: ^/admin_fiche_personnage, roles: ROLE_ADMIN }
         - { path: ^/admin_front_page_nouveau_perso, roles: ROLE_ADMIN }
         - { path: ^/admin_user, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        # - { path: ^/user, roles: ROLE_USER }
         # - { path: ^/encyclopedie_des_personnages, roles: ROLE_USER }
         # - { path: ^/encyclopedie_du_personnage, roles: ROLE_USER }
         # - { path: ^/fiche_personnage, roles: ROLE_USER }

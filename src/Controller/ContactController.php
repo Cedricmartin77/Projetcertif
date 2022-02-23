@@ -9,14 +9,15 @@ use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Mailer\MailerInterface;
 
-#[Route('/contact')]
 class ContactController extends AbstractController
 {
-    
-    #[Route('/', name: 'contact', methods: ['GET'])]
+    /**
+     * @Route("/contact", name="contact")
+     */
     public function index(Request $request, MailerInterface $mailer)
     {
         $form = $this->createForm(ContactType::class);
+
         $form->handleRequest($request);
 
 
@@ -27,19 +28,24 @@ class ContactController extends AbstractController
             $message = (new Email())
                 ->from($contactFormData['email'])
                 ->to('dokkanbattlefrancecontact@gmail.com')
-                ->subject('vous avez reçu un email')
+                ->subject('Vous avait reçus un mail')
                 ->text('Sender : '.$contactFormData['email'].\PHP_EOL.
-                    $contactFormData['Message'],
+                    $contactFormData['message'],
                     'text/plain');
             $mailer->send($message);
 
-            $this->addFlash('success', 'Vore message a été envoyé');
+
+
+
+            $this->addFlash('succès', 'Votre message a était envoyer');
 
             return $this->redirectToRoute('contact');
         }
 
+
+
         return $this->render('contact/index.html.twig', [
-            'form' => $form->createView()
+            'our_form' => $form->createView()
         ]);
     }
     

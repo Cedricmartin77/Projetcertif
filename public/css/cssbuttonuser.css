@@ -49,6 +49,7 @@
     background: #434fcc;
     padding: 9px 20px 10px 20px;
     text-decoration: none;
+    margin-left: -100px;
   }
   
   .btn3:hover {

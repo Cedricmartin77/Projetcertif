@@ -5,7 +5,7 @@
 {% block stylesheets %}
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/flexencyclopediedupersonnage.css') }}">
-
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssbuttonuser.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -13,7 +13,7 @@
  <h1 class="text-light">Encyclopedie de {{ encyclopedieDuPersonnages[0].encyclopedieDesPersonnages.title }}</h1>
 
  <form>
-    <input type="button" value="Retour en arrière" onclick="history.go(-1)">
+    <input class="btn2" type="button" value="Retour en arrière" onclick="history.go(-1)">
   </form>
 
  <div class="box" style="flex-flow: row wrap;">

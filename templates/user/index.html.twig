@@ -5,31 +5,52 @@
 {% block stylesheets %}
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssbuttonuser.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/csspageprofile.css') }}">
+
 
 {% endblock %}
 
 {% block body %}
 {% for user in users %}
-<h1>Profile de {{ user.pseudo }}</h1>
-    <div id="example-sidenav" data-ax="sidenav" class="sidenav shadow-1 sidenav-fixed white">
-      <a href="#" class="btn1">Modifier votre mot de Passe</a>
-      <a href="#" class="btn2">Modifier profil</a>
-      <a href="{{ path('home') }}" class="btn3">Retour vers Accueil</a>
+<h1>Descriptif de votre compte</h1>
+<a href="{{ path('home') }}" class="btn3">Retour vers Accueil</a>
+<div class="container emp-profile">
+  <form method="post">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="tab-content profile-tab" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row">
+              <div class="col-md-6 text">
+                <label>Pseudo :</label>
+              </div>
+              <div class="col-md-6 text">
+                <p>{{ user.pseudo }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 text">
+                <label>Email :</label>
+              </div>
+              <div class="col-md-6 text">
+                <p>{{ user.email }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <h1>Descriptif de votre compte</h1>
-    <div class="grix xs2 container">
-        <div class="col-xs1">Adrese mail :</div>
-        <div class="col-xs3">{{ user.email }}</div>
-        <div class="col-xs1">Pseudo :</div>
-        <div class="col-xs3">{{ user.pseudo }}</div>
-    </div>
-    
-    
-{% endfor %}
-    <main>
-    
-    </main>
+  </form>
+</div>
 
-  </body>
+
+
+{% endfor %}
+<main>
+
+</main>
+
+</body>
+
 </html>
 {% endblock %}

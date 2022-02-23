@@ -36,11 +36,16 @@
                             <a class="nav-link text-light"
                                 href="{{ path('encyclopedie_des_personnages') }}">Encyclopedie des Personnages</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light"
+                                href="{{ path('contact') }}">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
       <a href="{{ path('app_logout') }}"><button class="btn logout btn-success ml-2 my-2 my-sm-0" type="button">Se déconnecter</button></a>
+      <a href="{{ asset('user') }}"><button class="btn logout btn-success ml-2 my-2 my-sm-0" type="button">Mon profil</button></a>
     {% else %}
       <a href="{{ asset('login') }}"><button class="btn connecter btn-success ml-5 my-2 my-sm-0" type="button">Se connecter</button></a>
       <a href="{{ asset('register') }}"><button class="btn sinscrire btn-success ml-5 my-2 my-sm-0" type="button">S'inscrire</button></a>

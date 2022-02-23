@@ -5,8 +5,7 @@
 {% block stylesheets %}
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/pagedupersonnage.css') }}">
-
-<link rel="stylesheet" type="text/css" href="{{ asset('css/buttontest.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssbuttonuser.css') }}">
 
 {#{% for personnages in fiche_personnage %}#}
 
@@ -33,12 +32,14 @@
       <div class="btn-4">
         BUTTON
       </div> #}
-      <form>
-        <input type="button" value="Retour en arrière" onclick="history.go(-1)">
-      </form>
+      
       <h1>{{ personnages.title }}</h1>
       <h1>{{ personnages.secondtitle }}</h1>
-     
+
+      <form>
+        <input class="btn2 "type="button" value="Retour en arrière" onclick="history.go(-1)">
+      </fo>
+
     <div class="container">
         <div class="row-7">
             <div class="col-5">

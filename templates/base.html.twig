@@ -49,7 +49,7 @@
       <a href="{{ asset('user') }}"><button class="btn logout btn-success ml-2 my-2 my-sm-0" type="button">Mon profil</button></a>
       {% elseif is_granted('ROLE_USER') %}
       <a href="{{ path('home') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo2"></a>
-      <a href="{{ asset('app_logout') }}"><button class="btn connecter btn-success ml-5 my-2 my-sm-0" type="button">Se déconnecter</button></a>
+      <a href="{{ asset('logout') }}"><button class="btn connecter btn-success ml-5 my-2 my-sm-0" type="button">Se déconnecter</button></a>
       <a href="{{ asset('user') }}"><button class="btn sinscrire btn-success ml-5 my-2 my-sm-0" type="button">Mon profil</button></a>
     {% else %}
       <a href="{{ path('home') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo2"></a>

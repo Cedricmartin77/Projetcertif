@@ -49,6 +49,8 @@ main {
 .logo1{
   height: 75px;
   width: 90px;
+  border-radius: 7px; 
+  margin-right: 10px;
 }
 
 .logo2{

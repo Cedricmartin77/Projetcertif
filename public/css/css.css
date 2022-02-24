@@ -33,7 +33,9 @@ main {
 }
 
 .logout {
-  margin-right: 10px;
+  margin-right: 11px;
+  width: 135px;
+  height: 77px;
 }
 
 .connecter {

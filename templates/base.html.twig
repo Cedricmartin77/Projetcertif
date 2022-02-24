@@ -43,10 +43,14 @@
                     </ul>
                 </div>
             </div>
-            {% if is_granted ('IS_AUTHENTICATED_REMEMBERED') %}
+            {% if is_granted('ROLE_ADMIN') %}
             <a href="{{ path('admin') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo1"></a>
       <a href="{{ path('app_logout') }}"><button class="btn logout btn-success ml-2 my-2 my-sm-0" type="button">Se déconnecter</button></a>
       <a href="{{ asset('user') }}"><button class="btn logout btn-success ml-2 my-2 my-sm-0" type="button">Mon profil</button></a>
+      {% elseif is_granted('ROLE_USER') %}
+      <a href="{{ path('home') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo2"></a>
+      <a href="{{ asset('app_logout') }}"><button class="btn connecter btn-success ml-5 my-2 my-sm-0" type="button">Se déconnecter</button></a>
+      <a href="{{ asset('user') }}"><button class="btn sinscrire btn-success ml-5 my-2 my-sm-0" type="button">Mon profil</button></a>
     {% else %}
       <a href="{{ path('home') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo2"></a>
       <a href="{{ asset('login') }}"><button class="btn connecter btn-success ml-5 my-2 my-sm-0" type="button">Se connecter</button></a>

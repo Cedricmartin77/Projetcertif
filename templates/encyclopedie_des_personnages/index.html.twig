@@ -6,12 +6,17 @@
 
  <link rel="stylesheet" type="text/css" href="{{ asset('css/flexboxencyclopediedespersonnage.css') }}">
  <link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
+ <link rel="stylesheet" type="text/css" href="{{ asset('css/csspaginator.css') }}">
 
 {% endblock %}
 
 {% block body %}
 
 <h1 class="text-light">Encyclopédie des Personnages </h1>
+
+<div class="container bouge ">
+  {{ knp_pagination_render(encyclopedie_des_personnages, 'pagination.html.twig') }}
+</div>
 
 <div class="box" style="flex-flow: row wrap;">
   {% for encyclopediedespersos in encyclopedie_des_personnages %}
@@ -24,5 +29,9 @@
       </div>
     </a>
     {% endfor %}
+    <div class="container bouge ">
+      {{ knp_pagination_render(encyclopedie_des_personnages, 'pagination.html.twig') }}
+    </div>
+    
 
 {% endblock %}

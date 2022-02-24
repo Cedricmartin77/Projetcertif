@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/flexencyclopediedupersonnage.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssbuttonuser.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/csspaginator.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -16,6 +17,10 @@
  <form>
     <input class="btn2" type="button" value="Retour en arrière" onclick="history.go(-1)">
   </form>
+
+  <div class="container bouge ">
+    {{ knp_pagination_render(encyclopedieDuPersonnages, 'pagination.html.twig') }}
+  </div>
 
  <div class="box" style="flex-flow: row wrap;">
     {% if encyclopedieDuPersonnages is not null %}
@@ -31,6 +36,9 @@
                 </div>
             </a>
         {% endfor %}
+        <div class="container bouge ">
+            {{ knp_pagination_render(encyclopedieDuPersonnages, 'pagination.html.twig') }}
+          </div>
     {% else %}
         <h1>T'as encore rien créé mec !</h1>
     {% endif %}

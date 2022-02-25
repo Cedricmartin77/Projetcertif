@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Faire un don{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/cssbuttonuser.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/csspagededon.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
+
+
+{% endblock %}
+
+{% block body %}
+
+<h1 class="text0">Faire un don</h1>
+<a href="{{ path('home') }}" class="btn3">Retour vers Accueil</a>
+<div class="container emp-profile">
+  <form method="post">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="tab-content profile-tab" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row">
+              <div class="col-md-6 text">
+                <label>Bonjour a toi très cher Dokkaneur et bienvenue sur Dokkan Battle | France !</label>
+              </div>
+              <div class="mt-3 text2">
+                <p>Ce site est un site crée par un fan du jeu et de la série Dragon Ball, il regroupe toute les information sur toutes les cartes du jeu ayant la rareté SSR/UR/LR (pour le moment),
+                    par la suite il intégrera les évenement du jeu qui viendront au fur et a mesure.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="text2">
+                <p>N'hésité pas a m'envoyer un email via l'onglet "Contact" ou le lien cliquable ci-dessous vous pourrait m'envoyer vos recommendation pour le site et ou les choses
+                que vous souhaiteriez voir apparaitre.</p>
+              </div>
+              <div class="text2">
+                <p><a href="{{ path('contact') }}">Contact</a></p>
+              </div>
+              <div class="text2">
+                <p>Si vous le souhaité et que les moyens sont votre , vous pouvais donner quelque Zenie sur ce le lien cliquable ci-dessous
+                  ce qui permettra de soutenir le site pour qu'il reste en ligne et qu'il ce développe, je tiens a signaler que tout donnation qui
+                metterait un utilisateur dans une postion délicate , sera refusé si vous n'en n'avais pas les moyens ne le fait pas S'IL VOUS PLAIT vraiment.</p>
+              </div>
+              <div class="text2">
+                <p><a href="https://paypal.me/frdokkanbattle?country.x=FR&locale.x=fr_FR">Paypal</a></p>
+              </div>
+              <div class="text2">
+                <p>J'espère que le site vous plaira, et que vous y passerait un très bon moment dessus. </p>
+              </div>
+              <div class="text2">
+                <p>Bien a vous.</p>
+              </div>
+              <div class="text2">
+                <p>@NaaXers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<img src=" {{ asset('img/imagedaccueil/demonkingpiccolo.png') }} " class="img" alt=""/>
+{% endblock %}

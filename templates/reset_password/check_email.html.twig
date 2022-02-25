@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vérification{% endblock %}
+
+{% block body %}
+    <p class="text-light">
+        Si votre email match avec votre compte, alors un email viens d'être envoyer sur votre boite mail pour modifier votre Mot de Passe,
+        ce lien expirera dans{{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+    </p>
+    <p class="text-light">Si vous ne recevez pas d'email regarder vos spam ou alors , vous vous êtes tromper d'email ! <a href="{{ path('app_forgot_password_request') }}">Re essayer</a>.</p>
+{% endblock %}

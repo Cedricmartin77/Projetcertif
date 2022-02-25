@@ -47,7 +47,7 @@ security:
         # - { path: ^/fiche_personnage, roles: ROLE_USER }
         # - { path: ^/registration, roles: ROLE_USER }
         # - { path: ^/home, roles: ROLE_USER }
-        # - { path: ^/login, roles: ROLE_USER }
+        # - { path: ^/login|register|reset-password, roles: ROLE_USER }
         # - { path: ^/register, roles: ROLE_USER }
 
 when@test:

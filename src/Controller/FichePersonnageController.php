@@ -16,7 +16,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class FichePersonnageController extends AbstractController
 {
     #[Route('/{id}', name: 'fiche_personnage', methods: ['GET'])]
-    public function show(FichePersonnageRepository $fichePersonnageRepository, int $id): Response
+    public function show(FichePersonnageRepository $fichePersonnageRepository, $id): Response
     {
         $personnages = $fichePersonnageRepository->find($id);
         return $this->render('fiche_personnage/show.html.twig', [

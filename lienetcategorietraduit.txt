@@ -80,10 +80,10 @@ Univers 6 -> Univers 6
 Vengeance -> Revenge
 Voyageur du temps -> Time travelers
 Vie artificielle -> Artificial Life Forms
-''-> Entrusted Will
-'' -> Battle of Fate
-'' -> Beyond Super Saiyan
-'' -> Fused Fighters
+'Volonté confié'-> Entrusted Will
+'Combat fatidique' -> Battle of Fate
+'Au-delà du Super Saiyan' -> Beyond Super Saiyan
+'Guerrier Fusioné' -> Fused Fighters
 ----------------------------------------------
 Liste des liens traduit :
 -------------------------->

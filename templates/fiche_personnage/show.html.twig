@@ -53,10 +53,10 @@
             <p>Leader Skill :</p>
             <p class="border-bottom">{{ personnages.aptitudeleader }}</p>
             {# <div class="dropdown-divider m-3 text-light"></div> #}
-            <p>Attaque Spé : {{ personnages.nomattaquespecial }}</p>
+            <p>Attaque Spéciale : {{ personnages.nomattaquespecial }}</p>
             <p class="border-bottom">{{ personnages.descriptionattaquespecial }}</p>
             {% if personnages.nomattaquespecialultime  is not empty %}
-            <p>Attaque Spé Ultime : {{ personnages.nomattaquespecialultime }}</p>
+            <p>Attaque Spécial Ultime : {{ personnages.nomattaquespecialultime }}</p>
             {% endif %}
             {% if personnages.descriptionattaquespecialultime is not empty %}
             <p class="border-bottom">{{ personnages.descriptionattaquespecialultime }}</p>
@@ -68,7 +68,7 @@
             <p class="border-bottom">{{ personnages.descriptionunitsuperattaque }}</p>
             {% endif %}
             {% if personnages.nomactiveskill is not empty %}
-            <p>Nom Active Skill : {{ personnages.nomactiveskill }}</p>
+            <p>Active Skill : {{ personnages.nomactiveskill }}</p>
             {% endif %}
             {% if personnages.descriptionactiveskill  is not empty %}
             <p class="border-bottom">{{ personnages.descriptionactiveskill }}</p>
@@ -82,14 +82,14 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <p class="">PV : {{ personnages.hpdebase }}</p>
-                <p class="">ATTAQUE : {{ personnages.attaquedebase }}</p>
-                <p class="">DEFENSE : {{ personnages.defensedebase }}</p>
+                <p class="">PV 55% : {{ personnages.hpdebase }}</p>
+                <p class="">ATTAQUE 55% : {{ personnages.attaquedebase }}</p>
+                <p class="">DEFENSE 55% : {{ personnages.defensedebase }}</p>
             </div>
             <div class="col-6">
-                <p class="">PV MAX : {{ personnages.hpmax }}</p>
-                <p class="">ATTAQUE MAX : {{ personnages.attaquemax }}</p>
-                <p class="">DEFENSE MAX : {{ personnages.defensemax }}</p>
+                <p class="">PV MAX 100% : {{ personnages.hpmax }}</p>
+                <p class="">ATTAQUE MAX 100% : {{ personnages.attaquemax }}</p>
+                <p class="">DEFENSE MAX  100%: {{ personnages.defensemax }}</p>
             </div>
         </div>
     </div>

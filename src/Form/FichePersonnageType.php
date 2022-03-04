@@ -66,6 +66,20 @@ class FichePersonnageType extends AbstractType
                 'placeholder' => 'Ex.: Atk et def +170%'
             ]
         ])
+        ->add('nompassiveskill', TextType::class, [
+            'label' => 'Nom Passive Skill',
+            'required' => false,
+            'attr' => [
+                'placeholder' => 'Ex.: Saiyan au coeur d\'or'
+            ]
+        ])
+        ->add('descriptionpassiveskill', TextareaType::class, [
+            'label' => 'Description Passive Skill',
+            'required' => false,
+            'attr' => [
+                'placeholder' => 'Ex.: Bloque lennemie'
+            ]
+        ])
         ->add('nomattaquespecial', TextType::class, [
             'label' => 'Nom Attaque Spécial',
             'required' => false,
@@ -120,20 +134,6 @@ class FichePersonnageType extends AbstractType
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Ex.: Bloque lennemie',
-                ]
-            ])
-            ->add('nompassiveskill', TextType::class, [
-                'label' => 'Nom Passive Skill',
-                'required' => false,
-                'attr' => [
-                    'placeholder' => 'Ex.: Saiyan au coeur d\'or'
-                ]
-            ])
-            ->add('descriptionpassiveskill', TextareaType::class, [
-                'label' => 'Description Passive Skill',
-                'required' => false,
-                'attr' => [
-                    'placeholder' => 'Ex.: Bloque lennemie'
                 ]
             ])
             ->add('listedesliensdupersonnage', TextareaType::class, [

@@ -67,14 +67,14 @@
             {% if personnages.descriptionunitsuperattaque is not empty %}
             <p class="border-bottom">{{ personnages.descriptionunitsuperattaque }}</p>
             {% endif %}
+            <p>Aptitude Passive : {{ personnages.nompassiveskill }}</p>
+            <p class="border-bottom">{{ personnages.descriptionpassiveskill }}</p>
             {% if personnages.nomactiveskill is not empty %}
             <p>Active Skill : {{ personnages.nomactiveskill }}</p>
             {% endif %}
             {% if personnages.descriptionactiveskill  is not empty %}
             <p class="border-bottom">{{ personnages.descriptionactiveskill }}</p>
             {% endif %}
-            <p>Aptitude Passive : {{ personnages.nompassiveskill }}</p>
-            <p class="border-bottom">{{ personnages.descriptionpassiveskill }}</p>
             <p>Liste des Liens :</p>
             <p class="border-bottom">{{ personnages.listedesliensdupersonnage }}</p>
             <p>Liste des Catégories :</p>

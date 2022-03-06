@@ -144,7 +144,6 @@ Fuyard -> Flee
 Fierté Saiyan -> Saiyan Pride
 Fonceur -> Infighter
 Formidable ennemi -> Formidable ennemy
-Fonceur -> Infighter
 Forme brisant la limite -> Limit-Breaking Form
 Guerrier de tenace -> Tough as Nails
 Gentleman -> Gentleman 

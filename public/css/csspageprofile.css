@@ -1,3 +1,7 @@
+body {
+    min-height: 700px;
+}
+
 .emp-profile{
     padding: 3%;
     margin-top: 3%;
@@ -46,4 +50,10 @@
     font-weight: 600;
     color: black;
     margin-left: 340px;
+}
+
+.text1{
+    font-weight: 600;
+    color: white;
+    margin-left: -110px;
 }

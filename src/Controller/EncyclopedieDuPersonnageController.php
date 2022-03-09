@@ -20,13 +20,13 @@ class EncyclopedieDuPersonnageController extends AbstractController
     #[Route('/encyclopedie/du/personnage/{id}', name: 'encyclopedie_du_personnage', methods: ['GET'])]
     public function show(Request $request, $id, EncyclopedieDuPersonnageRepository $encyclopedieDuPersonnageRepository, PaginatorInterface $paginator): Response
     {
-        dump($fichesPersonnages = $encyclopedieDuPersonnageRepository->findEncyclopedieDuPersonnages($id));
+        $fichesPersonnages = $encyclopedieDuPersonnageRepository->findEncyclopedieDuPersonnages($id);
 
-        dump($fichesPersonnages = $paginator->paginate(
+        $fichesPersonnages = $paginator->paginate(
             $fichesPersonnages, /* query NOT result */
             $request->query->getInt('page', 1)/*page number*/,
             10/*limit per page*/
-        ));
+        );
 
         return $this->render('encyclopedie_du_personnage/show.html.twig', [
             'encyclopedieDuPersonnages' => $fichesPersonnages,

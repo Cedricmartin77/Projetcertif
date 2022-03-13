@@ -1,41 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Formulaire de contact{% endblock %}
+{% block title %}Page de Contact{% endblock %}
 
 {% block stylesheets %}
 
-<link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
+ <link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
 
 {% endblock %}
 
 {% block body %}
-<h1>Formulaire de Contact</h1>
-<h3 class="text-light">Utiliser ce formulaire pour me faire part de votre avis sur le site , 
-    mais aussi me donner des conseille ou des choses que vous aimeriez voir :)</h3>
-    
-<div class="container">
-<div class="p-5 contact-form text-light">
-    <div class="form-group">
-{{ form_start(our_form) }}
-    {{ form_row(our_form.nom, {'attr': {'class': 'form-control'}}) }}
 
+<h1>N'hésitez pas a m'envoyer un mail pour suggérer de possible amélioration du site ou autre :D </h1>
 
-</div>
-<div class="form-group">
-    {{ form_row(our_form.email, {'attr': {'class': 'form-control'}}) }}
-
-</div>
-<div class="form-group">
-    {{ form_row(our_form.message, {'attr': {'class': 'form-control'}}) }}
-
+<div class="container text-light">
+{{ form(formulaire) }}
 </div>
 
-<div class="form-group">
-    <input type="submit" value="Envoyer" class="btn btn-primary py-3 px-5">
-</div>
-{{ form_end(our_form) }}
-</div>
-</div>
-
-</div>
 {% endblock %}

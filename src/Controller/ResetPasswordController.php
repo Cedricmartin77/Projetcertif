@@ -36,7 +36,7 @@ class ResetPasswordController extends AbstractController
     /**
      * Display & process form to request a password reset.
      */
-    #[Route('', name: 'app_forgot_password_request')]
+    #[Route('/reset_password', name: 'app_forgot_password_request')]
     public function request(Request $request, MailerInterface $mailer): Response
     {
         $form = $this->createForm(ResetPasswordRequestFormType::class);
@@ -87,18 +87,18 @@ class ResetPasswordController extends AbstractController
 
         $token = $this->getTokenFromSession();
         if (null === $token) {
-            throw $this->createNotFoundException('Aucune demande de réinitialisation de mot de passe trouvée pour vous.');
+            throw $this->createNotFoundException('No reset password token found in the URL or in the session.');
         }
 
         try {
             $user = $this->resetPasswordHelper->validateTokenAndFetchUser($token);
         } catch (ResetPasswordExceptionInterface $e) {
             $this->addFlash('reset_password_error', sprintf(
-                'Un problème a eu lieu pendant votre requête de changement de mot de passe.',
+                'There was a problem validating your reset request - %s',
                 $e->getReason()
             ));
 
-            return $this->redirectToRoute('app_forgot_password_request');
+            return $this->redirectToRoute('home');
         }
 
         // The token is valid; allow the user to change their password.
@@ -112,7 +112,7 @@ class ResetPasswordController extends AbstractController
             // Encode(hash) the plain password, and set it.
             $encodedPassword = $userPasswordHasher->hashPassword(
                 $user,
-                $form->get('password')->getData()
+                $form->get('plainPassword')->getData()
             );
 
             $user->setPassword($encodedPassword);
@@ -158,7 +158,7 @@ class ResetPasswordController extends AbstractController
         $email = (new TemplatedEmail())
             ->from(new Address('dokkanbattlefrancecontact@gmail.com'))
             ->to($user->getEmail())
-            ->subject('Modification de Mot de Passe souhaité')
+            ->subject('Your password reset request')
             ->htmlTemplate('reset_password/email.html.twig')
             ->context([
                 'resetToken' => $resetToken,

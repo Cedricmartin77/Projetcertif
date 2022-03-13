@@ -50,3 +50,22 @@
   margin-top: 85px;
 }
 
+
+@media(min-width: 810px) and (max-width: 1080px) {
+
+  .flex {
+    margin-left: 419px;
+    width: 46%;
+    margin-top: -626px;
+  }
+
+  .img {
+    border-radius: 7%;
+    height: 624px;
+    margin-left: -42px;
+    margin-top: 85px;
+    width: 136%;
+  }
+
+}
+

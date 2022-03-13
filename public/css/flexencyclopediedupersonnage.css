@@ -46,3 +46,11 @@
 body {
   background-color: black;
 }
+
+@media(min-width: 810px) and (max-width: 1080px) {
+
+  .flex {
+    width: 95%;
+  }
+
+}

@@ -8,6 +8,16 @@
     margin-top: 10px;
 }
 
+.bouge2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+  margin-right: 280px;
+  margin-top: 10px;
+}
+
 .page-item.active .page-link {
   z-index: 3;
   color: #fff !important;
@@ -28,3 +38,18 @@
     border-bottom-color: rgb(222, 226, 230);
     border-left-color: rgb(222, 226, 230);
 }
+
+/* responsive ipad vertical */
+@media(min-width: 810px) and (max-width: 1080px) {
+
+  .bouge {
+    margin-left: 3%;
+    margin-top: 24px;
+}
+
+.bouge2 {
+  margin-right: 6%;
+}
+
+}
+/* responsive ipad vertical fin */

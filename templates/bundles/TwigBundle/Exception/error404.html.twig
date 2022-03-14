@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page non trouvée{% endblock %}
+
+{% block stylesheets %}
+
+ <link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
+ <link rel="stylesheet" type="text/css" href="{{ asset('css/cssbuttonuser.css') }}">
+
+{% endblock %}
+
+{% block body %}
+<img src="{{ asset('img/backgroundfrontpage/errorimage.webp') }}">
+<h1><a href="{{ path('home') }}" class="btn1">Retourner en Accueil</a></h1>
+<h1><a href="{{ path('app_contact') }}" class="btn1">Rentrer en contact</a></h1>  
+
+{% endblock %}

@@ -8,6 +8,16 @@
     margin-top: 10px;
 }
 
+.bouge2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+  margin-right: 280px;
+  margin-top: 10px;
+}
+
 .page-item.active .page-link {
   z-index: 3;
   color: #fff !important;
@@ -28,3 +38,114 @@
     border-bottom-color: rgb(222, 226, 230);
     border-left-color: rgb(222, 226, 230);
 }
+
+@media screen and (max-width: 2560px) {
+  .bouge {
+    margin-left:24%;
+}
+
+.bouge2 {
+  margin-left:11%;
+}
+
+}
+
+@media screen and (max-width: 1770px) {
+  .bouge {
+    width:68%;
+}
+
+.bouge2 {
+  width:68%;
+}
+
+}
+
+@media screen and (max-width: 1590px) {
+  .bouge {
+    width:64%;
+}
+
+.bouge2 {
+  width:64%;
+}
+
+}
+
+@media screen and (max-width: 1440px) {
+  .bouge {
+    margin-left:18%;
+}
+
+.bouge2 {
+  margin-left:19%;
+}
+}
+
+
+@media screen and (max-width: 1098px) {
+  .bouge {
+    width:50%;
+}
+
+.bouge2 {
+  width:50%;
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+  .bouge {
+    width:65%;
+}
+
+.bouge2 {
+  margin-left:26%;
+}
+
+}
+
+@media screen and (max-width: 923px) {
+  .bouge {
+    width:40%;
+}
+
+.bouge2 {
+  width:40%;
+}
+
+}
+
+@media screen and (max-width: 850px) {
+  .bouge {
+    width:32%;
+}
+
+.bouge2 {
+  width:32%;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+  .bouge {
+    width:66%;
+}
+
+.bouge2 {
+  margin-left:34%;
+}
+
+}
+
+@media screen and (max-width: 425px) {
+  .bouge {
+    width:100%;
+}
+
+.bouge2 {
+  margin-left:66%;
+}
+
+}
+

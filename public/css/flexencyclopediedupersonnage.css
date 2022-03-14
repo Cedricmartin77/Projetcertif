@@ -46,3 +46,75 @@
 body {
   background-color: black;
 }
+
+@media screen and (max-width: 1440px) {
+  .flex {
+    width: 45%;
+  }
+
+  .image {
+    width: 35%;
+
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .flex {
+    width: 75%;
+  }
+
+  .image {
+    width: 35%;
+
+  }
+
+}
+
+@media screen and (max-width: 944px) {
+  .flex {
+    width: 69%;
+  }
+
+  .image {
+    width: 35%;
+
+  }
+
+}
+
+@media screen and (max-width: 850px) {
+  .flex {
+    width: 84%;
+  }
+
+  .image {
+    width: 39%;
+
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .flex {
+    width: 84%;
+  }
+
+  .image {
+    width: 39%;
+
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+  .flex {
+    width: 82%;
+  }
+
+  .image {
+    width: 88%;
+
+  }
+
+}

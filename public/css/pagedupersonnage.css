@@ -50,3 +50,8 @@
   margin-top: 85px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 840px) {
+  .flex {
+    margin-left: 20%;
+  }
+}

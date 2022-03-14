@@ -57,6 +57,16 @@ body {
   }
 }
 
+@media screen and (max-width: 1920px) {
+  .flex {
+    width: 42%;
+  }
+
+  .image {
+    width: 41%;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .flex {
     width: 60%;

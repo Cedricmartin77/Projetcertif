@@ -7,7 +7,7 @@
     width: 956px;
     margin-bottom: 113px;
     margin-top: -668px;
-    margin-left: 665px;    
+    margin-left: 725px;  
   }
   
   .flex .border-bottom {
@@ -49,3 +49,147 @@
     margin-left: -219px;
     margin-top: 85px;
   }
+
+  @media screen and (max-width: 667px) and (min-width: 375px) {
+    .flex {
+      width: 51%;
+      margin-left: 46%
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -22%;
+    }
+    
+  }
+
+  @media screen and (max-width: 896px) and (min-width: 414px) {
+    .flex {
+      width: 51%;
+      margin-left: 46%
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -22%;
+    }
+    
+  }
+
+  @media screen and (max-width: 896px) and (min-width: 414px) {
+    .flex {
+      width: 51%;
+      margin-left: 46%
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -22%;
+    }
+    
+  }
+
+  @media screen and (max-width: 915px) and (min-width: 412px) {
+    .flex {
+      width: 51%;
+      margin-left: 46%
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -22%;
+    }
+    
+  }
+
+  @media screen and (max-width: 740px) and (min-width: 360px) {
+    .flex {
+      width: 51%;
+      margin-left: 44%;
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -35%;
+    }
+    
+  }
+
+  @media screen and (max-width: 1180px) and (min-width: 820px) {
+    .flex {
+      width: 51%;
+      margin-left: 46%;
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -24%;
+    }
+    
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    .flex {
+      width: 51%;
+      margin-left: 48%;
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -12%;
+    }
+    
+  }
+
+  @media screen and (max-width: 1368px) and (min-width: 912px) {
+    .flex {
+      width: 51%;
+      margin-left: 47%;
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -21%;
+    }
+    
+  }
+
+  @media screen and (max-width: 540px) and (min-width: 720px) {
+    .flex {
+      width: 51%;
+      margin-left: 47%;
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -21%;
+    }
+    
+  }
+
+  @media screen and (max-width: 653px) and (min-width: 280px) {
+    .flex {
+      width: 51%;
+      margin-left: 47%;
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -21%;
+    }
+    
+  }
+
+  @media screen and (max-width: 283px) and (min-width: 653px) {
+    .flex {
+      width: 51%;
+      margin-left: 47%;
+    }
+  
+    .img {
+      width: 127%;
+      margin-left: -21%;
+    }
+    
+  }
+

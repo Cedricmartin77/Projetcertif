@@ -39,6 +39,17 @@
     border-left-color: rgb(222, 226, 230);
 }
 
+@media screen and (max-width: 2565px) {
+  .bouge {
+    margin-left:24%;
+}
+
+.bouge2 {
+  margin-left:11%;
+}
+
+}
+
 @media screen and (max-width: 2560px) {
   .bouge {
     margin-left:24%;
@@ -49,6 +60,7 @@
 }
 
 }
+
 
 @media screen and (max-width: 1920px) {
   .bouge {
@@ -159,4 +171,30 @@
 }
 
 }
+
+@media screen and (max-width: 896px) {
+  .bouge {
+    width:64%;
+}
+
+.bouge2 {
+  margin-left:66%;
+}
+
+}
+
+@media screen and (max-width: 414px) {
+  .bouge {
+    width:64%;
+}
+
+.bouge2 {
+  margin-left:68%;
+}
+
+}
+
+
+
+
 

@@ -117,3 +117,87 @@ body {
   }
 
 }
+
+@media screen and (max-width: 896px) {
+  .flex {
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width: 375px) {
+  .flex {
+    width: 100%;
+}
+
+.image {
+  width: 80%;
+}
+
+}
+
+@media screen and (max-width: 320px) {
+  .flex {
+    width: 100%;
+}
+
+.image {
+  width: 101%;
+}
+
+}
+
+@media screen and (max-width: 428px) {
+  .flex {
+    width: 100%;
+}
+
+.image {
+  width: 61%;
+}
+
+}
+
+@media screen and (max-width: 414px) {
+  .flex {
+    width: 100%;
+}
+
+.image {
+  width: 63%;
+}
+
+}
+
+@media screen and (max-width: 375px) {
+  .flex {
+    width: 100%;
+}
+
+.image {
+  width: 80%;
+}
+
+}
+
+@media screen and (max-width: 320px) {
+  .flex {
+    width: 100%;
+}
+
+.image {
+  width: 100%;
+}
+
+}
+
+@media screen and (max-width: 360px) {
+  .flex {
+    width: 100%;
+}
+
+.image {
+  width: 87%;
+}
+
+}

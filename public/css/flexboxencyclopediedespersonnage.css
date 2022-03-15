@@ -201,3 +201,25 @@ body {
 }
 
 }
+
+@media screen and (max-width: 384px) {
+  .flex {
+    width: 100%;
+}
+
+.image {
+  width: 78%;
+}
+
+}
+
+@media screen and (max-width: 360px) {
+  .flex {
+    width: 100%;
+}
+
+.image {
+  width: 87%;
+}
+
+}

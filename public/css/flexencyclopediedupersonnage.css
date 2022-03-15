@@ -118,3 +118,106 @@ body {
   }
 
 }
+
+@media screen and (max-width: 414px) {
+  .flex {
+    width: 82%;
+  }
+
+  .image {
+    width: 81%;
+
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .flex {
+    width: 82%;
+  }
+
+  .image {
+    width: 90%;
+
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  .flex {
+    width: 104%;
+  }
+
+  .image {
+    width: 100%;
+
+  }
+
+}
+
+@media screen and (max-width: 428px) {
+  .flex {
+    width: 100%;
+  }
+
+  .image {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .flex {
+    width: 100%;
+  }
+
+  .image {
+    width: 82%;
+  }
+
+}
+
+@media screen and (max-width: 390px) {
+  .flex {
+    width: 100%;
+  }
+
+  .image {
+    width: 75%;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  .flex {
+    width: 100%;
+  }
+
+  .image {
+    width: 85%;
+  }
+
+}
+
+@media screen and (max-width: 384px) {
+  .flex {
+    width: 100%;
+  }
+
+  .image {
+    width: 79%;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  .flex {
+    width: 100%;
+  }
+
+  .image {
+    width: 87%;
+  }
+
+}
+

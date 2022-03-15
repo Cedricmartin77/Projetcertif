@@ -194,6 +194,17 @@
 
 }
 
+@media screen and (max-width: 896px) {
+  .bouge {
+    width:64%;
+}
+
+.bouge2 {
+  margin-left:32%;
+}
+
+}
+
 
 
 

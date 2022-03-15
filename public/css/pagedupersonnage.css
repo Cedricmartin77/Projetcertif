@@ -46,7 +46,7 @@
 .img {
   border-radius: 7%;
   height: 627px;
-  margin-left: -268px;
+  margin-left: -212px;
   margin-top: 85px;
 }
 
@@ -85,19 +85,6 @@
   .img {
     width: 98%;
     margin-left: 1%;
-  }
-  
-}
-
-@media screen and (max-width: 2560px) and (min-width: 1024px) {
-  .flex {
-    width: 44%;
-    margin-left: 38%;
-  }
-
-  .img {
-    width: 92%;
-    margin-left: -77%;
   }
   
 }

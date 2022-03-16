@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Encyclopédie des Personnages{% endblock %}
+{% block title %}Encyclopedie des Personnages{% endblock %}
 
 {% block stylesheets %}
 
-<link rel="stylesheet" type="text/css" href="{{ asset('css/flexboxencyclopediedespersonnage.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
-
+ <link rel="stylesheet" type="text/css" href="{{ asset('css/flexboxencyclopediedespersonnage.css') }}">
+ <link rel="stylesheet" type="text/css" href="{{ asset('css/css.css') }}">
+ <link rel="stylesheet" type="text/css" href="{{ asset('css/csspaginator.css') }}">
 
 {% endblock %}
 
@@ -14,18 +14,24 @@
 
 <h1 class="text-light">Encyclopédie des Personnages </h1>
 
+<div class="container bouge ">
+  {{ knp_pagination_render(encyclopedie_des_personnages, 'pagination.html.twig') }}
+</div>
 
-    <div class="box" style="flex-flow: row wrap;">
-      {% for encyclopediedespersonnages in encyclopedie_des_personnages %}
-        <a href="{{ path('encyclopedie_du_personnage', {'id': encyclopediedespersonnages.id }) }}" class="flex">
-          <div class="image">
-            <img src=" {{ asset('img/logoencyclopediedespersonnages/' ~ encyclopediedespersonnages.img) }} " alt=""/>
-          </div>
-          <div class="text">
-            <p>{{ encyclopediedespersonnages.title }}</p>
-          </div>
-        </a>
-        {% endfor %}
-        {{ knp_pagination_render(encyclopediedespersos) }}
+<div class="box" style="flex-flow: row wrap;">
+  {% for encyclopediedespersos in encyclopedie_des_personnages %}
+    <a href="{{ path('encyclopedie_du_personnage', {'id': encyclopediedespersos.id }) }}" class="flex">
+      <div class="image">
+        <img src=" {{ asset('img/logoencyclopediedespersonnages/' ~ encyclopediedespersos.img) }} " alt=""/>
+      </div>
+      <div class="text">
+        <p>{{ encyclopediedespersos.title }}</p>
+      </div>
+    </a>
+    {% endfor %}
+    <div class="container bouge bouge2 ">
+      {{ knp_pagination_render(encyclopedie_des_personnages, 'pagination.html.twig') }}
+    </div>
     
-    {% endblock %}
+
+{% endblock %}

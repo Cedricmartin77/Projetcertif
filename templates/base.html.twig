@@ -50,15 +50,15 @@
                 </div>
             </div>
             {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{ path('admin') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo1"></a>
+            <a href="{{ path('admin') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo1" alt="Logo Dokkan Battle France"></a>
       <a href="{{ path('app_logout') }}"><button class="btn logout btn-success ml-2 my-2 my-sm-0" type="button">Se déconnecter</button></a>
       <a href="{{ asset('user') }}"><button class="btn logout btn-success ml-2 my-2 my-sm-0" type="button">Mon profil</button></a>
       {% elseif is_granted('ROLE_USER') %}
-      <a href="{{ path('home') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo2"></a>
+      <a href="{{ path('home') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo2" alt="Logo Dokkan Battle France"></a>
       <a href="{{ asset('logout') }}"><button class="btn connecter btn-success ml-5 my-2 my-sm-0" type="button">Se déconnecter</button></a>
       <a href="{{ asset('user') }}"><button class="btn sinscrire btn-success ml-5 my-2 my-sm-0" type="button">Mon profil</button></a>
     {% else %}
-      <a href="{{ path('home') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo2"></a>
+      <a href="{{ path('home') }}"><img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" class="logo2" alt="Logo Dokkan Battle France"></a>
       <a href="{{ asset('login') }}"><button class="btn connecter btn-success ml-5 my-2 my-sm-0" type="button">Se connecter</button></a>
       <a href="{{ asset('register') }}"><button class="btn sinscrire btn-success ml-5 my-2 my-sm-0" type="button">S'inscrire</button></a>
     {% endif %}
@@ -79,7 +79,7 @@
                         <p><a href="{{ path('app_contact') }}">Contact</a></p>
                     </div>
   <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 my-auto order-sm-2 order-md-3 order-lg-2">
-      <img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" alt="logo" class="logo">
+      <img src="{{ asset('img/logodusite/logodokkanbattlefrance.png') }}" alt="Logo Dokkan Battle France" class="logo">
   </div>
   <div class="col-12 col-md-6 col-lg-4 order-sm-3 order-md-2 order-lg-3 p-5">
       <h5>COORDONNÉES</h5>

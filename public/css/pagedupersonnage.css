@@ -104,13 +104,15 @@
 
 @media screen and (max-width: 1440px) and (min-width: 768px) {
   .flex {
-    width: 48%;
-    margin-left: 46%;
+    width: 105%;
+    margin-left: 7%;
+    margin-top: 5%;
   }
 
   .img {
-    width: 98%;
-    margin-left: 7%;
+    width: 164%;
+    height: 31%;
+    margin-left: 34%;
   }
   
 }
@@ -130,14 +132,47 @@
 
 @media screen and (max-width: 740px) and (min-width: 360px) {
   .flex {
-    width: 51%;
-    margin-left: 45%;
+    width: 93%;
+    margin-left: 4%;
+    margin-top: 5%;
   }
 
   .img {
-    width: 127%;
-    margin-left: -37%;
+    width: 243%;
+    margin-left: -2%;
   }
   
 }
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .flex {
+    width: 105%;
+    margin-left: 3%;
+    margin-top: 5%;
+  }
+
+  .img {
+    width: 164%;
+    height: 31%;
+    margin-left: 34%;
+  }
+  
+}
+
+@media screen and (max-width: 1368px) and (min-width: 912px) {
+  .flex {
+    width: 80%;
+    margin-left: 11%;
+    margin-top: 5%;
+  }
+
+  .img {
+    width: 164%;
+    height: 31%;
+    margin-left: 34%;
+  }
+  
+}
+
+
 

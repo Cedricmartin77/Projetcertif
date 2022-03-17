@@ -130,26 +130,28 @@
 
   @media screen and (max-width: 1024px) and (min-width: 768px) {
     .flex {
-      width: 51%;
-      margin-left: 48%;
+      width: 90%;
+      margin-left: 6%;
+      margin-top: 5%;
     }
   
     .img {
-      width: 127%;
-      margin-left: -12%;
+      width: 131%;
+      margin-left: 48%;
     }
     
   }
 
   @media screen and (max-width: 1368px) and (min-width: 912px) {
     .flex {
-      width: 51%;
-      margin-left: 47%;
+      width: 86%;
+      margin-left: 9%;
+      margin-top: 5%;
     }
   
     .img {
-      width: 127%;
-      margin-left: -21%;
+      width: 112%;
+      margin-left: 55%;
     }
     
   }
@@ -169,13 +171,14 @@
 
   @media screen and (max-width: 653px) and (min-width: 280px) {
     .flex {
-      width: 51%;
-      margin-left: 47%;
+      width: 96%;
+      margin-left: 2%;
+      margin-top: 5%;
     }
   
     .img {
-      width: 127%;
-      margin-left: -21%;
+      width: 247%;
+      margin-left: -4%;
     }
     
   }

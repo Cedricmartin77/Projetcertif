@@ -132,8 +132,8 @@
 
 @media screen and (max-width: 740px) and (min-width: 360px) {
   .flex {
-    width: 93%;
-    margin-left: 4%;
+    width: 98%;
+    margin-left: 1%;
     margin-top: 5%;
   }
 
@@ -174,20 +174,6 @@
   
 }
 
-@media screen and (max-width: 812px) and (min-width: 375px) {
-  .flex {
-    width: 98%;
-    margin-left: 1%;
-    margin-top: 5%;
-  }
-
-  .img {
-    width: 242%;
-    height: 31%;
-    margin-left: -2%;
-  }
-  
-}
 
 
 

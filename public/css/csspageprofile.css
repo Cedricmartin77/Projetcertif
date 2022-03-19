@@ -57,3 +57,108 @@ body {
     color: white;
     margin-left: -110px;
 }
+
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: -6%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 1024px) and (min-width: 515px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: -6%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 1440px) and (min-width: 1024px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: -6%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: -6%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 1440px) and (min-width: 768px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: -6%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 667px) and (min-width: 375px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: -6%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: 45%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 1368px) and (min-width: 912px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: 43%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 740px) and (min-width: 360px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: -6%;
+    }
+
+    .text1{
+        font-weight: 600;
+        color: white;
+        margin-left: -3%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 375px) and (min-width: 812px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: -6%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 1600px) and (min-width: 1200px) {
+    .text{
+        font-weight: 600;
+        color: black;
+        margin-left: -6%;
+    }
+    
+  }

@@ -96,10 +96,10 @@ class AdminEncyclopedieDesPersonnagesController extends AbstractController
     #[Route('/{id}', name: 'admin_encyclopedie_des_personnages_delete', methods: ['POST'])]
     public function delete(EncyclopedieDesPersonnagesRepository $encyclopedieDesPersonnagesRepository, int $id, ManagerRegistry $managerRegistry): Response
     {
-        $logo = $encyclopedieDesPersonnagesRepository->find($id);
+        $logo = $encyclopedieDesPersonnagesRepository->find($id);//sers a trouver l'encyclopédie des personnages par id
         // throw new \Exception('TODO: gérer la suppression des images du dossier img');
         $img = $this->getParameter('encyclopedieDesPersonnages_pictures_directory') . '/' . $logo->getImg();
-        if ($logo->getImg() && file_exists($img)) {
+        if ($logo->getImg() && file_exists($img)) {//sers a supprimer l'encyclopédie des personnages ainsi que l'image dans le dossier image
             unlink($img);
         }
         $manager = $managerRegistry->getManager();

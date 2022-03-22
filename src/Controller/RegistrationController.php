@@ -18,22 +18,22 @@ class RegistrationController extends AbstractController
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
-        $form->handleRequest($request);
+        $form->handleRequest($request);//sers a gerer une requette 
 
         if ($form->isSubmitted() && $form->isValid()) {
             // encode the plain password
             $user->setPassword(
             $userPasswordHasher->hashPassword(
                     $user,
-                    $form->get('password')->getData()
+                    $form->get('password')->getData()//l'utilisateur entre sont mot de passe hashé
                 )
             );
 
-            $entityManager->persist($user);
-            $entityManager->flush();
+            $entityManager->persist($user);//utilise doctrine pour envoyer les données en base de données
+            $entityManager->flush();//envois le nouvelle utilisateur en base de données
             // do anything else you need here, like send an email
 
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('home'); //rediirection en page d'accueil quand connecter après inscription
         }
 
         return $this->render('registration/register.html.twig', [

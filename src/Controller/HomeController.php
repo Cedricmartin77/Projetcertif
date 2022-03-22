@@ -17,7 +17,7 @@ class HomeController extends AbstractController
     public function index(FrontPageNouveauPersoRepository $frontPageNouveauPersoRepository): Response
     {
         return $this->render('home/index.html.twig', [
-            'front_page_nouveau_perso' => $frontPageNouveauPersoRepository->findBy(
+            'front_page_nouveau_perso' => $frontPageNouveauPersoRepository->findBy( //liaison a l'entité "front_page_nouveau_perso"
                 array(),
                 array('id'=> 'ASC'),
                 15,

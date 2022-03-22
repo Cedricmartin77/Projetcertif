@@ -18,7 +18,7 @@ class EncyclopedieDesPersonnagesController extends AbstractController
     #[Route('/', name: 'encyclopedie_des_personnages', methods: ['GET'])]
     public function index(Request $request, EncyclopedieDesPersonnagesRepository $encyclopedieDesPersonnagesRepository, PaginatorInterface $paginator): Response
     {
-        $encyclopediedespersos = $encyclopedieDesPersonnagesRepository->findAll();
+        $encyclopediedespersos = $encyclopedieDesPersonnagesRepository->findAll();//sers a trouver l'encyclopédie des personnages via sont id 
 
         $encyclopediedespersos = $paginator->paginate(
             $encyclopediedespersos, /* query NOT result */
@@ -26,7 +26,7 @@ class EncyclopedieDesPersonnagesController extends AbstractController
             10/*limit per page*/
         );
 
-        return $this->render('encyclopedie_des_personnages/index.html.twig', [
+        return $this->render('encyclopedie_des_personnages/index.html.twig', [//index de l'encyclopédi des personnages
             'encyclopedie_des_personnages' => $encyclopediedespersos
         ]);
     }

@@ -11,7 +11,7 @@ class PageDeDonController extends AbstractController
     #[Route('/page/de/don', name: 'page_de_don')]
     public function index(): Response
     {
-        return $this->render('page_de_don/index.html.twig', [
+        return $this->render('page_de_don/index.html.twig', [ //index de la page de don
             'controller_name' => 'PageDeDonController',
         ]);
     }

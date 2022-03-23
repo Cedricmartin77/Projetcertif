@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/cssadminbutton/cssbutton.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
+
 {% endblock %}
 
 {% block body %}
@@ -18,6 +19,7 @@
         {{ form_row(registrationForm.password, {
             label: 'Mot de Passe'
         }) }}
+        <a href="{{ path('app_condition_utilisation') }}" class="btn1">Condition d'utilisation</a>
         {{ form_row(registrationForm.agreeTerms) }}
 
         <button type="submit" class="btn2">S'inscrire</button>
